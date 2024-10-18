@@ -27,23 +27,26 @@ client_representative = "Kailash Nath"
 product_company = "juspay"
 product_domain = "payment"
 customer_domain = "e-commerce"
-call_duration = 5
+call_duration = 30
+# 5 minute call transcript most realistic
+part_duration = 5
+total_iteration = int(call_duration / part_duration)
+# product list is assumed to be of length so to distribute 1 - 10 in 6 pair such that call transcripts do not have repeating discussion
+distribution = [[0,2],[2,3],[3,5],[5,7],[7,8],[8,10]]
 
-# To do : add greeting with first name only
 final_response_content = f"""
-00:00:00 {sales_representative}: Hi {client_representative}, thanks for taking the time today. Let's discuss how we can improve your {product_domain} solutions.
-00:00:05 {client_representative}: Sure, I’m excited to learn more about your offerings.
+00:00:00 {sales_representative}: Hi {client_representative.split(" ")[0]}, thanks for taking the time today. Let's discuss how we can improve your {product_domain} solutions.
+
+00:00:05 {client_representative}: Hi {sales_representative.split(" ")[0]}, sure I’m excited to learn more about your offerings.
 """
-# To do : change range end point to generic based on split part
-for i in range(0,5):
-    product_detail_list = jp.product_detail[2*i:2*i + 2]
-    start_time = "00:"+str(i*call_duration)+":10"
-    system_message = prompt.generate_system_message(call_duration)
+for i in range(0,total_iteration):
+    product_detail_list = jp.product_detail[distribution[i][0]:distribution[i][1]]
+    start_time = "00:"+str(i*part_duration)+":10"
+    system_message = prompt.generate_system_message(part_duration)
     prompt_message = prompt.generate_call_transcript_prompt(sales_representative, client_representative,product_domain, customer_domain, product_detail_list, start_time, call_duration)
-    if i==4:
+    if i==(total_iteration-1):
         prompt_message = prompt_message + "Last Instruction - Conclude the transcript with next steps for a product demo and potential follow-up meetings."
     model = "gpt-4o-mini"
-    max_tokens = 8000
     messages=[
             {"role": "system", "content": system_message},
             {
@@ -51,7 +54,6 @@ for i in range(0,5):
                 "content": prompt_message
             }
         ]
-
     completion = client.chat.completions.create(
         model=model,
         messages = messages

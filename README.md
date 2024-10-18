@@ -16,6 +16,16 @@ The project is divided into three main tasks:
 ### Objective
 
 The goal of Task 1 is to develop a script that generates a realistic sales call transcript based on dynamic inputs and saves the generated transcript to a text file. This transcript mimics an actual sales call, detailing the interactions between a sales representative and a client.
+### Assumption 
+1. **Call Duration**: Sales call are initial discussion between product owner and potential client , so in realistic enviornment the call duration is assumed to be 30 minutes. 
+2. **Product Details**: Product feature list are assumed to follow a format and have 10 features 
+ ```json
+   {
+     "feature": "HyperCheckout",
+     "description": "HyperCheckout is a pre-built, customizable payment page UI that allows businesses to effortlessly collect payments on their app or website. It supports multiple payment methods, including UPI, cards, net banking, and wallets. This product is designed for fast integration, offering a seamless payment experience with minimal development effort.",
+     "pricing": "0.35% per transaction."
+   }
+```
 
 ### Approach
 
@@ -44,13 +54,8 @@ The function `generate_call_transcript_prompt` is at the core of this task. It g
 
 1. **`sales_representative`**: Name of the sales representative (e.g., "Rahul Kothari").
 2. **`client_representative`**: Name of the client representative (e.g., "Kailash Nath").
-3. **`product_detail_list`**: A list of product details to be discussed in the call. Each element in the list has the following structure:
-   ```json
-   {
-     "feature": "HyperCheckout",
-     "description": "HyperCheckout is a pre-built, customizable payment page UI that allows businesses to effortlessly collect payments on their app or website. It supports multiple payment methods, including UPI, cards, net banking, and wallets. This product is designed for fast integration, offering a seamless payment experience with minimal development effort.",
-     "pricing": "0.35% per transaction."
-   }
+3. **`product_detail_list`**: A list of product details to be discussed in the call following product_detail format. 
+  
 4. **start_time**: The start time of the transcript, formatted as `HH:MM:SS` (e.g., "00:05:00").
 5. **call_duration**: The duration of the call in minutes (e.g., 5 minutes). If the `start_time` is "00:15:00" and the `call_duration` is 5, the transcript will cover the conversation until "00:20:00".
 
