@@ -1,0 +1,19 @@
+00:00:00 Rahul Kothari (Fintech Company): Hi Kailash, thank you for taking the time to discuss our Hypercheckout solution today.
+
+00:00:30 Kailash Nath (e-commerce CTO): Hello Rahul, I appreciate you reaching out. Can you provide more details about Hypercheckout and how it can benefit our e-commerce platform?
+
+00:01:00 Rahul Kothari (Fintech Company): Absolutely, Hypercheckout is a fully managed cross-platform payment solution that seamlessly integrates into your app or website. It offers early access to the latest payment innovations with minimal tech investment, helping improve conversion rates and optimize payment processing costs. 
+
+00:01:45 Kailash Nath (e-commerce CTO): That sounds intriguing, but I'm concerned about integration costs and data security. How secure is the platform, and how easy is it to integrate into our existing system?
+
+00:02:15 Rahul Kothari (Fintech Company): Hypercheckout prioritizes security and scalability, ensuring data protection and ease of integration. We offer advanced security measures and a seamless integration process to minimize any disruptions to your current operations.
+
+00:03:00 Kailash Nath (e-commerce CTO): I see. What about the pricing for Hypercheckout? Can you provide some insights on that?
+
+00:03:30 Rahul Kothari (Fintech Company): For startups, the pricing model is either 0.35% per transaction or a fixed monthly fee of ₹20,000, whichever is higher. This flexible pricing structure is designed to support businesses of all sizes.
+
+00:04:00 Kailash Nath (e-commerce CTO): Thank you for clarifying the pricing. I would like to explore the product further. What are the next steps to schedule a product demo?
+
+00:04:30 Rahul Kothari (Fintech Company): Great to hear your interest, Kailash. I will coordinate with our team to set up a detailed product demo for you. I'll reach out to schedule a suitable time for the demo. Thank you for considering Hypercheckout for your e-commerce platform.
+
+[End of the 30-minute sales call transcript]

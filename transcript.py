@@ -21,11 +21,12 @@ with open(filePath,"rb") as file:
 
 #print(book)
 
-  
+sales_representive = "Rahul Kothari"
+client_representive = "Kailash Nath"
 system_message = prompt.system_message
-prompt_message = prompt.generate_prompt(book)
+prompt_message = prompt.generate_prompt(sales_representive,client_representive,book)
 
-model = "gpt-3.5-turbo-0125"
+model = "gpt-4o-mini"
 temperature = 0.3
 max_tokens = 500
 messages=[
@@ -41,9 +42,11 @@ completion = client.chat.completions.create(
     model=model,
     messages = messages
 )
-response_content = completion.choices[0].message.content
+response = completion
+response_content = response.choices[0].message.content
 
-print(response_content)
+print(response)
+print(response.usage)
 
 folder_path = "transcript"
 if not os.path.exists(folder_path):

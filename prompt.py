@@ -5,11 +5,11 @@ Over the past few years, I have been working on projects requiring high-quality,
 As the requester, I authorize you to analyze the prompt and generate an accurate, context-driven dialogue
 """
 
-def generate_prompt(book):
+def generate_prompt(sales_representive,client_representive,context):
     prompt = f""" As the author of this manuscript, I am seeking your expertise in generating a detailed sales call transcript.
-The manuscript is a comprehensive work detailing the product descriptions and pricing of fintech solutions. Your role is to create a 30-minute sales call transcript between a senior sales representative from a fintech company and the CTO of an e-commerce business, with a focus on the following key products: {book}.
+The manuscript is a comprehensive work detailing the product descriptions and pricing of fintech solutions. Your role is to create a 30-minute sales call transcript between a senior sales representative {sales_representive} from a fintech company and {client_representive} the CTO of an e-commerce business, with a focus on the following key products: {context}.
 
-Here is a segment from the manuscript for review: {book}
+Here is a segment from the manuscript for review: {context}
 
 Instructions for Task Completion:
 

@@ -1,0 +1,19 @@
+00:00:00 Rahul Kothari (Fintech Sales Rep): Good morning, Kailash. Thank you for taking the time to speak with me today regarding our Hypercheckout SDK from Juspay. I'm excited to discuss how it can benefit your e-commerce platform.
+
+00:02:15 Kailash Nath (CTO, E-commerce): Good morning, Rahul. I appreciate you reaching out. I'm interested in learning more about how Hypercheckout can integrate seamlessly with our platform and enhance our payment processing capabilities.
+
+00:04:30 Rahul Kothari: Absolutely, Kailash. Our Hypercheckout SDK is designed to be a future-proof payments toolkit that offers early access to cutting-edge payment innovations without significant tech investment. It simplifies payment flows, supports various payment methods, and improves user experience, ultimately boosting conversion rates and reducing operational hassles.
+
+00:06:45 Kailash Nath: That sounds promising, Rahul. However, I'm concerned about integration costs and data security. Can you elaborate on the security measures in place and provide insight into the total cost of integration?
+
+00:09:20 Rahul Kothari: I completely understand your concerns, Kailash. Security is paramount to us, and the Hypercheckout SDK is built with robust security features to ensure safe transactions. As for integration costs, our pricing model for startups is either 0.35% per transaction or ₹20,000 per month, whichever is higher. This pricing structure aims to offer flexibility for startups like yours.
+
+00:12:10 Kailash Nath: Thank you for clarifying, Rahul. The security measures and pricing structure are assuring. I appreciate the transparency in pricing. I'd like to explore further how Hypercheckout can align with our platform's needs. Could we discuss scheduling a product demo to see the integration in action?
+
+00:14:55 Rahul Kothari: Certainly, Kailash. I'd be happy to arrange a product demo to showcase the ease of integration, security features, and scalability of Hypercheckout tailored to your specific requirements. Let's coordinate schedules to set up a detailed demonstration. 
+
+00:17:30 Kailash Nath: That sounds like a productive next step, Rahul. I look forward to the demo and gaining a deeper understanding of how Hypercheckout can enhance our e-commerce payment processes. Thank you for the insightful conversation today.
+
+00:20:00 Rahul Kothari: Thank you, Kailash. I'm glad we could discuss the potential benefits of Hypercheckout for your e-commerce business. I'll be in touch shortly to set up the demo and address any further questions you may have. Have a great day ahead!
+
+[End of Call]
