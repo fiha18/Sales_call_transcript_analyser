@@ -1,4 +1,4 @@
-# Sales Call Transcript Generator
+# Sales Call Transcript Analysis
 
 ## Project Overview
 
@@ -34,6 +34,7 @@ To create a realistic and accurate transcript, I leveraged OpenAI’s GPT models
     - To generate more realistic and detailed transcripts, a **product detail list** was introduced.
     - This list includes features, descriptions, and pricing of the product being discussed in the call, ensuring key details are incorporated into the generated transcript.
     - A custom prompt generation function, `generate_call_transcript_prompt`, was developed to take dynamic inputs such as the sales representative’s name, client representative’s name, product details, and conversation timings.
+    - sequential open ai completion api call based on **product detail list** elements
 
 ### Function: `generate_call_transcript_prompt`
 
@@ -77,6 +78,9 @@ pip install PyPDF2
 ## Run the Transcript Generator:
 
 - Right now sales_representative, client_representative,product_company,product_domain,  customer_domain,call_duration are hardcoded .
+```bash
+python3 transcript.py
+```
 - The transcript will be saved to a .txt file inside transcipt folder for further analysis.
 
 ## Inital Folder Structure
