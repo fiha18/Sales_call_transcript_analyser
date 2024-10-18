@@ -54,12 +54,12 @@ The function `generate_call_transcript_prompt` is at the core of this task. It g
 4. **start_time**: The start time of the transcript, formatted as `HH:MM:SS` (e.g., "00:05:00").
 5. **call_duration**: The duration of the call in minutes (e.g., 5 minutes). If the `start_time` is "00:15:00" and the `call_duration` is 5, the transcript will cover the conversation until "00:20:00".
 
-## Additional Features
+### Additional Features
 
 - **Dynamic Timing**: The script calculates timestamps for each part of the transcript, ensuring that the call flows smoothly with realistic intervals between dialogue.
 - **Greeting and Conclusion**: A greeting is added at the start of the conversation, and a conclusion is appended based on the calculated time at the end of the call.
 
-## How to Run the Script
+### How to Run the Script
 
 Below are the steps to set up your environment and run the transcript generator script:
 
@@ -69,13 +69,13 @@ Below are the steps to set up your environment and run the transcript generator 
 python3 -m venv path/to/venv
 source path/to/venv/bin/activate
 ```
-## Install Dependencies
+### Install Dependencies
 ```bash
 pip install openai
 pip install PyPDF2
 ```
 
-## Run the Transcript Generator:
+### Run the Transcript Generator:
 
 - Right now sales_representative, client_representative,product_company,product_domain,  customer_domain,call_duration are hardcoded .
 ```bash
@@ -83,7 +83,7 @@ python3 transcript.py
 ```
 - The transcript will be saved to a .txt file inside transcipt folder for further analysis.
 
-## Inital Folder Structure
+### Inital Folder Structure
 ```
 CALL-TRANSCRIPT-ANALYSIS
 │   README.md
@@ -105,3 +105,6 @@ CALL-TRANSCRIPT-ANALYSIS
         hypercheckout-juspay_sales_call_transcript_20241019_004629.txt
         juspay_sales_call_transcript_20241019_022603.txt
 ```
+
+## Task 2: Call Summarization {WIP}
+## Task 3: Querying Transcripts{WIP}
