@@ -1,0 +1,73 @@
+00:00:00 Rahul Kothari (Juspay): Good morning, Kailash! How are you today?
+
+00:00:02 Kailash Nath (E-commerce Co.): Good morning, Rahul! I'm doing well, thanks. Just busy with some integrations on our side. How about you?
+
+00:00:05 Rahul Kothari: I'm great, thanks for asking! I appreciate you taking the time to speak with me today. I understand that improving your checkout experience and reducing transaction failures are significant challenges for you right now. Can you elaborate a bit more on those issues?
+
+00:00:18 Kailash Nath: Sure, we’ve noticed a pretty high drop-off rate at the checkout stage. It seems like many customers abandon their carts because of the payment process. We’ve also experienced a few transaction failures that frustrate both our team and our customers.
+
+00:00:32 Rahul Kothari: That's definitely a common challenge in e-commerce. The good news is that Juspay Hypercheckout is designed to tackle these exact issues. With our cross-platform, adaptive payments orchestrator, we can simplify the payment flows and provide a seamless experience. Have you had a chance to review the product features we offer?
+
+00:00:52 Kailash Nath: I did look over the summary you sent. The feature set looks promising, but I’m curious about how easily it can integrate with our existing systems. We have quite a complex architecture in place.
+
+00:01:06 Rahul Kothari: Absolutely, and that’s a valid concern. Hypercheckout supports multiple integration methods across various platforms like Android, iOS, and Web. We utilize a RESTful API that allows for straightforward integration with your existing architecture. Additionally, we offer comprehensive documentation and support to guide your team throughout the process. Would you like me to go into more detail on the API usage?
+
+00:01:31 Kailash Nath: Yes, please. I’d like to understand how your API would fit into our checkout flow.
+
+00:01:36 Rahul Kothari: So, once integrated, our API allows you to invoke different payment methods directly from your checkout page. This includes cards, UPI, wallets, and even EMI options. The API is designed to handle various payment flows seamlessly. For instance, if a user opts for UPI, they can be redirected to their preferred payment app without leaving your app. This minimizes friction and can significantly improve conversion rates.
+
+00:02:03 Kailash Nath: That sounds beneficial. But what about the security aspects? We need to ensure that our customers' data is well-protected.
+
+00:02:11 Rahul Kothari: Great question! Security is a top priority for us. We comply with RBI regulations, and our solution includes card-on-file tokenization. This means sensitive card details are never stored on your servers. We also use OTP-based authentication for wallet transactions and EMI flows to ensure secure transactions. Our layered security protocols help mitigate risks effectively. 
+
+00:02:39 Kailash Nath: That’s reassuring. But how do you handle transaction failures? We need a solution that ensures high success rates.
+
+00:02:45 Rahul Kothari: Our dynamic routing algorithms play a crucial role here. They monitor transaction success and failure in real-time and automatically make routing decisions based on historical performance. This means if a transaction fails, it can be rerouted to a different payment processor without any manual intervention, ensuring a higher success rate.
+
+00:03:12 Kailash Nath: Interesting. So, if we were to face issues with a particular payment gateway, we wouldn’t have to worry about it interrupting the entire flow?
+
+00:03:20 Rahul Kothari: Exactly! Our system is built to be resilient. That way, your customers can have a smooth checkout experience, even if one payment method has issues. 
+
+00:03:31 Kailash Nath: Now, let’s talk about costs. I see you have a pricing model for startups. Can you break it down for me?
+
+00:03:37 Rahul Kothari: Of course! Our model consists of a transaction fee of 0.35% per transaction along with a monthly subscription fee of ₹20,000. However, we also offer a discounted option where it’s 0.25% per transaction or ₹15,000 per month, whichever is higher. This model is designed to be cost-effective for businesses at various scales.
+
+00:04:02 Kailash Nath: That’s good to know. But how do you justify the subscription fee? 
+
+00:04:07 Rahul Kothari: The subscription fee provides you access to our full suite of features, including real-time analytics, payment routing management, and ongoing support from our technical team. This ensures that you can optimize your payment processes continuously without incurring additional costs with every new feature or update.
+
+00:04:29 Kailash Nath: Makes sense. Speaking of analytics, how detailed are the insights you provide?
+
+00:04:34 Rahul Kothari: Our analytics dashboard offers in-depth insights into checkout behavior, transaction success rates, and even refund processes. You can track performance across different parameters, which can help you identify bottlenecks in your payment flow and optimize accordingly. 
+
+00:04:56 Kailash Nath: That sounds very comprehensive. It seems that your solution can really help us streamline our operations. 
+
+00:05:02 Rahul Kothari: Absolutely! We aim to reduce operational complexities, especially when it comes to handling refunds and reconciliations. With our detailed analytics, you can also gain insights into which payment methods perform best, helping you make informed decisions.
+
+00:05:19 Kailash Nath: I’m definitely intrigued. How long is the typical integration timeline?
+
+00:05:23 Rahul Kothari: Typically, the integration can take anywhere from a couple of weeks to a month, depending on your existing infrastructure and how quickly your team can adapt. We provide dedicated support throughout the process to ensure smooth implementation.
+
+00:05:42 Kailash Nath: That’s quite reasonable. I do have one concern about ongoing maintenance. Will our team need to constantly update or monitor the system?
+
+00:05:50 Rahul Kothari: The beauty of Hypercheckout is that we offer Over-the-Air (OTA) updates, which means you won’t have to frequently update your app for every small change or new feature we release. You can manage configurations, styling, and even payment method updates in real-time without affecting the native app capabilities.
+
+00:06:12 Kailash Nath: That’s a huge plus. It sounds like you're really minimizing the workload on our end.
+
+00:06:16 Rahul Kothari: Exactly! Our goal is to empower your team to focus on growing your business rather than getting bogged down with payment-related tasks. 
+
+00:06:25 Kailash Nath: I appreciate that perspective. What would be the next steps if we were to move forward?
+
+00:06:31 Rahul Kothari: The next step would be to schedule a product demo to give you a hands-on experience with Hypercheckout. During the demo, we can walk through the integration process, the dashboard, and the analytics features in detail. Would you be available for a demo next week?
+
+00:06:51 Kailash Nath: I think that would work. Let’s tentatively say Wednesday at 2 PM?
+
+00:06:56 Rahul Kothari: Perfect! I’ll send you a calendar invite shortly. After the demo, we can discuss any further questions or concerns you might have, and I can also provide you with a detailed proposal.
+
+00:07:09 Kailash Nath: Sounds great. I’m looking forward to it. Thanks for the informative chat today, Rahul.
+
+00:07:13 Rahul Kothari: Thank you, Kailash! I appreciate your time, and I’m excited about the potential of working together. Have a great day!
+
+00:07:19 Kailash Nath: You too, Rahul. Goodbye!
+
+00:07:21 Rahul Kothari: Goodbye!
