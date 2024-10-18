@@ -1,0 +1,47 @@
+00:00:00 Rahul Kothari (Fintech Solutions): Good afternoon, Kailash. This is Rahul Kothari from Fintech Solutions. How are you doing today?
+
+00:00:05 Kailash Nath (E-commerce CTO): Hi, Rahul. I'm doing well, thank you. How about you?
+
+00:00:08 Rahul Kothari: Doing great, thanks for asking. I'm excited to talk to you about how our Hypercheckout can enhance your payment system. I understand you're looking for ways to streamline payments and improve conversion rates, correct?
+
+00:00:20 Kailash Nath: Absolutely. We're always looking for new technologies to enhance our user experience, but we're particularly concerned about the integration costs and how secure this would be. Could you shed some light on that?
+
+00:00:30 Rahul Kothari: Certainly, Kailash. Hypercheckout is designed to integrate seamlessly across multiple platforms like Android, iOS, and web. It offers a fully managed, cross-platform adaptive payment experience with minimal tech investment. So, you'll save both time and resources during integration.
+
+00:00:45 Kailash Nath: That sounds promising, but what about data security? With rising cyber threats, ensuring a secure payment process is non-negotiable for us.
+
+00:00:57 Rahul Kothari: I completely understand. Security is at the core of our product. Hypercheckout is designed as per the RBI guidelines with certified tokenization, ensuring your transactions are secure and compliant with industry standards. We also feature real-time alerts and dynamic routing to prevent fraud effectively.
+
+00:01:15 Kailash Nath: That definitely eases some of my concerns. How about the cost implications? As a startup, we need something that's cost-effective yet scalable.
+
+00:01:25 Rahul Kothari: We offer a flexible pricing model designed to support startups like yours. Our pricing is 0.35% to 0.25% per transaction or a flat fee of ₹20,000 to ₹15K per month, whichever is higher. This ensures you have a predictable cost structure while you scale your business.
+
+00:01:42 Kailash Nath: Okay, that's within the range we were expecting. But tell me, how does Hypercheckout help in conversion rate improvements?
+
+00:01:52 Rahul Kothari: Hypercheckout comes with a pre-built conversion optimized user experience. We utilize one-click payment experiences, such as VISA Safe Click for Android, allowing returning customers to make quick transactions under INR 2000, improving success rates significantly.
+
+00:02:10 Kailash Nath: Efficiency is vital for us. Another feature we're intrigued by is the dynamic routing. Can you elaborate on how that works?
+
+00:02:20 Rahul Kothari: Certainly. Dynamic routing allows our algorithm to monitor payment ecosystem failures in real-time, making automatic decisions on which payment gateway to use. It adapts to conditions like gateway downtimes or specific merchant issues, always ensuring high transaction success rates.
+
+00:02:37 Kailash Nath: That real-time adaptability is crucial. How about handling different payment methods like EMI, wallets, and UPI?
+
+00:02:47 Rahul Kothari: We support all standard payment flows including cards, netbanking, UPI, and various EMI options like Standard, No Cost, and Cardless EMI, along with payment via wallets and Buy Now, Pay Later schemes. This diversity in payment options ensures that you can provide your customers with the best coverage.
+
+00:03:05 Kailash Nath: Hypercheckout seems robust in features. What if we want to change payment method displays or update features—how flexible is your system?
+
+00:03:15 Rahul Kothari: Great question. With our Over-the-Air (OTA) updates, you can make changes like styling or payment method reorder without needing new app releases. This flexibility keeps your system adaptive and user-friendly without the extra workload.
+
+00:03:30 Kailash Nath: That's impressive, especially with our diverse customer base. What are the next steps if we decide to proceed with Hypercheckout?
+
+00:03:40 Rahul Kothari: I would suggest scheduling a demo with our technical team. They’ll be able to give you a walkthrough of Hypercheckout's integration process and functionalities. Are you available later this week?
+
+00:03:52 Kailash Nath: Yes, I should be available on Thursday. Can we aim for a morning slot?
+
+00:03:57 Rahul Kothari: That works perfectly. I'll confirm a suitable time and send you the invitation. I'm confident that our demo will address your detailed concerns.
+
+00:04:04 Kailash Nath: Looking forward to it, Rahul. Thank you for the detailed insights today.
+
+00:04:09 Rahul Kothari: My pleasure, Kailash. Talk soon!
+
+00:04:12 Kailash Nath: Bye.

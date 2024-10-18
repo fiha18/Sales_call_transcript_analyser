@@ -26,7 +26,7 @@ client_representive = "Kailash Nath"
 system_message = prompt.system_message
 prompt_message = prompt.generate_prompt(sales_representive,client_representive,book)
 
-model = "gpt-4o-mini"
+model = "gpt-4o"
 temperature = 0.3
 max_tokens = 500
 messages=[
