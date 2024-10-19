@@ -1,8 +1,9 @@
-sales_representative = "Srijan Amrit"
-client_representative = "Priyanka Gupta"
-product_company = "darwinbox"
+product_company = "darwinbox.in"
+potential_customer = "swiggy.com"
+sales_representative = f"Srijan ({product_company})"
+client_representative = f"Priyanka ({potential_customer})"
 product_domain = "hr management"
-customer_domain = "e-commerce"
+customer_domain = "food tech"
 major_issue = "company is looking to streamline the paperwork and administrative tasks associated with onboarding and payroll."
 product_details = [
     {
