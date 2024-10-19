@@ -1,0 +1,245 @@
+
+00:00:00 Rohit Kothari: Hi Kailash, thanks for taking the time today. Let's discuss how we can improve your payment solutions.
+
+00:00:05 Kailash Nath: Hi Rohit, sure I’m excited to learn more about your offerings.
+
+0:00:11 Rohit Kothari: HyperCheckout simplifies the payment process with a pre-built, customizable payment page UI. It supports multiple payment methods like UPI, cards, net banking, and wallets, which should be a great fit for your e-commerce platform.
+
+0:00:25 Kailash Nath: That sounds promising, but how easy is it to integrate with our existing system? We have a fairly complex infrastructure.
+
+0:00:31 Rohit Kothari: Excellent question, Kailash. HyperCheckout is designed for fast integration. We provide comprehensive APIs that allow you to plug it into your existing architecture with minimal development effort. Our integration documentation is detailed, and we also offer sandbox environments for testing.
+
+0:00:51 Kailash Nath: That’s good to hear. Can you elaborate on the security protocols in place? Security is a major concern for us, especially with payment data.
+
+0:00:58 Rohit Kothari: Absolutely. We adhere to the highest security standards, including PCI DSS compliance, which is critical for handling card transactions. Additionally, we implement end-to-end encryption for all payment data and tokenization, which means sensitive information is not stored on your servers, reducing the risk of data breaches.
+
+0:01:20 Kailash Nath: That definitely addresses some of my concerns. How does the pricing structure work for HyperCheckout?
+
+0:01:25 Rohit Kothari: HyperCheckout is priced at 0.35% per transaction. This includes all the features, security, and ongoing support. It’s a competitive rate, especially considering the level of customization and scalability it offers.
+
+0:01:41 Kailash Nath: And what about the Express Checkout SDK? How does that differ in terms of capabilities and pricing?
+
+0:01:46 Rohit Kothari: The Express Checkout SDK is more geared towards developers who want to create a completely custom UI for their payment processing. It allows for deeper integration into your app, offering more control over the user experience. The pricing for this is slightly lower at 0.30% per transaction, and you still benefit from our secure backend.
+
+0:02:09 Kailash Nath: Interesting. So, if we choose the SDK, how would it integrate with our current systems? 
+
+0:02:15 Rohit Kothari: The SDK provides a set of libraries that you can include in your application. You’ll be able to interact with our secure backend to process payments. We support various frameworks, whether you're using React, Angular, or even native mobile frameworks. Our technical team can assist you through the integration process, ensuring a smooth deployment.
+
+0:02:38 Kailash Nath: That’s reassuring. What about ongoing support? If we run into issues post-integration, how do we handle that?
+
+0:02:44 Rohit Kothari: We provide 24/7 support to all our clients. You’ll have access to our dedicated technical support team, who can assist with any issues, be it integration-related or day-to-day operations. We also offer regular updates and maintenance as part of our service.
+
+0:03:05 Kailash Nath: That sounds comprehensive. Can you share how easy it is to scale this solution as our business grows?
+
+0:03:11 Rohit Kothari: Scalability is one of our key strengths. Both HyperCheckout and the Express Checkout SDK are built on robust cloud infrastructure, allowing you to handle increased transaction volumes without any performance degradation. As your business grows, you can easily adjust your settings and configurations through our dashboard or APIs.
+
+0:03:34 Kailash Nath: That's great to know. How do you handle transaction failures or chargebacks? 
+
+0:03:40 Rohit Kothari: We have automated workflows in place for handling transaction failures and chargebacks. Our system monitors transactions in real-time, and if a transaction fails, it will trigger alerts so your team can act quickly. For chargebacks, we provide detailed reporting and analysis to help you understand the reasons behind them, which can assist in mitigating future occurrences.
+
+0:04:06 Kailash Nath: That’s a relief. And how does the reporting work? Do we get access to analytics for better financial tracking?
+
+0:04:12 Rohit Kothari: Yes, you’ll have access to a comprehensive dashboard that provides real-time analytics on transactions, customer behavior, and payment trends. This can help you make informed decisions and optimize your payment processes.
+
+0:04:29 Kailash Nath: Sounds like a solid offering. What would the next steps be if we decide to move forward?
+
+0:04:35 Rohit Kothari: The next step would be to schedule a technical walkthrough where we can demonstrate the integration process and answer any further questions your team might have. After that, we can discuss formalizing the agreement and getting you set up.
+
+0:04:50 Kailash Nath: That sounds good. I’ll discuss this with my technical team, and we can coordinate a time for that walkthrough.
+
+0:04:56 Rohit Kothari: Perfect! I’m looking forward to it. Let me know if you have any other questions in the meantime.
+0:05:02 Rohit Kothari: The Express Checkout API is designed for seamless integration, whether it's for web or mobile applications. It leverages Juspay’s REST APIs, which means you can create a highly customized payment experience tailored to your e-commerce platform. 
+
+0:05:15 Kailash Nath: That sounds promising, but how steep is the learning curve for our developers? We’ve had issues with integrations in the past.
+
+0:05:22 Rohit Kothari: I understand your concern. Our API is well-documented with comprehensive guides and sample code available. Most developers find it straightforward to implement. Additionally, our support team is available to assist during the integration process. 
+
+0:05:37 Kailash Nath: What about the actual integration process? Are there specific requirements we should be aware of?
+
+0:05:42 Rohit Kothari: Great question. The integration involves a few key steps: first, you’ll need to set up your API keys in our dashboard. Then, you’ll implement the endpoint for the payment processing feature. We support all major payment methods, including credit cards, digital wallets, and UPI, which can be integrated with just a few lines of code.
+
+0:05:59 Kailash Nath: So, you mentioned support for multiple payment methods. Can you elaborate on how that works in terms of user experience?
+
+0:06:05 Rohit Kothari: Absolutely. The Express Checkout API allows you to present a unified payment interface to your users. They can choose from various payment options without needing to redirect to external sites. This not only enhances user experience but also increases conversion rates. 
+
+0:06:19 Kailash Nath: That’s definitely something we need. However, what about data security? We need to ensure customer data is protected during the transaction process.
+
+0:06:26 Rohit Kothari: Security is a top priority for us. Our API complies with PCI DSS standards, which means it adheres to stringent security protocols for handling payment information. We also implement encryption for data in transit and at rest, ensuring that sensitive information is safeguarded against breaches.
+
+0:06:45 Kailash Nath: That’s reassuring, but what if we face any technical issues post-integration? What kind of ongoing support do you provide?
+
+0:06:53 Rohit Kothari: We offer 24/7 support through various channels, including chat, email, and phone. Additionally, we have a dedicated technical account manager for larger clients, ensuring that you have a direct line for any urgent issues. We also release regular updates and enhancements to the API with minimal disruption to your service.
+
+0:07:15 Kailash Nath: That’s good to hear. Now, regarding the pricing structure, you mentioned a 0.25% fee per transaction. Are there any hidden costs, like maintenance fees or setup charges?
+
+0:07:24 Rohit Kothari: No hidden fees at all. The 0.25% transaction fee is straightforward. There are no setup charges or maintenance fees associated with using the Express Checkout API. We believe in transparency, so you’ll know exactly what to expect in terms of costs.
+
+0:07:42 Kailash Nath: That’s quite competitive. What about scalability? If our transaction volume increases significantly, can your system handle that without performance issues?
+
+0:07:50 Rohit Kothari: Yes, scalability is a core feature of our solution. The infrastructure behind our API is built to handle high transaction volumes. It automatically scales with demand, ensuring that you don’t experience slowdowns during peak shopping seasons. We also conduct regular load testing to optimize performance.
+
+0:08:10 Kailash Nath: That sounds promising. How long does the typical integration process take, assuming our developers are well-versed with API integrations?
+
+0:08:17 Rohit Kothari: Depending on the complexity of your existing system, integration can typically be completed within a week or two. Our clients often report that the initial setup is quick, and once integrated, they can start processing payments almost immediately.
+
+0:08:32 Kailash Nath: That’s encouraging. I just want to ensure that our development timeline aligns with our upcoming product launch.
+
+0:08:39 Rohit Kothari: Absolutely, we can work closely with your team to establish a timeline that meets your launch schedule. We can also provide additional resources or assistance to expedite the process if needed.
+
+0:08:51 Kailash Nath: Thank you, Rohit. I have a clearer understanding now. I’ll discuss this with my team and get back to you with any further questions.
+0:08:57 Rohit Kothari: So, Kailash, let’s dive into HyperCredit first. This lender orchestration system is designed to streamline the entire loan process for your customers, from application to disbursement. It integrates seamlessly into your existing checkout flow, which I believe could be a game changer for your e-commerce platform.
+
+0:09:17 Kailash Nath: That sounds interesting, but can you elaborate on how this integration works with our current systems? We have a fairly complex setup.
+
+0:09:27 Rohit Kothari: Absolutely. HyperCredit uses RESTful APIs that allow you to connect with our system without needing to overhaul your existing architecture. Essentially, you’ll send loan requests directly from your checkout page to our service. Once the customer’s data is processed, the response comes back with the loan options available, which can be displayed right at checkout. It’s designed to be lightweight and efficient.
+
+0:09:52 Kailash Nath: Okay, and what about security? We handle a lot of sensitive customer information, and data breaches could be catastrophic for us.
+
+0:10:01 Rohit Kothari: That’s a valid concern. We implement robust security protocols including end-to-end encryption and tokenization of sensitive data. Additionally, our system is compliant with PCI DSS standards, so customer payment information is well-protected. We also conduct regular security audits and penetration testing to ensure that our infrastructure is resilient against threats.
+
+0:10:25 Kailash Nath: That’s reassuring. What about the scalability of HyperCredit? If we were to experience a sudden surge in transactions, how does your system handle that?
+
+0:10:34 Rohit Kothari: Great question! HyperCredit is built on a cloud-native architecture, which means it can automatically scale up or down based on your transaction volume. During peak times, the system can handle increased loads without any degradation in performance. We also have a dedicated support team available to assist you during high-traffic events.
+
+0:10:58 Kailash Nath: That sounds promising. If we were to implement this, what would be the pricing structure like? 
+
+0:11:04 Rohit Kothari: The pricing for HyperCredit is straightforward. It’s 0.40% per loan transaction. There are no hidden fees, and you only pay when a loan transaction occurs. This way, you can manage costs effectively without worrying about monthly maintenance fees.
+
+0:11:24 Kailash Nath: I see. And you mentioned earlier that you could assist with ongoing support. What does that entail?
+
+0:11:30 Rohit Kothari: We provide comprehensive support including integration assistance, training for your team, and ongoing technical support. Our dedicated account managers are available to help troubleshoot any issues you encounter post-launch. Plus, we offer regular updates to the system to improve functionality and security.
+
+0:11:52 Kailash Nath: That’s quite comprehensive. Now, how does the Payment Forms option fit into all this? 
+
+0:11:58 Rohit Kothari: Payment Forms are particularly useful if you want to collect payments without a website. They’re ideal for events, workshops, or small business promotions. You can easily create a payment form in minutes, and it integrates with HyperCredit to offer financing options at checkout. The pricing for Payment Forms is 0.45% per transaction, which is slightly higher but provides significant flexibility.
+
+0:12:24 Kailash Nath: Can you explain how the Payment Forms collect customer information securely? 
+
+0:12:29 Rohit Kothari: Certainly! Payment Forms use the same secure protocols as HyperCredit. When a customer fills out the form, their data is encrypted in transit. We also allow for customizable fields, so you can collect the necessary information while maintaining compliance with data protection regulations. The data is securely stored, and you can access it through your dashboard.
+
+0:12:53 Kailash Nath: That sounds efficient. I can see how this could simplify our payment processes across various platforms. Are there any integration challenges you foresee with our existing systems?
+
+0:13:01 Rohit Kothari: The primary challenge typically lies in ensuring that your backend can communicate effectively with our APIs. However, we provide detailed documentation and can assist your development team throughout the integration process. Our goal is to make this as seamless as possible for you.
+
+0:13:20 Kailash Nath: I appreciate that, Rohit. It sounds like you’ve thought through a lot of the potential obstacles. I’ll need to discuss this with my team, but I’m excited about the potential here.
+
+0:13:29 Rohit Kothari: Absolutely, take your time. I’m here to answer any further questions or help with scenarios you might want to run by us.
+0:13:35 Rohit Kothari: So, Kailash, let's dive into the NACH Mandates first. With LotusPay, you can automate recurring payments like subscriptions or EMIs seamlessly. Our solution boasts a 99% success rate, which is pretty impressive in this space.
+
+0:13:50 Kailash Nath: That’s a solid success rate. Can you explain how the integration process works with our existing systems?
+
+0:14:00 Rohit Kothari: Absolutely. We offer REST APIs that are designed for flexibility, which means you can integrate them into your current tech stack without major disruptions. You can also use our dashboard interface for more straightforward management. Our APIs are well-documented, so your developers will find the implementation process quite smooth.
+
+0:14:20 Kailash Nath: That sounds good. But how do you handle security during these transactions? That’s a huge concern for us.
+
+0:14:30 Rohit Kothari: Great question. We implement stringent security protocols, including AES-256 encryption and tokenization to protect sensitive data. Additionally, we comply with PCI DSS standards. This means that during the payment process, sensitive card information is not stored on your servers, reducing your liability.
+
+0:14:55 Kailash Nath: I appreciate that. Now, regarding pricing, you mentioned 0.20% per recurring payment. Can you break that down for me? Are there any hidden fees?
+
+0:15:05 Rohit Kothari: Certainly. The 0.20% fee is a flat rate per transaction, and there are no hidden fees associated with it. However, do keep in mind that there might be additional charges related to chargebacks or refunds, but those are standard across the industry. We aim for transparency, so you’ll always know what to expect.
+
+0:15:30 Kailash Nath: Understood. Now, let’s talk about the UPI TPAP SDK. Can you explain how it differs from the NACH Mandates?
+
+0:15:40 Rohit Kothari: Sure! The UPI TPAP SDK allows you to transform your app into a Third Party Application Provider. This means you can process P2P and P2M payments directly through your platform, enabling a more tailored experience for your customers. It's designed for speed and convenience, which is essential for user retention in e-commerce.
+
+0:16:00 Kailash Nath: And is the SDK easy to implement as well?
+
+0:16:05 Rohit Kothari: Yes, it's designed with ease of integration in mind. Similar to the NACH Mandates, we provide comprehensive documentation and support for your developers. It supports multiple payment methods, including UPI, which is increasingly popular in India, giving you a competitive edge.
+
+0:16:30 Kailash Nath: That’s helpful to know. What about scalability? As we grow, can this solution handle increased transaction volumes?
+
+0:16:40 Rohit Kothari: Definitely. Both the NACH Mandates and UPI TPAP SDK are built with scalability in mind. Our infrastructure is capable of handling a high volume of transactions, and we use load balancing techniques to ensure optimal performance even during peak times. You won’t have to worry about downtimes affecting your business.
+
+0:17:05 Kailash Nath: That’s reassuring. But what kind of ongoing support do you provide after the initial integration?
+
+0:17:10 Rohit Kothari: We offer 24/7 technical support to all our clients. Post-integration, you’ll have access to a dedicated account manager who will assist you with any issues or questions you may have. We also provide regular updates and maintenance to ensure that your systems are always running smoothly.
+
+0:17:30 Kailash Nath: That sounds comprehensive. Just to clarify, are there any additional costs for support and maintenance?
+
+0:17:35 Rohit Kothari: No, our ongoing support comes as part of the package. We believe in building long-term relationships with our clients, so we don’t charge extra for basic support. Your success is our success, after all.
+
+0:17:50 Kailash Nath: I like that approach. It makes it easier for us to focus on growing our business without worrying about unexpected costs. 
+
+0:18:00 Rohit Kothari: Exactly! We’re here to facilitate your growth, and with our solutions, you’ll have a solid foundation to build upon. Shall we discuss the next steps for a potential partnership? 
+
+0:18:15 Kailash Nath: Yes, let's do that. I’d like to see a demo of both solutions before making a decision. 
+
+0:18:25 Rohit Kothari: Absolutely, I can arrange that for you. How does early next week sound? 
+
+0:18:30 Kailash Nath: That works perfectly. Looking forward to it! 
+
+0:18:35 Rohit Kothari: Great! I’ll send you a calendar invite with the details.
+0:18:41 Rohit Kothari: So, Kailash, let’s dive into how our HyperUPI service can seamlessly integrate with your existing e-commerce platform. The beauty of HyperUPI is its 1-click in-app payment capability, which means your customers can complete transactions without leaving the app. 
+
+0:18:55 Kailash Nath: That sounds promising, Rohit. Can you elaborate on how easy it is to implement this in our current setup?
+
+0:19:02 Rohit Kothari: Absolutely. HyperUPI is designed with developers in mind. We provide comprehensive API documentation that guides you through the integration process. Typically, it can be integrated within a week, depending on your team's bandwidth. The customizable UI allows your developers to tweak the look and feel to match your brand, which is a huge plus.
+
+0:19:26 Kailash Nath: That’s good to know. But how does this integration handle security? E-commerce transactions can be a target for fraud, and I want to ensure our customers’ data is protected.
+
+0:19:38 Rohit Kothari: That’s a valid concern. HyperUPI adheres to the highest security protocols, including end-to-end encryption for all transactions. We also comply with PCI DSS standards, ensuring that your customers' payment information is secure. Additionally, we conduct regular security audits to identify any potential vulnerabilities.
+
+0:19:59 Kailash Nath: That's reassuring to hear. What about ongoing costs? You mentioned a pricing structure of 0.15% per transaction—are there any hidden fees or maintenance costs we should be aware of?
+
+0:20:09 Rohit Kothari: Great question. The 0.15% transaction fee is indeed the main charge, and there are no hidden fees. We also provide ongoing support as part of our service. Should you encounter any issues or require assistance with the integration or maintenance, our dedicated support team is available 24/7. 
+
+0:20:34 Kailash Nath: That’s helpful. How scalable is HyperUPI? As we grow, will it be able to handle increased transaction volumes without performance issues?
+
+0:20:42 Rohit Kothari: Yes, scalability is one of HyperUPI's core strengths. Our infrastructure is built on cloud technology, allowing for dynamic scaling based on your transaction load. Whether you process hundreds or thousands of transactions per minute, HyperUPI can handle it without compromising performance. 
+
+0:21:05 Kailash Nath: That’s impressive. Can you provide a bit more detail on how the API interacts with our current systems? 
+
+0:21:11 Rohit Kothari: Sure! The HyperUPI API connects directly with your existing checkout process. When a customer chooses to pay via UPI, the API triggers a secure payment request to our server. Once the transaction is completed, it sends a confirmation back to your system, allowing you to update your order status automatically. 
+
+0:21:34 Kailash Nath: That makes sense. Is there any need for additional software or infrastructure changes on our end to support this integration?
+
+0:21:40 Rohit Kothari: No additional infrastructure is required. HyperUPI is designed to work with the majority of e-commerce platforms as long as they can handle API calls. If you’re using popular frameworks like Shopify or Magento, the integration process is even simpler with our pre-built plugins.
+
+0:22:04 Kailash Nath: Excellent! One last thing—what metrics can we track post-integration to analyze the performance of HyperUPI?
+
+0:22:11 Rohit Kothari: You’ll have access to a detailed dashboard that provides insights like transaction volume, success rates, and even customer behavior analytics regarding payment preferences. These metrics can help you optimize your checkout experience further and drive conversions.
+
+0:22:36 Kailash Nath: That sounds very comprehensive. I appreciate the clarity on all these points, Rohit. 
+
+0:22:41 Rohit Kothari: I'm glad to hear that, Kailash! If you have any more questions or need a demo, just let me know.
+0:22:47 Rohit Kothari: So, Kailash, let's dive into the specifics of our offerings. With Juspay Payout, you can efficiently manage large-scale payouts directly to your customers or vendors. We support multiple methods like bank transfers, UPI IDs, cards, and wallets.
+
+0:22:58 Kailash Nath: That sounds promising, especially with the volume of transactions we handle. But how easy is the integration process with our existing systems?
+
+0:23:05 Rohit Kothari: Great question! The integration is designed to be seamless. We provide RESTful APIs that allow you to connect our services with your current platforms with minimal friction. Our technical documentation is quite comprehensive, and we also offer dedicated support during the integration phase.
+
+0:23:22 Kailash Nath: That’s reassuring. What about security protocols? We handle sensitive customer data, and I want to ensure that we’re compliant with the latest standards.
+
+0:23:31 Rohit Kothari: Absolutely, security is paramount for us. We adhere to PCI DSS compliance, and our transactions are encrypted using AES-256 encryption. Additionally, we implement tokenization for sensitive card data, which means that the actual card details are never stored on your servers. 
+
+0:23:50 Kailash Nath: That addresses most of my concerns, but could you break down the pricing for me? I’d like to understand the cost implications for our business model.
+
+0:23:57 Rohit Kothari: Certainly! For Juspay Payout, we charge a flat fee of 0.25% per payout transaction. For instance, if you're executing payouts of ₹1,00,000, the fee would be ₹250. For JusBiz, our virtual card solution is priced at 0.35% per transaction, which provides you a secure payment method specifically for suppliers and vendors.
+
+0:24:18 Kailash Nath: Okay, that’s clear. But with our growing transaction volume, how scalable are your solutions? 
+
+0:24:25 Rohit Kothari: Our platform is highly scalable. We leverage a microservices architecture that allows us to handle increased loads without a hitch. As your transaction volume grows, we can easily scale our infrastructure to meet those demands, ensuring that performance remains consistent.
+
+0:24:43 Kailash Nath: That’s good to know. But what happens if we encounter issues post-integration? How do you support ongoing maintenance?
+
+0:24:51 Rohit Kothari: We offer 24/7 customer support, accessible via multiple channels—phone, email, and live chat. Additionally, our technical team can assist with any issues or optimizations you might need after the integration. We also provide regular updates to ensure compliance and performance enhancements.
+
+0:25:10 Kailash Nath: Sounds comprehensive. Can you share how the virtual card solution works specifically? We often deal with various suppliers, and I want to ensure this can streamline our transactions.
+
+0:25:18 Rohit Kothari: Certainly! With JusBiz, once you generate a virtual card, it can be used immediately for transactions. You can set limits on each card for security and manage them through our dashboard. This flexibility allows you to issue cards for one-time use or recurring payments, reducing the risk of fraud significantly.
+
+0:25:40 Kailash Nath: That flexibility sounds beneficial for managing supplier payments. Is there any way to track these transactions in real-time?
+
+0:25:47 Rohit Kothari: Yes, indeed! Our dashboard provides real-time tracking of all transactions made through the virtual cards. You can view transaction statuses, and we also offer detailed reports that can help you analyze spending patterns.
+
+0:26:04 Kailash Nath: This all sounds promising. I’d like to see a demo of both Juspay Payout and JusBiz in action. What would be the next steps?
+
+0:26:12 Rohit Kothari: Absolutely, I can arrange a demo for you. I suggest we schedule a meeting where our technical team can walk you through both products and answer any questions in depth. Would next week work for you?
+
+0:26:25 Kailash Nath: Yes, next week sounds good. Let’s finalize a time, and I’ll gather my team to join the session.
+
+0:26:33 Rohit Kothari: Perfect! I’ll send you a calendar invite after this call, and we can align on the specifics. Following the demo, we can also discuss any additional queries you might have regarding implementation or pricing.
+
+0:26:47 Kailash Nath: Looking forward to it, Rohit. Thank you for the detailed insights today.
+
+0:26:50 Rohit Kothari: My pleasure, Kailash. Speak soon!

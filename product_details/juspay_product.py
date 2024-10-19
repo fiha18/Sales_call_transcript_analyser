@@ -1,4 +1,10 @@
-product_detail = [
+sales_representative = "Rohit Kothari"
+client_representative = "Kailash Nath"
+product_company = "juspay"
+product_domain = "payment"
+customer_domain = "e-commerce"
+major_issue = "company is looking to improve their checkout experience and reduce transaction failures."
+product_details = [
   {
     "feature": "HyperCheckout",
     "description": "HyperCheckout is a pre-built, customizable payment page UI that allows businesses to effortlessly collect payments on their app or website. It supports multiple payment methods, including UPI, cards, net banking, and wallets. This product is designed for fast integration, offering a seamless payment experience with minimal development effort.",
