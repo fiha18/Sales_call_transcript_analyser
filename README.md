@@ -92,23 +92,20 @@ python3 transcript.py
 ```
 CALL-TRANSCRIPT-ANALYSIS
 │   README.md
-│   prompt.py
 │   transcript.py
+│   utils.py
 │
 ├───myenv
 │   └───...
 │   
+├───generated_transcripts
+│       darwinbox_srijan_sales_call_transcript_20241019_190826.txt
+│       juspay_rohit_sales_call_transcript_20241019_191339.txt
 ├───product_details
 │       juspay_product.py
-│       
-├───products
-│       hypercheckout_juspay.pdf
-│       hypercheckout-juspay.pdf
-│       
-└───transcript
-        hypercheckout-juspay_sales_call_transcript_20241018_205731.txt
-        hypercheckout-juspay_sales_call_transcript_20241019_004629.txt
-        juspay_sales_call_transcript_20241019_022603.txt
+│       darwinbox_product.py     
+└───prompts
+        transcript_generator_prompt.py
 ```
 
 ## Task 2: Call Summarization {WIP}
