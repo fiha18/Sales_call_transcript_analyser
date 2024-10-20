@@ -100,7 +100,7 @@ def generate_fake_call_transcript(product_owner,model = "gpt-4o-mini",max_tokens
 
 def save_transcript_file(file_path,final_response_content):
     """
-    This function creates a transcript file and save it to folder_path based on the provided final_response_content.
+    This function saves a transcript file to folder_path based on the provided final_response_content.
 
     Parameters:
         final_response_content: The text content to be written to the transcript file.

@@ -58,6 +58,7 @@ def generate_transcript_summary(file_path,summary_format):
                 utils.stop_print_period()
                 print("")
                 summary = completion_response.choices[0].message.content.replace("```", "")
+                print(summary)
                 summary_list.append(summary)
                 break
             except RateLimitError:
@@ -74,11 +75,55 @@ def generate_transcript_summary(file_path,summary_format):
     print(summary_list)
     return "".join(summary_list)
 
-input_file = "generated_transcripts/darwinbox_srijan_sales_call_transcript_20241019_190826.txt"
+def save_summary_file(file_path,summary):
+    """
+    This function saves a summary file to folder_path based on the provided final_response_content.
+
+    Parameters:
+        summary : The text content to be written to the transcript file.
+        file_path (optional): The directory path where the transcript file will be saved.
+    Returns:
+        None
+    """
+    # Write the content to the transcript file
+    with open(file_path, 'w') as file:
+        file.write(summary)
+
+def perform_call_transcript_summary_generation():
+    # To do: add transcript_folder, input_file_name and summary_format from input or runtime parameter
+    transcript_folder = "generated_transcripts"
+    input_file_name = "darwinbox_srijan_sales_call_transcript_20241021_020017.txt"
+    summary_format = "concise"
+    transcript_file_path = os.path.join(transcript_folder, input_file_name)
+    if not os.path.exists(transcript_file_path):
+        print(f"file {os.path.basename(transcript_file_path)} does not exists.")
+        return 
+    # summary_format paragraph format, bullet points, concise
+    summary = generate_transcript_summary(transcript_file_path,summary_format)
+    # folder path to save summary 
+    folder_path="generated_summaries"
+    # Create the folder if it doesn't exist
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+    file_name = input_file_name.replace(".txt",f"_{summary_format}_summary.txt")
+    file_path = os.path.join(folder_path, file_name)
+    if os.path.exists(file_name):
+        print(f"Output file {os.path.basename(file_path)} already exists, skipping.")
+        return 
+    if summary is not None:
+        try:
+            save_summary_file(file_path,summary)
+            print(f"Summary generated successfully and saved to folder: {folder_path}\nFilename: {file_name}")
+        except PermissionError:
+            print(f"No permission to write file: {file_path}")
+        except FileExistsError:
+            print(f"File already exists: {file_path}")
+        except Exception as e:
+            print(f"An error occurred while writing the file: {file_path}. Error: {e}")
+    #print(summary)
+
+perform_call_transcript_summary_generation() 
 # summary_format - paragraph format ,bullet points or concise
-summary = generate_transcript_summary(input_file,summary_format="concise")
-print(f"Summary of call transcript {input_file.split('/')[1]} is provided below :\n")
-print(summary)
 print(completion_usage)
 end_execution_time = time.time()
 total_time = float(end_execution_time - start_execution_time)

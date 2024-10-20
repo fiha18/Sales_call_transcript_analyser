@@ -25,14 +25,13 @@ def get_summarizer_user_prompt(transcript,summary_format,primary_points):
        - Concerns or objections raised by the client, and the sales representative's responses or solutions.
        - Any agreements, decisions, or follow-up actions from the conversation.
     3. Adhere to the provided format: {summary_format}, which can be in one of the following styles:
-       - paragraph format: A summary in 4-5 cohesive paragraphs.
-       - bullet points: A list of key takeaways or action items.
-       - concise: Short and direct statements summarizing each point.
+       - paragraph format: A summary in 4-5 cohesive paragraphs, for each paragraph avoid line spacing.
+       - bullet points: A list of key takeaways or action items, maintain same line spacing between each point.
+       - concise: Short and direct statements summarizing each point, maintain same line spacing between each line.
     4. Follow the provided format : {summary_format} to create summary
     5. Ensure that sensitive information like personal details or confidential data (e.g., email addresses, employee IDs,document password) is removed.
     6. Ensure the summary is *contextually accurate, maintains logical flow, and clearly differentiates between speakers.
     7. Some transcripts may have incomplete sentences, so ensure these are completed to avoid summarization errors.
-
     Example summary format:
     - The conversation started with a discussion on key_point1.
     - The sales representative emphasized key_point2, while the client inquired about key_point3.
