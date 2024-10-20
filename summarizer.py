@@ -75,8 +75,9 @@ def generate_transcript_summary(file_path,summary_format):
     return "".join(summary_list)
 
 input_file = "generated_transcripts/darwinbox_srijan_sales_call_transcript_20241019_190826.txt"
-summary = generate_transcript_summary(input_file,summary_format="paragraph")
-print(f"Summary of call transcript {input_file.split("/")[1]} is provided below :\n")
+# summary_format - paragraph format ,bullet points or concise
+summary = generate_transcript_summary(input_file,summary_format="concise")
+print(f"Summary of call transcript {input_file.split('/')[1]} is provided below :\n")
 print(summary)
 end_execution_time = time.time()
 total_time = float(end_execution_time - start_execution_time)
