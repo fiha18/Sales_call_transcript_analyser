@@ -37,6 +37,7 @@ def generate_call_transcript_prompt(sales_representative, client_representative,
     - Provide technical insights into how the integration would work with {client_representative}'s existing systems.
 
     Instructions for the dialogue:
+    - Format the transcript with timestamps and speaker names, like this: `{start_time} [Speaker Name]: Dialogue content.`
     - No need for greeting or concluding remarks, as these prompts are part of a loop.
     - Conversation should include fillers like {fillers} and contraction words like {contraction_words}
     - If participants have opposing requirements or constraints, your task is to handle this without creating contradictions.

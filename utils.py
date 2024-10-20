@@ -3,11 +3,27 @@ import threading
 
 
 def add_time(start_time_str, minutes_to_add):
-        start_time_obj = timedelta(hours=int(start_time_str.split(":")[0]), 
-                                   minutes=int(start_time_str.split(":")[1]), 
-                                   seconds=int(start_time_str.split(":")[2]))
-        end_time_obj = start_time_obj + timedelta(seconds=minutes_to_add*60)
-        return str(end_time_obj)
+        try:
+        # Split time string into hours, minutes, seconds
+                time_parts = start_time_str.split(":")
+                
+                # Ensure that there are exactly 3 parts (HH:MM:SS)
+                if len(time_parts) != 3:
+                        raise ValueError(f"Invalid time format: {start_time_str}")
+                
+                # Convert the time parts to integers
+                start_time_obj = timedelta(hours=int(time_parts[0]), 
+                                        minutes=int(time_parts[1]), 
+                                        seconds=int(time_parts[2]))
+                
+                # Add the required minutes
+                end_time_obj = start_time_obj + timedelta(seconds=minutes_to_add*60)
+                
+                return str(end_time_obj)
+    
+        except ValueError as e:
+                print(f"Error parsing time string '{start_time_str}': {e}")
+                return None
 
 def print_period():
     """

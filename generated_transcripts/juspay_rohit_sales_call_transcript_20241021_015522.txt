@@ -1,0 +1,209 @@
+00:00:00 Rohit (juspay.in): Hi Kailash, thanks for taking the time today. Let's discuss how we can improve your payment solutions.
+
+    00:00:05 Kailash (myntra.com): Hi Rohit, sure I’m excited to learn more about your offerings.
+
+0:00:11 Rohit (juspay.in): Great! So, I wanted to start by diving into our HyperCheckout solution. It's designed for easy integration—essentially, you can have it up and running on your app or website in no time. It supports multiple payment methods like UPI, cards, net banking, and wallets, which is critical for e-commerce platforms like Myntra. 
+
+0:00:30 Kailash (myntra.com): That sounds promising. Can you walk me through how the integration process would work with our existing systems? I want to ensure it won't disrupt our current setup.
+
+0:00:39 Rohit (juspay.in): Absolutely, that's a valid concern. Our HyperCheckout is built to work smoothly with various tech stacks. Typically, it involves embedding a simple JavaScript snippet into your frontend, and then you can utilize our RESTful API for backend communication. We provide comprehensive documentation and a sandbox environment for testing, which makes the entire process pretty straightforward.
+
+0:00:58 Kailash (myntra.com): Okay, that’s good to know. What kind of support do you offer during the integration phase? I want to ensure we aren't left in the dark, especially if we run into issues.
+
+0:01:05 Rohit (juspay.in): We have a dedicated support team available around the clock. You’ll have access to our technical support via chat, email, or even voice calls if needed. Additionally, we also offer a service level agreement (SLA) that guarantees response times depending on the severity of the issue. For critical issues, we aim to respond within an hour.
+
+0:01:25 Kailash (myntra.com): That sounds reassuring. Now, regarding security—how does HyperCheckout handle sensitive payment information? 
+
+0:01:32 Rohit (juspay.in): Great question! Security is a top priority for us. Our system is PCI DSS compliant, meaning we adhere to the highest standards for payment security. We tokenize sensitive data, so it never gets stored or transmitted in a way that could be intercepted. Also, our backend is protected by advanced encryption protocols, ensuring that even if there’s an issue, your customers' data remains safe.
+
+0:01:58 Kailash (myntra.com): That's definitely a must-have for us. Can you elaborate on how you ensure scalability? As we grow, we need a solution that can handle increased transaction volumes without a hitch.
+
+0:02:06 Rohit (juspay.in): Of course! HyperCheckout is built on a microservices architecture, which allows it to scale horizontally. This means that as transaction volumes increase, we can seamlessly add more resources without affecting performance. We also monitor transaction loads in real time, allowing us to preemptively scale based on demand. This ensures that your customers have a smooth checkout experience, even during peak times.
+
+0:02:31 Kailash (myntra.com): That’s very encouraging. What’s the pricing structure like? I want to make sure it aligns with our budget as well.
+
+0:02:38 Rohit (juspay.in): The pricing for HyperCheckout is 0.35% per transaction, which is quite competitive given the range of features and the level of security we offer. Plus, it includes all updates and support without any additional costs. 
+
+0:02:53 Kailash (myntra.com): I see. And what about the Express Checkout SDK? How does it differ from HyperCheckout in terms of use case and integration?
+
+0:03:00 Rohit (juspay.in): Good question! The Express Checkout SDK is tailored for developers who prefer a more customizable checkout experience. It allows you to create your own UI while still leveraging our secure backend. This is ideal if you want more control over the user experience on your app. The integration process is similar, but you'll have greater flexibility in terms of design and functionality.
+
+0:03:27 Kailash (myntra.com): That flexibility could be beneficial, especially if we want to maintain a unique brand identity. What kind of customization options are available?
+
+0:03:34 Rohit (juspay.in): With the Express Checkout SDK, you can customize everything from the look and feel of the payment interface to the flow of the checkout process. You can also add custom logic for handling different payment scenarios, such as offering discounts or upselling products during checkout. The SDK is designed to give you full control while still benefiting from our robust backend security.
+
+0:03:57 Kailash (myntra.com): That’s promising. Are there any limitations I should be aware of when using the SDK compared to HyperCheckout?
+
+0:04:05 Rohit (juspay.in): The primary limitation is the added complexity in development. While HyperCheckout is more of a plug-and-play solution, the SDK requires more upfront effort to implement. However, if you have a capable development team, the benefits of customization can far outweigh that initial investment of time.
+
+0:04:27 Kailash (myntra.com): Understood. And what about the support for multiple payment methods—does the SDK support everything that HyperCheckout does?
+
+0:04:34 Rohit (juspay.in): Yes, it does. Both solutions support the same range of payment methods, including UPI, cards, net banking, and wallets. So, you won’t miss out on any payment options if you decide to go with the SDK.
+
+0:04:50 Kailash (myntra.com): That's good to hear. Just to clarify, if we were to choose the SDK, would we still have access to the same level of backend analytics and reporting?
+
+0:04:56 Rohit (juspay.in): Absolutely! Both solutions provide access to our analytics dashboard, which gives you insights into transaction volumes, user behavior, and more. You'll receive the same level of reporting regardless of which option you choose.
+
+0:05:11 Kailash (myntra.com): Excellent! That really helps clarify my questions. Let’s explore the next steps moving forward.
+
+0:05:17 Rohit (juspay.in): Sure, Kailash! Now, let’s dive into the specifics of the Express Checkout API. One of the standout features is its ease of integration. We use REST APIs, which means your development team can integrate them into your existing systems without major disruptions. Have you had a chance to look at your current payment processing solution and identify any pain points?
+
+0:05:38 Kailash (myntra.com): Yes, we’ve noticed that our current solution is somewhat rigid when it comes to customization. We want to provide a more tailored experience for our users, especially during checkout. How flexible is your API in that regard?
+
+0:05:54 Rohit (juspay.in): That's a great question! The Express Checkout API is designed to be highly customizable. You can modify the payment experience according to your branding and user journey. Whether it’s the layout, the flow, or even the payment methods, you're in control. Plus, it supports all major payment methods, including credit cards, debit cards, UPI, and wallets. Do you have specific customization requirements in mind?
+
+0:06:19 Kailash (myntra.com): Definitely! We’re particularly interested in optimizing the mobile checkout experience since a significant portion of our users shop via mobile. Can the API handle different user interfaces seamlessly across devices?
+
+0:06:34 Rohit (juspay.in): Absolutely! The API is responsive by design. It adjusts dynamically to different screen sizes and resolutions, ensuring a smooth checkout process on both mobile and desktop. Furthermore, we provide comprehensive documentation that includes various UI samples and best practices for mobile optimization. Would your team require any assistance with the implementation?
+
+0:06:57 Kailash (myntra.com): That sounds promising! I think our developers would appreciate that. However, I’m also curious about the security protocols in place. What measures do you have to ensure transaction security?
+
+0:07:10 Rohit (juspay.in): Great question! Security is a top priority for us. The Express Checkout API is built with robust security protocols, including PCI DSS compliance, encryption of sensitive data, and tokenization. We also implement two-factor authentication and regular security audits. This means that both your customers and their payment details are well protected throughout the transaction. Does your current system have any specific security concerns that we should address?
+
+0:07:41 Kailash (myntra.com): Yes, we’ve encountered issues with fraud detection and chargebacks recently. It’s become a bit of a challenge for us. How does your system handle these issues?
+
+0:07:55 Rohit (juspay.in): I understand your concerns. Our system incorporates advanced fraud detection mechanisms that analyze transaction patterns in real-time. We use machine learning algorithms that help identify and flag potentially fraudulent transactions before they are approved. Additionally, we offer chargeback management tools that assist you in responding to disputes effectively. Would you be interested in integrating those tools as part of your setup?
+
+0:08:23 Kailash (myntra.com): That would be really helpful! But, I wonder about the scalability of your solution. As our user base grows, can your service handle increased traffic during peak shopping seasons?
+
+0:08:39 Rohit (juspay.in): Absolutely! The Express Checkout API is designed to scale effortlessly. It can handle high transaction volumes, especially during peak seasons like sales events or holidays. We leverage cloud infrastructure, which allows for real-time scaling based on demand. Moreover, we monitor system performance closely, ensuring that any spikes in traffic are managed without downtime. Do you anticipate any specific traffic surges based on your business cycles?
+
+0:09:05 Kailash (myntra.com): Yes, we usually see significant spikes during the festive season and major sales. It’s critical that we maintain a seamless checkout experience during those times. What kind of service level agreement (SLA) do you offer in terms of uptime and support?
+
+0:09:21 Rohit (juspay.in): Our standard SLA guarantees 99.9% uptime, which means your checkout will be available almost all the time. In terms of support, we provide 24/7 technical assistance, so you can reach out anytime you need help. Additionally, our support team is well-versed in handling integration issues and can assist you proactively. Would you like to know more about how our support works during high-traffic periods?
+
+0:09:50 Kailash (myntra.com): Yes, that would be beneficial to understand. How does your team ensure that support is readily available, especially during those peak times?
+
+0:09:56 Rohit (juspay.in): Great question, Kailash. During peak periods, we have a dedicated support team that monitors system performance in real-time. They’re equipped with dashboards that display key metrics, allowing them to identify and resolve any issues before they escalate. We also implement a tiered support system, where critical issues get immediate attention, ensuring minimal disruption to your operations. 
+
+0:10:20 Kailash (myntra.com): That sounds reassuring. So, what about the integration process itself? How does HyperCredit fit into our existing systems?
+
+0:10:27 Rohit (juspay.in): Excellent point! HyperCredit is designed to integrate seamlessly with your existing checkout systems. We utilize RESTful APIs, which means you can easily connect your backend with our service without major overhauls. Our SDKs also offer pre-built components for faster deployment. We’ll provide comprehensive documentation and even sample code to help your developers through the integration process. 
+
+0:10:50 Kailash (myntra.com): That’s helpful. But I’m curious, what kind of technical support do you offer during the integration phase?
+
+0:10:56 Rohit (juspay.in): We offer extensive technical support during the integration phase. Our team conducts onboarding sessions with your developers, guiding them through best practices and addressing any specific challenges they might encounter. We also have a dedicated Slack channel for real-time troubleshooting during the integration, so your team can get quick answers to any questions without delays.
+
+0:11:19 Kailash (myntra.com): I see. That sounds efficient. What about security? I know that handling financial data comes with significant risks. How do you ensure that our customer data is secure?
+
+0:11:29 Rohit (juspay.in): Absolutely, security is a top priority for us. We comply with PCI DSS standards, which means we have stringent measures in place to protect cardholder data. Our platform uses end-to-end encryption for all transactions, and we perform regular security audits and penetration testing. Additionally, we’ve implemented tokenization, which means sensitive data is replaced with a unique identifier, reducing the risk of data breaches.
+
+0:11:55 Kailash (myntra.com): That’s reassuring. However, with all these security measures, how do you balance performance? We need to ensure a smooth customer experience during the checkout process.
+
+0:12:03 Rohit (juspay.in): That’s a great concern, and we’ve optimized our system specifically for that. By leveraging CDN networks and caching strategies, we minimize latency. The architecture is built to scale horizontally, which allows us to handle high traffic volumes without impacting performance. We’ve also implemented smart load balancing to distribute traffic evenly across our servers.
+
+0:12:27 Kailash (myntra.com): So, scalability is built into the system. Can you elaborate on how it would handle an unexpected traffic surge, like during a major sale?
+
+0:12:36 Rohit (juspay.in): Definitely. Our system is designed to automatically scale based on traffic patterns. If we detect a spike, we can provision additional resources in real-time to accommodate the load. This elasticity ensures that your checkout experience remains smooth, even during peak traffic events. We also conduct stress tests regularly to ensure our infrastructure can handle unexpected demands.
+
+0:13:02 Kailash (myntra.com): That sounds robust. Now, regarding Payment Forms, how easy is it for us to set that up for events or pop-up sales?
+
+0:13:09 Rohit (juspay.in): Payment Forms are incredibly user-friendly. You don’t need a full-fledged website to get started. Just create a form on our platform, customize it with your branding, and share the link. It’s designed for quick setup and can be up and running within minutes. Plus, you’ll still have access to our analytics dashboard to track transactions in real-time. 
+
+0:13:34 Kailash (myntra.com): Sounds simple. But what if we want to integrate Payment Forms with our existing customer data systems? 
+
+0:13:40 Rohit (juspay.in): We can facilitate that integration as well. Payment Forms can be linked to your CRM or data management systems through our API. This way, you can collect and analyze customer data seamlessly alongside transaction information, ensuring a comprehensive view of your sales and customer interactions.
+
+0:14:00 Kailash (myntra.com): That’s useful. But how does the pricing structure work for Payment Forms? You mentioned 0.45% per transaction—are there any hidden fees?
+
+0:14:08 Rohit (juspay.in): Great question. The 0.45% fee covers all transaction costs, and there are no hidden fees. We believe in transparency, so you’ll know exactly what to expect. Additionally, we offer competitive rates for high volumes, which could further reduce your overall transaction costs. 
+
+0:14:31 Kailash (myntra.com): That’s good to know. I appreciate the transparency. What about reporting features? How do we track the performance of both HyperCredit and Payment Forms? 
+
+0:14:39 Rohit (juspay.in): Our dashboard provides comprehensive reporting features for both products. You’ll have access to transaction summaries, conversion rates, and customer insights. The analytics tools allow you to filter data by various metrics, helping you make informed decisions based on your sales performance. 
+
+0:14:56 Kailash (myntra.com): That sounds powerful. Thank you for clarifying all these points.
+
+0:15:02 Rohit (juspay.in): I'm glad you found that helpful, Kailash. Now, regarding the NACH Mandates, one of the key advantages is the 99% success rate for recurring payments. This means that your customers can set up their payments once, and it minimizes the hassles of failed transactions. Have you considered the impact of payment failures on your customer experience?
+
+0:15:25 Kailash (myntra.com): Absolutely, Rohit. Payment failures can really frustrate customers and lead to abandoned transactions. A high success rate would definitely help in retaining them. How does the integration process work for the NACH Mandates?
+
+0:15:44 Rohit (juspay.in): Great question! Integrating NACH Mandates is quite straightforward. You can either use our REST APIs or the dashboard interface. If you opt for the APIs, we provide detailed documentation to guide your developers through the integration process. The API allows for automated handling of mandates, making it easier for you to manage subscriptions or EMIs. Would you be looking at developing this in-house, or do you have a tech partner?
+
+0:16:13 Kailash (myntra.com): We're considering a hybrid approach. Some parts will be handled in-house, while others may involve an external partner. What about support during the integration phase? 
+
+0:16:29 Rohit (juspay.in): We offer comprehensive support during and after the integration phase. Once you start, our technical support team will be available to assist you with any challenges. We also conduct regular check-ins to ensure everything's running smoothly. Plus, we have a dedicated account manager who will help you navigate through any strategic decisions. Does that align with what you were hoping for?
+
+0:16:55 Kailash (myntra.com): Yes, that sounds great. Having that level of support is crucial. Now, switching gears a bit, can you explain how the security protocols work with the NACH Mandates?
+
+0:17:13 Rohit (juspay.in): Absolutely. Security is a top priority for us. The NACH Mandates comply with the latest security standards, including end-to-end encryption during data transmission. We also implement tokenization, which ensures that sensitive customer data isn’t stored on your servers. Instead, unique tokens are created for each transaction, reducing the risk of data breaches. Does your team have specific security requirements you’re focused on?
+
+0:17:40 Kailash (myntra.com): Yes, we do. We're particularly concerned about compliance with PCI DSS standards since we deal with a lot of customer financial data. How does your solution align with those requirements?
+
+0:17:58 Rohit (juspay.in): That's a valid concern. Our solutions are designed with PCI DSS compliance in mind. We ensure that any payment information processed through our systems adheres to the strictest security measures defined by PCI. Regular audits and penetration testing are part of our protocol to maintain compliance and security. Additionally, we provide documentation to help your compliance team understand how our systems align with these standards. Would that be sufficient for your needs?
+
+0:18:27 Kailash (myntra.com): Yes, that would be helpful. I appreciate the thoroughness. Now, regarding the UPI TPAP SDK, how does that fit into the overall architecture of our existing systems? 
+
+0:18:42 Rohit (juspay.in): The UPI TPAP SDK can seamlessly integrate with your existing infrastructure. It’s designed to be modular, meaning you can implement it without needing a complete overhaul of your current systems. Your developers can use the SDK to enable both P2P and P2M transactions within your app, giving you a custom payment solution like GPay or PayTM. The SDK also supports various payment methods, which is great for enhancing customer convenience. What specific features are you hoping to add with this integration?
+
+0:19:12 Kailash (myntra.com): We want to enhance the payment experience, particularly for mobile transactions. It would be ideal if the SDK could also support loyalty programs and promotional offers. Is that something it can handle?
+
+0:19:28 Rohit (juspay.in): Yes, indeed! The UPI TPAP SDK allows for the integration of loyalty programs and promotional offers. You can create custom workflows to apply discounts or rewards during the checkout process. This flexibility can significantly improve customer engagement. Are you currently using any loyalty programs that you’d like to integrate with the payment process?
+
+0:19:54 Kailash (myntra.com): Yes, we have a few running, but we want to streamline them. It sounds like your solution could help with that. What’s the pricing structure for the UPI TPAP SDK?
+
+0:20:10 Rohit (juspay.in): The pricing for the UPI TPAP SDK is 0.30% per transaction, which is quite competitive considering the features and flexibility it offers. Plus, since it supports multiple payment methods, you can optimize your transaction costs based on the payment options your customers choose. How does that align with your budget expectations?
+
+0:20:16 Rohit (juspay.in): That aligns well, considering that our HyperUPI solution is priced at just 0.15% per transaction. It’s designed to make the payment process seamless for your customers, allowing for one-click in-app UPI payments right on your checkout page. This means they won’t have to leave your app, which could significantly improve conversion rates.
+
+0:20:36 Kailash (myntra.com): That sounds promising, but I’m curious about how easy it is to integrate HyperUPI with our existing systems. What does the integration process look like?
+
+0:20:46 Rohit (juspay.in): Great question! The integration is quite straightforward. We provide a pre-built, customizable UI that you can easily embed into your app. Our SDK is lightweight, and we have extensive documentation to guide your developers through the process. Typically, it involves adding a few lines of code to your checkout flow, and our team can assist you with that during the integration phase. Would you like me to share some technical details or documentation?
+
+0:21:12 Kailash (myntra.com): Yes, that would be helpful. We're also keen on understanding the security protocols you've implemented to safeguard transactions. With the increasing focus on security in payments, it’s critical for us.
+
+0:21:25 Rohit (juspay.in): Absolutely, security is a top priority for us. HyperUPI employs end-to-end encryption and complies with PCI DSS standards. Additionally, we use tokenization to ensure sensitive data is not stored on your servers. We also offer features like two-factor authentication and fraud detection mechanisms which can be customized to suit your requirements. This layered approach ensures that both your customers' data and transaction integrity are protected. How do these measures align with your security policies?
+
+0:21:57 Kailash (myntra.com): They align quite well, but we need to ensure that these security protocols don’t affect the user experience. If users have to go through too many steps, it might deter them from completing purchases.
+
+0:22:08 Rohit (juspay.in): I completely understand your concern. The beauty of our HyperUPI solution is that while it has robust security features, we’ve designed the customer experience to be as frictionless as possible. For instance, with the pre-built UI, we can implement the two-factor authentication in a way that’s not intrusive. Most of our clients have found that their conversion rates actually improve with our solution because customers feel more secure. Would you like to discuss specific user flows?
+
+0:22:38 Kailash (myntra.com): Yes, I’d like to see how that would work in practice. What kind of user flows do you typically recommend for a smoother experience?
+
+0:22:46 Rohit (juspay.in): Typically, we recommend starting with a simple one-click payment option for users who have already authenticated their UPI accounts. If they’re new or haven’t linked their accounts, we can guide them through a quick setup process. This way, return customers can enjoy a swift checkout, while new users still have a clear path to complete their transactions. We can also implement a ‘Save for future use’ option, which encourages repeat usage. How does that sound for your user base?
+
+0:23:17 Kailash (myntra.com): That sounds good. However, we do have a diverse customer base, and some segments may not be as tech-savvy. I wonder if the integration can accommodate those users without making it too complicated.
+
+0:23:29 Rohit (juspay.in): Definitely. We can customize the interface depending on the user segment. For less tech-savvy customers, we can provide more guided prompts and a clear step-by-step process. This flexibility ensures that all users, regardless of their comfort level with technology, can navigate the payment process easily. Plus, our analytics tools can help you monitor user interactions and optimize the flows over time. Would you be interested in exploring those analytical capabilities?
+
+0:23:59 Kailash (myntra.com): Yes, analyzing user interactions would be crucial for us. How does your analytics tool integrate with the payment process, and what kind of insights can we expect?
+
+0:24:09 Rohit (juspay.in): Our analytics tool integrates seamlessly with HyperUPI, providing real-time data on transaction success rates, drop-off points in the payment process, and user demographics. You can gain insights into which payment options are most popular, and how different user segments interact with your checkout flow. This information can be invaluable for optimizing both your payment processes and overall user experience. Would you like to see a demo of this feature?
+
+0:24:34 Kailash (myntra.com): A demo would definitely help us visualize how it all comes together. Also, can I ask about your service level agreement? What kind of support do you provide post-integration?
+
+0:24:45 Rohit (juspay.in): Of course! Our service level agreement includes 24/7 technical support and a dedicated account manager who will assist you throughout the integration and beyond. We also provide regular performance reports and proactive monitoring to ensure everything runs smoothly. Our aim is to be there for you every step of the way, especially during peak shopping periods. Does that meet your expectations for ongoing support?
+
+0:24:51 Kailash (myntra.com): That definitely sounds reassuring, Rohit. The 24/7 support is something we’d really value, especially during high-traffic times. But can you elaborate on how the integration process works with our existing systems? We have a pretty established infrastructure and want to ensure compatibility.
+
+0:25:06 Rohit (juspay.in): Absolutely, Kailash. Our integration process is designed to be seamless. We provide RESTful APIs that can easily connect with most e-commerce platforms, including yours. We start with a sandbox environment where your developers can test the integration without affecting your live systems. 
+
+0:25:23 Rohit (juspay.in): Once testing is complete, we’ll guide you through the transition to the production environment. We also have comprehensive documentation and code samples to facilitate this. Additionally, our technical team will be on standby to assist with any challenges that might arise during the integration phase.
+
+0:25:40 Kailash (myntra.com): That’s great to hear! So, when you talk about RESTful APIs, how do you ensure security during these transactions? Security is a major concern for us, especially when dealing with customer payouts and vendor payments.
+
+0:25:54 Rohit (juspay.in): I completely understand. Security is paramount for us as well. Our APIs are designed with industry-standard security protocols, including OAuth 2.0 for authentication and TLS encryption for data transmission. This ensures that all sensitive information, including payment details, is securely protected during transactions.
+
+0:26:12 Rohit (juspay.in): Furthermore, we undergo regular security audits and comply with PCI DSS standards. This level of security not only protects your data but also instills trust among your customers and vendors. Do you currently have any specific security measures in place that we should align with?
+
+0:26:31 Kailash (myntra.com): Yes, we do have some security protocols, including two-factor authentication for sensitive operations. It sounds like your system can integrate well with that. But I’m curious about the scalability of your solutions. As we grow, especially during seasonal spikes, how can your products handle increased transaction volumes?
+
+0:26:50 Rohit (juspay.in): Great question! Both Juspay Payout and JusBiz are built to be highly scalable. Our architecture supports horizontal scaling, allowing us to manage increased loads by adding more resources as needed. 
+
+0:27:05 Rohit (juspay.in): Additionally, we use load balancing to distribute traffic efficiently across servers. This means that during peak times, like sales events, the system can handle spikes in transaction requests without any degradation in performance. Have you experienced scalability issues with your current payment solutions?
+
+0:27:27 Kailash (myntra.com): Yes, during our last big sale, we faced some challenges with processing speed and downtime. That’s why we’re looking for a more robust solution. Can you tell me about your pricing structure again, specifically how it scales with larger transaction volumes?
+
+0:27:44 Rohit (juspay.in): Certainly! For Juspay Payout, the pricing is set at 0.25% per payout transaction, which is competitive for large-scale operations. For JusBiz, the virtual card solution is priced at 0.35% per transaction. These rates remain consistent, regardless of the volume, so as you scale, you won't experience any unexpected price hikes.
+
+0:28:06 Rohit (juspay.in): This allows you to budget effectively as you grow. We also offer volume-based discounts for very high transaction volumes, which could benefit you during peak seasons. Would that pricing model align well with your budgetary expectations?
+
+0:28:27 Kailash (myntra.com): That sounds reasonable. We can definitely work with that. I think a demo would really help us see how these features translate into our operations. Can we set something up?
+
+0:28:40 Rohit (juspay.in): Absolutely! I’d love to arrange a demo for you. It’ll give you a hands-on feel for how our solutions work and how they can be tailored to meet your specific needs. 
+
+0:28:54 Rohit (juspay.in): After the demo, we can also discuss any further questions or concerns that arise. When would be a good time for your team to connect for this?
+
+0:29:09 Kailash (myntra.com): How about early next week? We can gather our technical team to join as well. Does that work for you?
+
+0:29:19 Rohit (juspay.in): Early next week sounds perfect! I’ll coordinate with my team and send over a calendar invite with some time slots. I'm looking forward to diving deeper into how we can support Myntra’s growth with our solutions.

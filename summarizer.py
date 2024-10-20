@@ -79,6 +79,7 @@ input_file = "generated_transcripts/darwinbox_srijan_sales_call_transcript_20241
 summary = generate_transcript_summary(input_file,summary_format="concise")
 print(f"Summary of call transcript {input_file.split('/')[1]} is provided below :\n")
 print(summary)
+print(completion_usage)
 end_execution_time = time.time()
 total_time = float(end_execution_time - start_execution_time)
 print(f"Total time taken: {total_time:.4f} seconds")
