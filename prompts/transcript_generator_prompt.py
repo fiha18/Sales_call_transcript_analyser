@@ -3,7 +3,7 @@ def generate_call_transcript_system_message(call_duration):
     system_message = f"""
     You are an expert dialogue and script generator.
     Your task is to create detailed, realistic, and technical sales call transcripts. The goal is to produce a natural and comprehensive conversation focused on the provided context, split into smaller chunks of {call_duration}-minute intervals to ensure accuracy and token efficiency.
-    The conversation should be highly engaging, with deep technical discussions on the products, including product features, security, integration, and scalability. 
+    The conversation should be highly engaging, with deep technical discussions on the products, including problem-solving approaches, product features, security, integration, and scalability. 
     You are expected to add transitions, customer objections, clarifications, and responses, making it as authentic as possible. Each segment should continue smoothly from the previous one to ensure the transcript feels continuous.
     In this setup:
     1. You will generate the conversation in smaller increments (e.g., 5 minutes), avoiding generatin in one go and aiming for a response that uses the maximum token limit.
@@ -15,7 +15,7 @@ def generate_call_transcript_system_message(call_duration):
 
 
 
-def generate_call_transcript_prompt(sales_representative, client_representative, product_domain, customer_domain, product_detail_list, start_time, call_duration,last_ending_line):
+def generate_call_transcript_prompt(sales_representative, client_representative, product_domain, customer_domain, product_detail_list, start_time, call_duration,last_ending_line,fillers,contraction_words,major_context):
     end_time = utils.add_time(start_time, call_duration)
     product_details = ""
     for product in product_detail_list:
@@ -33,13 +33,16 @@ def generate_call_transcript_prompt(sales_representative, client_representative,
 
     Here are the primary points for the call:
     - {sales_representative} should emphasize ease of integration, security protocols, scalability, and support for multiple {product_domain} methods.
-    - Address concerns related to data security, pricing breakdown, and ongoing support/maintenance costs.
+    - Address concerns related to {major_context}.
     - Provide technical insights into how the integration would work with {client_representative}'s existing systems.
 
     Instructions for the dialogue:
     - No need for greeting or concluding remarks, as these prompts are part of a loop.
-    - Format the transcript with timestamps and speaker names, like this: `{start_time} [Speaker Name]: Dialogue content.`
-    - Make the conversation flow naturally with technical depth discussions and high level architecture.
+    - Conversation should include fillers like {fillers} and contraction words like {contraction_words}
+    - If participants have opposing requirements or constraints, your task is to handle this without creating contradictions.
+    - Discussion on service level agreement (SLA)
+    - Ensure the use of randomness doesn’t cause bias (e.g., favoring certain participants too often)
+    - Make the conversation flow naturally with highly specialized jargon, technical depth discussions specific to {product_domain} and high level architecture.
     - Each new chunk conversation will begin by alternative speaker after the last few lines from the previous segment as provided within ``` ``` quotes below.
     - There must be follow up questions from {client_representative}
     - Each response should be detailed and relevant to the client's needs.

@@ -7,10 +7,13 @@ import utils as utils
 import product_details.juspay_product as juspay
 import product_details.darwinbox_product as darwinbox
 
+#To Do : Add Exception Handling
+#To Do : Unexpected participant count handling
+# To Do : OpenAI Rate limits, API downtime or slow response retry mechanism,Prompt length limits,
 start_execution_time = time.time()
 OPENAI_API_KEY = "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"
 client = OpenAI(api_key=OPENAI_API_KEY)
-model = "gpt-4o"
+model = "gpt-4o-mini"
 temperature = 0.7
 max_tokens = 8000       
 print("Product owner should be between juspay or darwinbox")
@@ -37,8 +40,9 @@ for i in range(0,total_iteration):
     start_time = utils.add_time(previous_end_time,0.1)
     print(" Start Time of "+str(i+1)+ " part of transcript "+ start_time)
     # start time of ith transcript should be  >= end time of (i-1)th transcript
+    contraction_word_list = list(utils.get_contration_words.keys())
     system_message = transcript_generator_prompt.generate_call_transcript_system_message(part_duration)
-    prompt_message = transcript_generator_prompt.generate_call_transcript_prompt(product_owner.sales_representative, product_owner.client_representative,product_owner.product_domain, product_owner.customer_domain, product_detail_list, start_time, part_duration,previous_end_lines)
+    prompt_message = transcript_generator_prompt.generate_call_transcript_prompt(product_owner.sales_representative, product_owner.client_representative,product_owner.product_domain, product_owner.customer_domain, product_detail_list, start_time, part_duration,previous_end_lines,utils.get_common_fillers,utils.get_major_context)
     if i==(total_iteration-1):
         prompt_message = prompt_message + "Last Instruction - Conclude the transcript with next steps for a product demo and potential follow-up meetings."
     messages=[
@@ -69,14 +73,13 @@ if not os.path.exists(folder_path):
     os.makedirs(folder_path)
 
 current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
-
+# To Do : If there exist same duration transcript handle exception
 file_name = f"{product_owner.product_company.split('.')[0]}_{product_owner.sales_representative.split(' ')[0].lower()}_sales_call_transcript_{current_time}.txt"
 
 file_path = os.path.join(folder_path, file_name)
 
 with open(file_path, 'w') as file:
     file.write(final_response_content)
-
 
 print("Transcript generated successfully and saved to folder - "+folder_path + "with file names -" + file_name)
 

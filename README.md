@@ -77,7 +77,7 @@ source path/to/venv/bin/activate
 ### Install Dependencies
 ```bash
 pip install openai
-pip install PyPDF2
+pip install textblob
 ```
 
 ### Run the Transcript Generator:
@@ -109,4 +109,10 @@ CALL-TRANSCRIPT-ANALYSIS
 ```
 
 ## Task 2: Call Summarization {WIP}
+### Future work 
+  - Use of language detection to ensure the correct language model is applied for multilingual scenarios.
+  - Tone Filtering: tone analysis as part of the processing, identify emotive language or sarcasm for better insight.
+  - Keyword Segmentation: From a list of important keywords that signify different sections of the conversation. When a keyword is detected, segment the transcript at that point.
+
+
 ## Task 3: Querying Transcripts{WIP}
