@@ -16,7 +16,7 @@ def get_summarizer_system_message(word_limit):
 
 def get_summarizer_user_prompt(transcript,summary_format,primary_points):
     prompt = f"""
-    As an AI language model,Your task is to summarize a portion of a sales call transcript between a senior sales representative from a product company and a client representative from a customer_domain business. The focus of the summary should be on the technical and business-related aspects of the conversation.
+    As an AI language model,Your task is to summarize a chunk of a sales call transcript between a senior sales representative from a product company and a client representative from a customer business. The focus of the summary should be on the technical and business-related aspects of the conversation.
 
     Instructions for summarizing the transcript:
     1. Ignore any small talk, greetings, or irrelevant details.

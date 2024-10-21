@@ -1,6 +1,7 @@
 # from openai import OpenAI
 # from openai import RateLimitError
 import os
+import sys
 import time
 import utils
 import prompts.summarizer_prompt as summarizer_prompt
@@ -17,7 +18,7 @@ start_execution_time = time.time()
 # max_tokens = 8000   
 
 completion_usage = {}
-def generate_transcript_summary(file_path,summary_format):
+def generate_transcript_summary(file_path,summary_format="paragraph"):
     """
     Creates a summary for a given file using the OpenAI GPT 4 API.
 
@@ -62,9 +63,13 @@ def save_summary_file(file_path,summary):
 def perform_call_transcript_summary_generation():
     # To do: add transcript_folder, input_file_name and summary_format from input or runtime parameter
     transcript_folder = "generated_transcripts"
-    input_file_name = "darwinbox_srijan_sales_call_transcript_20241021_020017.txt"
+    command_line_args = sys.argv
+    input_file_name = command_line_args[1]
+    if not input_file_name:
+        print(f"Input file {input_file_name} does not exists, skipping.")
+        return 
     # either paragraph , bullet_points, concise
-    summary_format = "bullet_points"
+    summary_format = command_line_args[2] if len(command_line_args) > 2  else None 
     transcript_file_path = os.path.join(transcript_folder, input_file_name)
     if not os.path.exists(transcript_file_path):
         print(f"file {os.path.basename(transcript_file_path)} does not exists.")
@@ -91,7 +96,7 @@ def perform_call_transcript_summary_generation():
             print(f"File already exists: {file_path}")
         except Exception as e:
             print(f"An error occurred while writing the file: {file_path}. Error: {e}")
-    #print(summary)
+    print(summary)
 
 perform_call_transcript_summary_generation() 
 # summary_format - paragraph format ,bullet points or concise
