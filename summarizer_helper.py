@@ -20,8 +20,11 @@ def split_text(text, word_limit=1500):
     return [' '.join(words[i * word_limit: (i + 1) * word_limit]) for i in range(num_parts)]
 
 
-
 def preprocess_text(text):
+    processed_lines = preprocess_text_helper(text)
+    return '\n'.join(processed_lines)
+
+def preprocess_text_helper(text):
     """
     Preprocess the chunk of call transcript text
         1. removing timestamp and participant name from lines like ( 00:00:03 Sam(open.ai) )
@@ -32,7 +35,7 @@ def preprocess_text(text):
     text (str): The text to be split.
 
     Returns:
-    list: The list of lines.
+    lines (str): proccessed lines .
     """
     start_execution_time_preprocessing = time.time()
     lines = text.lower().split('\n')
@@ -67,4 +70,5 @@ def preprocess_text(text):
     end_execution_time_preprocessing = time.time()
     total_time = float(end_execution_time_preprocessing - start_execution_time_preprocessing)
     print(f"Total time taken for preprocessing: {total_time:.4f} seconds")
-    return '\n'.join(processed_lines)
+    return processed_lines
+

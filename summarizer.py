@@ -54,7 +54,6 @@ def generate_transcript_summary(file_path,summary_format):
                     temperature = temperature,
                     max_tokens = max_tokens 
                 )
-                completion_usage[i] = completion_response.usage
                 utils.stop_print_period()
                 print("")
                 summary = completion_response.choices[0].message.content.replace("```", "")
@@ -124,7 +123,7 @@ def perform_call_transcript_summary_generation():
 
 perform_call_transcript_summary_generation() 
 # summary_format - paragraph format ,bullet points or concise
-print(completion_usage)
+#print(completion_usage)
 end_execution_time = time.time()
 total_time = float(end_execution_time - start_execution_time)
 print(f"Total time taken: {total_time:.4f} seconds")
