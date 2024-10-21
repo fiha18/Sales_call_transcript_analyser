@@ -10,14 +10,20 @@ start_execution_time = time.time()
 
 def query_chunks_with_openai(user_query,chunks):
     #total_chunks = len(chunks)
-    final_response = []
+    chunk_response_list = []
     for i,chunk in enumerate(chunks,start=1):
         system_message = query_prompt.get_querying_system_message()
         prompt_message = query_prompt.get_querying_user_prompt(chunk,user_query)
         # Generic openai api function which accepts system message and user prompt
         chunk_response = openai.call_openai_api(system_message,prompt_message)
-        final_response.append(chunk_response)
-    return "".join(final_response)
+        chunk_response_list.append(chunk_response)
+    return chunk_response_list
+
+def merge_chunk_responses(user_query,chunk_response_list):
+    system_message = query_prompt.get_merge_response_system_message(chunk_response_list)
+    prompt_message = user_query
+    final_response = openai.call_openai_api(system_message,prompt_message)
+    return final_response
 
 # Main function that handles the querying of the transcript chunks
 def query_transcript(transcript, query):
@@ -31,11 +37,12 @@ def query_transcript(transcript, query):
     
     # OpenAI API with relevant chunks
     if relevant_chunks:
-        responses = query_chunks_with_openai(query, relevant_chunks)
+        chunk_response_list = query_chunks_with_openai(query, relevant_chunks)
+        response = merge_chunk_responses(query,chunk_response_list)
     else:
         return "No relevant information found in the transcript."
     
-    return responses
+    return response
 
 
 def perform_user_query_on_call_transcript_generation():

@@ -220,8 +220,9 @@ Attaching Screenshots of querying to call transcript and summary for same query.
     ![Screenshot of querying with summary : Time 9 seconds ]( /screenshots/query_with_summary.png)
     
 #### Optimizations
-
 - **Efficient Use of Token Limits**: Avoided exceeding token limits in the GPT models and ensure that responses are accurate without truncation.
 - **Priority of Summary**: Using a pre-generated summary for general or simple queries thus speeding up query resolution.
 - **Fallback Mechanism**: If the summary does not contain enough information to answer the user query, the system efficiently falls back on querying the transcript chunks.
+
+- **Merging Chunk Responses**: chat completion api response for each chunk are merged in a cohesive, well-structured response that directly addresses the user’s prompt.
 

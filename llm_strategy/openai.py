@@ -27,8 +27,8 @@ def call_openai_api(system_message, prompt_message, model = "gpt-4o-mini", max_t
             print(f"Sending request to OpenAI API...", end="")
             utils.print_period()
             message = [
-                    {"role" : "system", "content": system_message}
-                ,   {"role" : "user", "content" : prompt_message}
+                    {"role" : "system", "content": [{"type":"text","text":system_message}]}
+                ,   {"role" : "user", "content" : [{"type":"text","text":prompt_message}]}
                 ]
             completion_response = client.chat.completions.create(
                     model=model,
