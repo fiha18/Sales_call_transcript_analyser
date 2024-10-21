@@ -119,8 +119,6 @@ def perform_user_query_on_call_transcript_generation():
     #To Do : Persist Chat into file 
         
 perform_user_query_on_call_transcript_generation() 
-# summary_format - paragraph format ,bullet points or concise
-print(completion_usage)
 end_execution_time = time.time()
 total_time = float(end_execution_time - start_execution_time)
 print(f"Total time taken: {total_time:.4f} seconds")

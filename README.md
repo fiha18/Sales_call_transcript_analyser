@@ -173,4 +173,54 @@ The script includes robust error handling to ensure smooth operation during the 
   - Keyword Segmentation: From a list of important keywords that signify different sections of the conversation. When a keyword is detected, segment the transcript at that point.
 
 
-## Task 3: Querying Transcripts{WIP}
+## Task 3: Querying the Transcript Efficiently
+
+In this task, the focus is on efficiently querying large transcripts while handling token limitations in GPT models, and using summaries for faster responses when applicable.
+
+#### Approach
+
+**Step 1: Chunking the Transcript for Querying**
+
+Due to token limitations in models like GPT-3.5 and GPT-4 (approximately 4,000 tokens for GPT-3.5 and up to 8,000 tokens for GPT-4), the transcript must be split into smaller, manageable chunks to fit within these constraints.
+
+**Steps:**
+1. **Define Chunk Size**:  
+   Chunk the transcript into segments of around 2,500 tokens (approximately 10,000 characters) to ensure each chunk can be processed effectively.
+   
+2. **Create a Chunking Function**:  
+   The function splits the transcript into logical segments, ensuring the breaks occur at natural points such as the end of a sentence or topic.
+
+3. **Store and Index Chunks**:  
+  Storing each chunk in a list of dict, indexing them by their start and end positions allowing easy reference back to the original transcript.
+
+4. **Synonym Replacement for Efficient Querying**:  
+  a function to replace synonyms with their corresponding keyword, ensuring that multiple related terms are combined into a single word. This optimization helps match relevant chunks more effectively.
+
+   - **Example**:  
+     Query: "Explain in brief about Employee onboarding, its security protocols, encryption, their pricing, fee or charge, and how integration or linking can be done?"  
+     After processing, the query will be converted into a set of keywords:  
+     `{'protocols', 'or', 'how', 'done', 'brief', 'their', 'and', 'price', 'onboarding', 'be', 'explain', 'in', 'employee', 'its', 'integration', 'security', 'can', 'about'}`
+
+   This approach simplifies the query by collapsing related terms (e.g., "pricing", "fee", "charge" are all combined into "price"), ensuring a more efficient search through transcript chunks.
+
+**2: Handling Summary for Quick Responses**
+
+For call of around 30 minutes the summary is smaller (~12,000 characters) and call transcript (~28,000 character), it is better suited for general queries that do not require deep contextual information. This saves processing time and fits within the token limit for querying.
+Attaching Screenshots of querying to call transcript and summary for same query. 
+**Steps:**
+1. **Direct Query on Summary**:  
+   If the query appears general or focused on broad information, the summary file is used for querying directly, avoiding the need to process the full transcript.
+
+2. **Fallback to Full Transcript Query**:  
+   If the summary is insufficient for answering the query, the system falls back to the full transcript by searching through the chunks generated in Step 1.
+  - Querying without summary
+    ![Screenshot of querying without summary : Time 29 seconds ]( /screenshots/query_without_summary.png)
+  - Querying with summary
+    ![Screenshot of querying with summary : Time 9 seconds ]( /screenshots/query_with_summary.png)
+    
+#### Optimizations
+
+- **Efficient Use of Token Limits**: Avoided exceeding token limits in the GPT models and ensure that responses are accurate without truncation.
+- **Priority of Summary**: Using a pre-generated summary for general or simple queries thus speeding up query resolution.
+- **Fallback Mechanism**: If the summary does not contain enough information to answer the user query, the system efficiently falls back on querying the transcript chunks.
+
