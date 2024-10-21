@@ -19,19 +19,28 @@ def get_synonyms_dict():
     }
     return synonyms
 
-# Function to optimize keyword extraction
+def map_synonyms_to_original_keyword(query_word, synonyms_dict):
+    """Map a synonym to its keyword."""
+    for key, synonym_list in synonyms_dict.items():
+        if query_word in synonym_list:
+            return key
+    return query_word 
+
 def extract_keywords(query):
     """AI-Generated Code for using re.sub to remove punctuation"""
-    # lowercase, remove punctuation, and split into words
+    # Lowercase, remove punctuation, and split into words
     normalized_query = re.sub(r'[^\w\s]', '', query.lower())
     query_keywords = normalized_query.split()
+    
     generic_synonyms = get_synonyms_dict()
-    expanded_keywords = set()
+
+    # Replace synonyms with their corresponding keyword
+    combined_keywords = set()
     for keyword in query_keywords:
-        expanded_keywords.add(keyword)
-        for syn in generic_synonyms.get(keyword, []):
-            expanded_keywords.add(syn)
-    return expanded_keywords
+        # Map the synonym to its main keyword if applicable
+        main_keyword = map_synonyms_to_original_keyword(keyword, generic_synonyms)
+        combined_keywords.add(main_keyword)
+    return combined_keywords
 
 # Function to search for relevant chunks based on keyword matching
 def find_relevant_chunks(query, transcript_chunks):

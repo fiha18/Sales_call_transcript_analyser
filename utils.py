@@ -139,3 +139,7 @@ def get_common_fillers():
 def get_major_context():
         major_context = ["product feature","product pricing","maintainability","scalability","security protocols","data security","support/maintenance costs","ease of integration"]
         return major_context
+
+def get_summary_related_words():
+        summary_related_words = [ "overview","abstract", "recap", "synopsis", "digest", "outline", "highlights", "key points", "summary statement", "brief", "condensed version", "summary report", "compendium", "review","conclusion"]
+        return summary_related_words
