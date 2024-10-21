@@ -41,10 +41,11 @@ def generate_fake_call_transcript(product_owner,model = "gpt-4o-mini",max_tokens
     previous_end_lines += f"""\n\n00:00:05 {product_owner.client_representative}: Hi {product_owner.sales_representative.split(" ")[0]}, sure I’m excited to learn more about your offerings."""
     previous_end_time = "00:00:05"
     final_response_content = previous_end_lines.strip()
-    # start time of ith transcript should be  >= end time of (i-1)th transcript
+    # start time of ith transcript chunk should be  >= end time of (i-1)th transcript chunk
     contraction_word_list = list(utils.get_contration_words().keys())
     for i in range(0,total_iteration):
         product_detail_list = product_owner.product_details[distribution[i][0]:distribution[i][1]]
+        print(f"Starting time of {i+1}/{total_iteration} transacript chunk : {previous_end_time}")
         start_time = utils.add_time(previous_end_time,0.1)
         system_message = transcript_generator_prompt.generate_call_transcript_system_message(part_duration)
         prompt_message = transcript_generator_prompt.generate_call_transcript_prompt(product_owner.sales_representative, product_owner.client_representative,product_owner.product_domain, product_owner.customer_domain, product_detail_list, start_time,part_duration,previous_end_lines,utils.get_common_fillers,contraction_word_list,utils.get_major_context)
@@ -83,9 +84,10 @@ def save_transcript_file(file_path,final_response_content):
 
 
 def perform_call_transcript_generation():
-    print("Enter the product owner either juspay or darwinbox better result else add product details in product_details folder following same format as others")
+    predefined_product_list = ["juspay","darwinbox","shopify","sap-erp"]
+    print(f"Enter the product owner in this list {predefined_product_list} else add product details in product_details folder following same format as others")
     product_owner = input("Enter product owner : ")
-    if product_owner not in ["juspay","darwinbox"]:
+    if product_owner not in predefined_product_list:
         print("Product details not added as of now , add it in product_details folder following same format as others")
         return
     #dynamically import a module

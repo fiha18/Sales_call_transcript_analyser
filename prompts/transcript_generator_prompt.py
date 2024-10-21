@@ -38,6 +38,7 @@ def generate_call_transcript_prompt(sales_representative, client_representative,
 
     Instructions for the dialogue:
     - Format the transcript with timestamps and speaker names, like this: `{start_time} [Speaker Name]: Dialogue content.`
+    - Make sure that each line start with timestamps following this sample format: "00:09:13" 
     - No need for greeting or concluding remarks, as these prompts are part of a loop.
     - Conversation should include fillers like {fillers} and contraction words like {contraction_words}
     - If participants have opposing requirements or constraints, your task is to handle this without creating contradictions.
@@ -49,7 +50,7 @@ def generate_call_transcript_prompt(sales_representative, client_representative,
     - Each response should be detailed and relevant to the client's needs.
     
     Continuation: This transcript chunk starts with the following lines for continuity from the previous segment: provided within  ``` ``` quotes.
-    Example format: provided within ``` ``` quotes.
+    Example format: provided within  ``` ``` quotes.
     ```{last_ending_line}```
     """
     return prompt

@@ -1,10 +1,13 @@
 from datetime import timedelta
+import re
 import threading
 
 
 def add_time(start_time_str, minutes_to_add):
         try:
-        # Split time string into hours, minutes, seconds
+                # Clean the time string using regex to remove invalid characters
+                start_time_str = re.sub(r"[^0-9:]", "", start_time_str)
+                # Split time string into hours, minutes, seconds
                 time_parts = start_time_str.split(":")
                 
                 # Ensure that there are exactly 3 parts (HH:MM:SS)

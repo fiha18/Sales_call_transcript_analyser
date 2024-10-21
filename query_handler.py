@@ -1,5 +1,3 @@
-from openai import OpenAI
-from openai import RateLimitError
 import os
 import sys
 import time
@@ -9,13 +7,6 @@ import prompts.query_prompt as query_prompt
 import llm_strategy.openai as openai
 period_timer = None
 start_execution_time = time.time()
-# Initialize OpenAI API key
-OPENAI_API_KEY = "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"
-client = OpenAI(api_key=OPENAI_API_KEY)
-model = "gpt-4o-mini"
-temperature = 0.7
-max_tokens = 8000 
-completion_usage = {}
 
 def query_chunks_with_openai(user_query,chunks):
     #total_chunks = len(chunks)
@@ -51,7 +42,7 @@ def perform_user_query_on_call_transcript_generation():
     # To do: add transcript_folder, input_file_name and summary_format from input or runtime parameter
     transcript_folder = "generated_transcripts"
     summary_folder = "generated_summaries"
-    summary_format = "bullet_points"
+    summary_format = "paragraph"
     command_line_args = sys.argv
     input_file_name = command_line_args[1]
     user_query = command_line_args[2]
