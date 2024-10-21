@@ -60,7 +60,8 @@ To create a realistic and accurate transcript, I leveraged OpenAI’s GPT models
 3. **Optimization Strategy**:
     - To generate more realistic and detailed transcripts, a **product detail list** was introduced.
     - This list includes features, descriptions, and pricing of the product being discussed in the call, ensuring key details are incorporated into the generated transcript.
-    - A custom prompt generation function, `generate_call_transcript_prompt`, was developed to take dynamic inputs such as the sales representative’s name, client representative’s name, product details, and conversation timings.
+    - A dynamic prompt generation function, `generate_call_transcript_prompt`, was developed to take dynamic inputs such as the sales representative’s name, client representative’s name, product details, and conversation timings.
+    - previous transcript context is provided to user prompt for more realistic response (below is a screenshot of response time without previous  )
     - sequential open ai completion api call based on **product detail list** elements
 
 ### Function: `generate_call_transcript_prompt`

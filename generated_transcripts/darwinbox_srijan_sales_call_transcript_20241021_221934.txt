@@ -1,0 +1,213 @@
+00:00:00 Srijan (darwinbox.in): Hi Priyanka, thanks for taking the time today. Let's discuss how we can improve your hr management solutions.
+
+00:00:05 Priyanka (swiggy.com): Hi Srijan, sure I’m excited to learn more about your offerings.
+
+00:00:11 Srijan (darwinbox.in): Absolutely, Priyanka. I think one of the key areas where we can add value is through our Employee Onboarding system. It streamlines the entire process—everything from document management to background checks and training assignments. Our pricing starts at just $5 per employee per month, which is quite competitive in the market.
+
+00:00:30 Priyanka (swiggy.com): That sounds interesting. Can you elaborate on how the document management aspect works? We have a lot of sensitive employee data, so security is a big concern for us.
+
+00:00:39 Srijan (darwinbox.in): Of course! Security is paramount for us too. Our document management system employs advanced encryption protocols for data at rest and in transit. This means that any sensitive employee information is securely stored and transmitted, ensuring that only authorized personnel can access it. Additionally, we integrate with existing security frameworks that you may already have in place, which provides an added layer of protection.
+
+00:01:02 Priyanka (swiggy.com): That’s reassuring to hear. How does this integration work with existing systems, particularly since we’re already using several HR tools?
+
+00:01:10 Srijan (darwinbox.in): Great question! Our platform is built with API-first architecture, which means we can easily integrate with your current HR tools, whether it’s an ATS or a payroll system. We provide detailed documentation to facilitate the integration process, and our dedicated support team will be there to assist you every step of the way. Most of our clients find that the integration can be completed in just a few days, depending on their setup.
+
+00:01:38 Priyanka (swiggy.com): That sounds efficient. But what if we have specific customization needs? Can your system adapt to those?
+
+00:01:45 Srijan (darwinbox.in): Absolutely, Priyanka. Our platform is highly customizable. We understand that every organization has unique processes, so we allow you to tailor workflows, forms, and reporting dashboards according to your needs. Whether it’s adjusting onboarding checklists or configuring alerts for specific milestones, you have full control. 
+
+00:02:07 Priyanka (swiggy.com): That’s impressive! How scalable is your solution? As we grow, we want to ensure that our HR systems can keep up without a hitch.
+
+00:02:15 Srijan (darwinbox.in): Scalability is one of our core strengths. Our cloud-based infrastructure allows you to easily scale up or down based on your workforce size. Whether you’re onboarding 50 employees or 500, our system can handle the load without compromising performance. Plus, our pricing model is designed to be flexible, so as your headcount fluctuates, you won’t be stuck with fixed costs.
+
+00:02:45 Priyanka (swiggy.com): That’s good to hear! What about support? If we encounter issues during onboarding or usage, what kind of support can we expect?
+
+00:02:54 Srijan (darwinbox.in): We offer 24/7 support with a dedicated account manager who will be your go-to person for any questions or issues. Additionally, we have an extensive knowledge base and community forum where you can find answers and connect with other users. Our commitment includes a Service Level Agreement (SLA) that guarantees response times based on the urgency of your requests.
+
+00:03:22 Priyanka (swiggy.com): So, if there's a critical issue, how quickly can we expect a resolution?
+
+00:03:27 Srijan (darwinbox.in): For critical issues, our SLA ensures that you receive a response within one hour, and we aim to resolve it within four hours. For non-critical issues, our response time is typically within 24 hours. We take our support commitments seriously because we know how vital these systems are to your operations.
+
+00:03:53 Priyanka (swiggy.com): That’s very reassuring. Now, about the Time and Attendance Tracking feature you mentioned earlier—how does that integrate into the onboarding process?
+
+00:04:01 Srijan (darwinbox.in): The Time and Attendance Tracking feature is seamlessly integrated into the onboarding workflow. When new employees are onboarded, they can easily set up their profiles, which includes their work schedules and attendance preferences. The system then tracks their clock-ins, clock-outs, and any absences in real time, ensuring accurate payroll calculations and compliance with labor laws.
+
+00:04:27 Priyanka (swiggy.com): That sounds efficient. But what about accuracy? How do you ensure that the data captured is reliable?
+
+00:04:34 Srijan (darwinbox.in): We use geolocation features and biometric verification methods to ensure accuracy in attendance tracking. Employees can clock in and out using their mobile devices, which not only records their location but also validates their identity. This minimizes the risk of buddy punching and ensures that the data you receive for payroll is accurate and trustworthy. 
+
+00:05:00 Priyanka (swiggy.com): That does sound effective. I’d love to see a demo of how all these features work together. When can we arrange that?
+
+00:05:06 Srijan (darwinbox.in): Absolutely, Priyanka. I can arrange a demo as soon as next week. During the demo, we can walk through the performance management module, which includes goal-setting features, performance reviews, and real-time feedback mechanisms. You'll see how these elements integrate seamlessly with your existing systems.
+
+00:05:24 Priyanka (swiggy.com): That sounds great! But I'm curious about how this performance management tool integrates with our current HR systems. We have a setup that’s pretty specific to our needs, and I want to ensure there's no disruption.
+
+00:05:40 Srijan (darwinbox.in): I completely understand your concern. Our integration process is designed to be smooth and non-disruptive. We utilize APIs that allow for real-time data exchange with your existing systems. This means you won't have to overhaul your current architecture; rather, we can enhance it. We also have extensive documentation and support in place to assist with the integration phase.
+
+00:06:04 Priyanka (swiggy.com): That’s reassuring. What about data security during this integration? I know that handling employee data comes with its own set of challenges.
+
+00:06:12 Srijan (darwinbox.in): Great question. Security is one of our top priorities. We follow industry-standard protocols, including data encryption both at rest and in transit. Additionally, we conduct regular security audits and adhere to compliance standards like GDPR. This ensures your data remains secure throughout the integration process and beyond.
+
+00:06:34 Priyanka (swiggy.com): I appreciate that. Can you elaborate on how you handle data backups and recovery? In our business, downtime isn’t an option.
+
+00:06:44 Srijan (darwinbox.in): Absolutely. We have a robust backup system in place that performs daily backups, with the option for more frequent backups if required. In the event of an incident, our recovery process is designed to restore data quickly, usually within a few hours. We also have a service level agreement (SLA) that outlines our response times and guarantees minimum uptime.
+
+00:07:14 Priyanka (swiggy.com): That sounds solid. Can you walk me through how your performance management system supports scalability? As we expand, we need a solution that can grow with us.
+
+00:07:24 Srijan (darwinbox.in): Definitely! Our performance management system is built on a scalable architecture, meaning it can handle an increasing number of users without compromising performance. Whether you're adding new teams or expanding to new locations, our platform can accommodate that growth effortlessly. We also offer tiered pricing, so as you scale, your costs remain manageable.
+
+00:07:48 Priyanka (swiggy.com): That’s good to know. I’m also interested in how customizable the performance management features are. Can we tailor them to fit specific metrics or KPIs relevant to our teams?
+
+00:08:00 Srijan (darwinbox.in): Yes, customization is one of our strong suits. You can define specific KPIs and performance metrics that align with your organizational goals. The system allows for flexible goal-setting, which means each department can create goals that are pertinent to their function, ensuring that everyone is aligned with Swiggy’s broader objectives.
+
+00:08:26 Priyanka (swiggy.com): That sounds very flexible. How do you support users in getting accustomed to the new system? Change can sometimes be overwhelming for employees.
+
+00:08:36 Srijan (darwinbox.in): We have an extensive onboarding and training program. This includes personalized training sessions for different user roles, whether they’re managers or regular employees. We also provide ongoing support through our help center and dedicated account managers who can assist with any questions or issues that arise post-implementation.
+
+00:09:00 Priyanka (swiggy.com): That’s really helpful! Can we also incorporate feedback mechanisms that are more frequent than the standard review cycles? I think our teams would benefit from more continuous feedback.
+
+00:09:12 Srijan (darwinbox.in): Absolutely! Our platform supports continuous feedback loops, allowing managers and peers to provide input on performance anytime. This feature encourages real-time recognition and can significantly enhance employee development. You'll be able to foster a culture of continuous improvement rather than waiting for formal review periods.
+
+00:09:36 Priyanka (swiggy.com): That sounds like a great advantage. Lastly, I’m wondering about the pricing structure. You mentioned starting at $7 per employee per month. Are there any additional costs we should be aware of?
+
+00:09:48 Srijan (darwinbox.in): The $7 per employee per month covers the core functionalities. However, depending on any additional features you might need—like advanced analytics or integration support—there could be some extra costs. We’re transparent with all pricing details and will work with you to customize a package that fits your budget and requirements. 
+
+00:10:06 Priyanka (swiggy.com): Great! I appreciate the clarity on that. I look forward to the demo and getting into more specifics.
+
+00:10:12 Srijan (darwinbox.in): Perfect, Priyanka! So, regarding the Learning Management System (LMS), one of the standout features is its ability to seamlessly integrate with existing systems. We can set up single sign-on (SSO) to ensure your employees have a smooth experience without the need for multiple logins. This level of integration not only enhances user experience but also fortifies security since all access can be managed centrally.
+
+00:10:34 Priyanka (swiggy.com): That’s really interesting, Srijan! Security is a big concern for us, especially with the kind of data we handle. Can you elaborate on the security protocols you have in place for both the LMS and the ATS?
+
+00:10:50 Srijan (darwinbox.in): Absolutely! For both our LMS and ATS, we employ end-to-end encryption for data in transit and at rest. Additionally, we utilize multi-factor authentication (MFA) to add an extra layer of security for user access. Regular audits and compliance with standards like GDPR and ISO 27001 are part of our commitment to data security. This way, you can be assured that your employees’ information is protected.
+
+00:11:15 Priyanka (swiggy.com): That sounds reassuring. How do you handle data breaches if they were to occur? I mean, what's the protocol for that?
+
+00:11:25 Srijan (darwinbox.in): Great question! In the unfortunate event of a data breach, we have a comprehensive incident response plan in place. This includes immediate containment of the breach, assessment of the impact, and notification procedures in accordance with legal requirements. Additionally, we provide a dedicated support team to assist you through the process, ensuring transparency and communication every step of the way.
+
+00:11:48 Priyanka (swiggy.com): That’s good to hear. Now, regarding scalability, as you know, we’re an evolving business and might see fluctuations in employee numbers. How does your solution adapt to that?
+
+00:12:02 Srijan (darwinbox.in): Our solutions are highly scalable. With our LMS and ATS, you can easily add or remove users based on your current needs without any hassle. The pricing model is flexible as well—since our LMS starts at $10 per employee per month, you only pay for what you use. Plus, we have the infrastructure to support rapid growth, ensuring that performance remains consistent as you scale.
+
+00:12:29 Priyanka (swiggy.com): That’s definitely a plus for us! Speaking of performance, how does your system handle heavy traffic, especially during peak hiring seasons or training periods?
+
+00:12:39 Srijan (darwinbox.in): Our platform is built on robust cloud architecture, which allows for dynamic resource allocation. This means that during peak times, the system can scale resources to handle increased traffic without any degradation in performance. We also utilize load balancers to distribute the traffic evenly across servers, ensuring that response times remain optimal.
+
+00:13:05 Priyanka (swiggy.com): That sounds great! Are there any limits to the number of concurrent users that can be on the platform at the same time?
+
+00:13:12 Srijan (darwinbox.in): No, there aren’t any hard limits on concurrent users. The system is designed to support thousands of users simultaneously. Of course, we continuously monitor the system performance and adjust resources as needed to maintain that level of service.
+
+00:13:30 Priyanka (swiggy.com): That's impressive! Now, I’d like to know more about the integration process with our existing systems. Can you walk me through what that would look like?
+
+00:13:42 Srijan (darwinbox.in): Certainly! The integration process starts with an assessment of your current HR systems. We have a dedicated integration team that works closely with your IT department to map out the necessary data flows. Depending on your existing infrastructure, we can use APIs or middleware to facilitate this integration. We also provide extensive documentation and support throughout the process to ensure a smooth transition.
+
+00:14:07 Priyanka (swiggy.com): That sounds straightforward. How long does the integration usually take?
+
+00:14:13 Srijan (darwinbox.in): Typically, the integration process can take anywhere from a few weeks to a couple of months, depending on the complexity of your existing systems and the specific requirements for integration. However, we prioritize minimizing downtime and ensuring that your team can continue their work seamlessly.
+
+00:14:34 Priyanka (swiggy.com): Got it. And what about the training for our HR team? Will there be any support during the onboarding phase?
+
+00:14:40 Srijan (darwinbox.in): Absolutely! We offer comprehensive training sessions for your HR team as part of the onboarding process. This includes live webinars, access to our resource library, and dedicated support from our customer success team. Our goal is to ensure that your team feels confident in using the systems effectively from day one.
+
+00:15:04 Priyanka (swiggy.com): That’s really helpful. I appreciate all the details you’ve shared so far, Srijan. I think I have a clearer picture now.
+
+00:15:10 Srijan (darwinbox.in): Great to hear that, Priyanka! Now, diving into the technical side, our Benefits Administration module seamlessly integrates with existing HR systems. We’ve designed the API to be robust and flexible, ensuring it can easily connect with your current platforms, whether they’re cloud-based or on-premises. This means minimal disruption during the transition and a straightforward implementation process.
+
+00:15:40 Priyanka (swiggy.com): That's good to know! But can you elaborate on the security protocols you have in place for data protection, especially considering the sensitive nature of employee benefits information?
+
+00:15:55 Srijan (darwinbox.in): Absolutely, security is a top priority for us. We adhere to industry-standard security protocols, including AES-256 encryption for data at rest and in transit. We also implement multi-factor authentication and role-based access controls to ensure that only authorized personnel can access sensitive data. Additionally, our systems are regularly audited by third-party security experts to identify and mitigate any potential vulnerabilities.
+
+00:16:30 Priyanka (swiggy.com): That’s reassuring. Now, in terms of scalability, how does your system handle increasing employee numbers, especially since we’re experiencing rapid growth?
+
+00:16:41 Srijan (darwinbox.in): Great question! Our platform is built with scalability in mind. It can handle thousands of employee records without a hitch. When your workforce grows, you won’t need to worry about performance issues. We utilize cloud infrastructure that automatically allocates resources based on demand, so whether you’re onboarding 50 or 500 new employees, your operations won’t be affected.
+
+00:17:05 Priyanka (swiggy.com): That sounds promising. So, if we decided to scale, how would the integration process work? Would we need to make significant changes to our existing systems?
+
+00:17:18 Srijan (darwinbox.in): Not at all! Our integration process is designed to be as non-intrusive as possible. We provide a dedicated integration team that will work closely with your IT department. They’ll map out your current workflows and ensure that our solutions align with your existing systems. We also offer pre-built connectors for popular HR platforms, which can significantly speed up the process.
+
+00:17:47 Priyanka (swiggy.com): That’s helpful to know. What about the service level agreement (SLA)? What kind of support can we expect post-implementation?
+
+00:18:01 Srijan (darwinbox.in): Our SLA guarantees 99.9% uptime, and we provide 24/7 customer support through multiple channels, including chat, email, and phone. Regular maintenance and updates are part of our commitment, ensuring you always have access to the latest features and security patches. Additionally, we conduct quarterly business reviews to assess your satisfaction and discuss any evolving needs.
+
+00:18:38 Priyanka (swiggy.com): That’s comprehensive! I’m particularly interested in how quickly we can get started. What would the timeline look like for implementing the Benefits Administration and Payroll Processing modules?
+
+00:18:52 Srijan (darwinbox.in): Typically, the implementation for both modules can be completed within 6 to 8 weeks, depending on the complexity of your existing systems and the number of employees. We start with a kickoff meeting to set expectations, followed by a detailed project plan. Our team will guide you through each phase, from data migration to user training.
+
+00:19:17 Priyanka (swiggy.com): Sounds efficient! Can you tell me more about the data migration process? What challenges should we anticipate?
+
+00:19:27 Srijan (darwinbox.in): Certainly! Data migration is a critical phase. We use automated tools to help transfer your existing data into our system, which minimizes manual errors. However, challenges can arise, especially if data formats are inconsistent. We conduct thorough data audits prior to migration to identify and resolve any discrepancies. It’s also crucial to have a backup plan in case we encounter unexpected issues.
+
+00:19:58 Priyanka (swiggy.com): That's a solid approach. What kind of support do you provide during this migration phase?
+
+00:20:06 Srijan (darwinbox.in): During migration, you’ll have a dedicated project manager who will be your point of contact. They will coordinate with your team and ensure that the process runs smoothly. We also provide training sessions for your HR team to help them get familiar with the new system beforehand. Communication is key, and we make sure you’re informed every step of the way.
+
+00:20:12 Priyanka (swiggy.com): That's reassuring to hear. But what about the security protocols you have in place? Given the sensitive nature of employee data, we want to ensure that everything is protected.
+
+00:20:20 Srijan (darwinbox.in): Absolutely, security is one of our top priorities. We utilize industry-standard encryption protocols, both at rest and in transit. This means that any data shared between your users and our platform is encrypted to prevent unauthorized access. Additionally, we conduct regular security audits and penetration testing to identify and mitigate any vulnerabilities.
+
+00:20:38 Priyanka (swiggy.com): That sounds comprehensive. Can you elaborate on how this integrates with our existing systems? We have a mix of legacy systems and some modern applications running concurrently.
+
+00:20:46 Srijan (darwinbox.in): Certainly! Our Employee Self-Service Portal is designed with flexibility in mind. We can use APIs to seamlessly integrate with your existing HRIS or payroll systems. For legacy systems, we can set up data import/export functionalities that allow for smooth data transfer while maintaining data integrity. Our team will work closely with your IT department to map out the integration points and ensure everything aligns perfectly.
+
+00:21:10 Priyanka (swiggy.com): That sounds promising, but what if there are issues during the integration? How do you handle that?
+
+00:21:16 Srijan (darwinbox.in): Great question! We have a robust Service Level Agreement (SLA) that outlines our commitment to support. During the integration phase, we provide 24/7 technical support. If any issues arise, our support team is available to troubleshoot and resolve them promptly. We also have a rollback plan in case we need to revert any changes temporarily.
+
+00:21:38 Priyanka (swiggy.com): Good to know. And how do you handle scalability? As we grow, we might need to adapt the system to accommodate more employees or different functionalities.
+
+00:21:46 Srijan (darwinbox.in): Our platform is built for scalability. Whether you're onboarding hundreds of new employees or expanding into new regions, our system can handle it. We provide tiered pricing plans that allow you to scale your usage based on your needs. Plus, our infrastructure is cloud-based, which means it can grow with you without significant upfront investments in hardware.
+
+00:22:10 Priyanka (swiggy.com): That's helpful! However, do you have any case studies or examples of how you've helped other clients in a similar situation?
+
+00:22:16 Srijan (darwinbox.in): Yes, we do! For instance, we recently worked with a large retail chain that faced similar challenges with employee management. They had over 5,000 employees and multiple legacy systems. After implementing our solution, they were able to streamline their processes, reduce administrative overhead by 30%, and improve employee satisfaction with self-service capabilities. We can share detailed case studies with metrics that illustrate the impact.
+
+00:22:42 Priyanka (swiggy.com): That's impressive! I'd love to see those metrics. One last thing—what's the typical timeline from contract signing to full implementation?
+
+00:22:50 Srijan (darwinbox.in): The timeline can vary depending on the complexity of your existing systems and specific requirements, but typically, you can expect to go live within 8 to 12 weeks. This includes the phases of initial discovery, integration, data migration, testing, and training. We work diligently to ensure a smooth transition without disrupting your ongoing operations.
+
+00:23:12 Priyanka (swiggy.com): That sounds reasonable. I'm also curious about the training aspect. How do you ensure that our HR team is fully equipped to use the new system?
+
+00:23:18 Srijan (darwinbox.in): We provide comprehensive training tailored to your team's needs. This includes live training sessions, recorded webinars, and detailed user manuals. We also offer ongoing support post-implementation to address any questions or concerns that may arise as your team gets accustomed to the platform.
+
+00:23:40 Priyanka (swiggy.com): That gives me a lot of confidence. I think my team would really appreciate that kind of support. One last thing on my mind—is there a trial period available for us to test the platform before making a long-term commitment?
+
+00:23:48 Srijan (darwinbox.in): Yes, we offer a trial period for you to explore the platform, typically around 30 days. During this period, you'll have access to all features and functionalities, allowing your team to assess its fit for your needs. We believe that experiencing the platform firsthand is the best way to evaluate its value.
+
+00:24:06 Priyanka (swiggy.com): That sounds like a good opportunity. I think that would definitely help us in our decision-making process. I'll discuss this further with my team, but I appreciate all the information you've provided today!
+
+00:24:12 Srijan (darwinbox.in): Absolutely, Priyanka. And while you're evaluating, I want to touch on the analytics and reporting feature. We provide comprehensive reporting on various HR metrics, such as turnover rates and employee satisfaction. This is especially crucial for a fast-paced environment like Swiggy, where understanding employee sentiment can directly impact retention strategies. 
+
+00:24:30 Priyanka (swiggy.com): That makes sense. Can you elaborate on how those reports are generated? Does it require a lot of manual input from our HR team?
+
+00:24:36 Srijan (darwinbox.in): Great question! The reports are generated automatically through our system. Once integrated, the platform tracks data in real-time, so your HR team won't need to manually input information. We utilize APIs to pull data from existing systems, ensuring that the reports reflect the most accurate and up-to-date metrics. This also minimizes the risk of human error. 
+
+00:24:57 Priyanka (swiggy.com): That's a relief. I was worried about the extra workload on our HR staff. Speaking of integration, how does your system handle security, especially when dealing with sensitive employee data?
+
+00:25:06 Srijan (darwinbox.in): Security is a top priority for us. We implement industry-standard security protocols, including end-to-end encryption and regular security audits. Additionally, our service level agreement (SLA) outlines the specific security measures we take to protect your data. We also offer role-based access controls, so you can ensure that only authorized personnel have access to sensitive information.
+
+00:25:30 Priyanka (swiggy.com): That sounds robust. However, how scalable is your solution? As Swiggy continues to grow, we need to ensure that the HR management system can keep pace without requiring a complete overhaul.
+
+00:25:40 Srijan (darwinbox.in): Our platform is built with scalability in mind. Whether you're adding new employees, expanding to new locations, or integrating additional HR functionalities, our system can adapt seamlessly. We also have features that support multiple HR management methods, so you can tailor the experience to fit your evolving organizational needs. 
+
+00:26:00 Priyanka (swiggy.com): That's reassuring. But what if we encounter issues during the integration process? How responsive is your support team?
+
+00:26:06 Srijan (darwinbox.in): We provide dedicated support during the integration phase. You'll have access to a project manager who will work closely with your team to ensure a smooth onboarding process. Our support team is available 24/7, and we're committed to resolving any issues quickly. Plus, we offer extensive documentation and training resources to empower your HR team.
+
+00:26:31 Priyanka (swiggy.com): That’s good to know! I assume your mobile access feature is included in the package as well? How does that work in practice?
+
+00:26:40 Srijan (darwinbox.in): Yes, it is! The mobile access feature allows employees to manage HR functions directly from their smartphones. They can view payslips, request time off, and even participate in performance reviews—all from a user-friendly mobile interface. This flexibility increases engagement, especially for a workforce that may be on-the-go, like delivery personnel. 
+
+00:27:02 Priyanka (swiggy.com): That sounds convenient! But what about the user experience? Is it intuitive enough for employees who may not be tech-savvy?
+
+00:27:10 Srijan (darwinbox.in): Absolutely! User experience is a major focus for us. We've invested heavily in designing an intuitive interface that minimizes the learning curve. We also conduct user testing to gather feedback and make continuous improvements. Our goal is to make sure that all employees, regardless of their tech proficiency, can navigate the system effortlessly.
+
+00:27:39 Priyanka (swiggy.com): I appreciate that focus on user experience. It’s vital for us as we have a diverse workforce. Would you say that the platform can adapt to the unique needs of our HR operations, especially considering our rapid growth?
+
+00:27:49 Srijan (darwinbox.in): Certainly. The platform is designed to be flexible, allowing for customization to align with your specific HR workflows. We understand that every organization has its unique challenges, and we’re committed to providing a solution that not only meets but exceeds those expectations.
+
+00:28:12 Priyanka (swiggy.com): That’s encouraging to hear. I think I’d like to see a demo to better understand how these features come together in practice. What are the next steps?
+
+00:28:21 Srijan (darwinbox.in): That’s a great idea, Priyanka! I can set up a personalized demo for your team where we can showcase the platform’s features in action. After that, we can discuss any specific requirements you have and address any additional questions. Would next week work for you?
+
+00:28:39 Priyanka (swiggy.com): Next week sounds perfect. I’ll coordinate with my team and get back to you with a couple of time slots.
+
+00:28:45 Srijan (darwinbox.in): Fantastic! I look forward to it. I’ll send you a calendar invite as soon as we finalize the time. Thank you for this productive discussion today, Priyanka.

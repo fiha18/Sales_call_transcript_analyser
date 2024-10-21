@@ -1,15 +1,16 @@
 import os
 from datetime import datetime
-from openai import OpenAI
-from openai import RateLimitError
+# from openai import OpenAI
+# from openai import RateLimitError
 import time
 import prompts.transcript_generator_prompt as transcript_generator_prompt
 import utils as utils
 import importlib
+import llm_strategy.openai as openai
 
 start_execution_time = time.time()
-OPENAI_API_KEY = "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"
-client = OpenAI(api_key=OPENAI_API_KEY)
+# OPENAI_API_KEY = "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"
+# client = OpenAI(api_key=OPENAI_API_KEY)
 
 completion_usage = {}
 def generate_fake_call_transcript(product_owner,model = "gpt-4o-mini",max_tokens=6000,temperature=0.7,call_duration = 30,chunk_duration=5):
@@ -37,7 +38,7 @@ def generate_fake_call_transcript(product_owner,model = "gpt-4o-mini",max_tokens
     distribution = [[0,2],[2,3],[3,5],[5,7],[7,8],[8,10]]
     # storing previous chunk context
     previous_end_lines = f"""00:00:00 {product_owner.sales_representative}: Hi {product_owner.client_representative.split(" ")[0]}, thanks for taking the time today. Let's discuss how we can improve your {product_owner.product_domain} solutions."""
-    previous_end_lines = f"""\n\n00:00:05 {product_owner.client_representative}: Hi {product_owner.sales_representative.split(" ")[0]}, sure I’m excited to learn more about your offerings."""
+    previous_end_lines += f"""\n\n00:00:05 {product_owner.client_representative}: Hi {product_owner.sales_representative.split(" ")[0]}, sure I’m excited to learn more about your offerings."""
     previous_end_time = "00:00:05"
     final_response_content = previous_end_lines.strip()
     # start time of ith transcript should be  >= end time of (i-1)th transcript
@@ -50,52 +51,20 @@ def generate_fake_call_transcript(product_owner,model = "gpt-4o-mini",max_tokens
         # In the last chunk conclusion will be added
         if i==(total_iteration-1):
             prompt_message = prompt_message + "Last Instruction - Conclude the transcript with next steps for a product demo and potential follow-up meetings."
-        retries = 0
-        while retries < 5:
-            try:
-                print(f"Making call transcript generation request {i+1}/{total_iteration} to OpenAI API for conversation between {product_owner.product_company} with {product_owner.potential_customer}", end="")
-                utils.print_period()
-                messages=[
-                        {"role": "system", "content": system_message},
-                        {
-                            "role": "user",
-                            "content": prompt_message
-                        }
-                    ]
-                completion = client.chat.completions.create(
-                    model=model,
-                    messages = messages,
-                    temperature = temperature,
-                    max_tokens = max_tokens     
-                )
-                utils.stop_print_period()
-                completion_usage[i] = completion.usage
-                response_content = completion.choices[0].message.content.replace("```", "")
-                response_lines = response_content.splitlines()
-                previous_end_lines = response_lines[-3:]
-                previous_end_time = response_lines[-1].split(" ")[0]
-                previous_end_time = previous_end_time.replace("[", "").replace("]", "")
-                if response_lines[-1]:  
-                    # Check if the last line is not empty
-                    previous_end_time = response_lines[-1].split(" ")[0]
-                    # Strip out any unwanted characters
-                    previous_end_time = previous_end_time.replace("[", "").replace("]", "")
-                else:
-                    previous_end_time = None  # Handle empty line case
-                final_response_content += "\n\n" + response_content.strip()
-                print("")
-                break
-            except RateLimitError:
-                print("\nReceived rate limit error, waiting for 60 seconds before retrying...")
-                utils.stop_print_period()
-                time.sleep(60)
-                retries += 1
-            except Exception as e:
-                print("\nQuitting due to unexpected error: {}".format(e))
-                utils.stop_print_period()
-                return None
-        if retries >= 5:
-            print("\nExceeded maximum number of retries. Giving up on current chunk.")
+        # Generic openai api function which accepts system message and user prompt
+        response_content = openai.call_openai_api(system_message,prompt_message)
+        response_lines = response_content.splitlines()
+        previous_end_lines = response_lines[-3:]
+        previous_end_time = response_lines[-1].split(" ")[0]
+        previous_end_time = previous_end_time.replace("[", "").replace("]", "")
+        if response_lines[-1]:  
+            # Check if the last line is not empty
+            previous_end_time = response_lines[-1].split(" ")[0]
+            # Strip out any unwanted characters
+            previous_end_time = previous_end_time.replace("[", "").replace("]", "")
+        else:
+            previous_end_time = None  # Handle empty line case
+        final_response_content += "\n\n" + response_content.strip()
     return final_response_content
 
 def save_transcript_file(file_path,final_response_content):

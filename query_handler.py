@@ -6,7 +6,7 @@ import time
 import utils
 import query_helper
 import prompts.query_prompt as query_prompt
-
+import llm_strategy.openai as openai
 period_timer = None
 start_execution_time = time.time()
 # Initialize OpenAI API key
@@ -18,43 +18,14 @@ max_tokens = 8000
 completion_usage = {}
 
 def query_chunks_with_openai(user_query,chunks):
-    total_chunks = len(chunks)
+    #total_chunks = len(chunks)
     final_response = []
     for i,chunk in enumerate(chunks,start=1):
         system_message = query_prompt.get_querying_system_message()
         prompt_message = query_prompt.get_querying_user_prompt(chunk,user_query)
-        retries = 0
-        while retries < 5:
-            try:
-                print(f"Making query request {i}/{total_chunks} to OpenAI API for call transcript", end="")
-                utils.print_period()
-                message = [
-                    {"role" : "system", "content": system_message}
-                ,   {"role" : "user", "content" : prompt_message}
-                ]
-                completion_response = client.chat.completions.create(
-                    model=model,
-                    messages = message,
-                    temperature = temperature,
-                    max_tokens = max_tokens 
-                )
-                completion_usage[i] = completion_response.usage
-                utils.stop_print_period()
-                print("")
-                response = completion_response.choices[0].message.content.replace("```", "")
-                final_response.append(response)
-                break
-            except RateLimitError:
-                print("\nReceived rate limit error, waiting for 60 seconds before retrying...")
-                utils.stop_print_period()
-                time.sleep(60)
-                retries += 1
-            except Exception as e:
-                print("\nQuitting due to unexpected error: {}".format(e))
-                utils.stop_print_period()
-                return None
-        if retries >= 5:
-            print("\nExceeded maximum number of retries. Giving up on current chunk.")
+        # Generic openai api function which accepts system message and user prompt
+        chunk_response = openai.call_openai_api(system_message,prompt_message)
+        final_response.append(chunk_response)
     return "".join(final_response)
 
 # Main function that handles the querying of the transcript chunks

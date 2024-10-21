@@ -1,19 +1,20 @@
-from openai import OpenAI
-from openai import RateLimitError
+# from openai import OpenAI
+# from openai import RateLimitError
 import os
 import time
 import utils
 import prompts.summarizer_prompt as summarizer_prompt
 import summarizer_helper
+import llm_strategy.openai as openai
 
 period_timer = None
 start_execution_time = time.time()
 # Initialize OpenAI API key
-OPENAI_API_KEY = "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"
-client = OpenAI(api_key=OPENAI_API_KEY)
-model = "gpt-4o-mini"
-temperature = 0.7
-max_tokens = 8000   
+# OPENAI_API_KEY = "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"
+# client = OpenAI(api_key=OPENAI_API_KEY)
+# model = "gpt-4o-mini"
+# temperature = 0.7
+# max_tokens = 8000   
 
 completion_usage = {}
 def generate_transcript_summary(file_path,summary_format):
@@ -39,39 +40,9 @@ def generate_transcript_summary(file_path,summary_format):
     for i,chunk in enumerate(chunks, start=1):
         system_message = summarizer_prompt.get_summarizer_system_message(word_limit=1500)
         prompt_message = summarizer_prompt.get_summarizer_user_prompt(chunk,summary_format,utils.get_major_context)
-        retries = 0
-        while retries < 5:
-            try:
-                print(f"Making summarization request {i}/{total_chunks} to OpenAI API for {os.path.basename(file_path)}", end="")
-                utils.print_period()
-                message = [
-                    {"role" : "system", "content": system_message}
-                ,   {"role" : "user", "content" : prompt_message}
-                ]
-                completion_response = client.chat.completions.create(
-                    model=model,
-                    messages = message,
-                    temperature = temperature,
-                    max_tokens = max_tokens 
-                )
-                utils.stop_print_period()
-                print("")
-                summary = completion_response.choices[0].message.content.replace("```", "")
-                print(summary)
-                summary_list.append(summary)
-                break
-            except RateLimitError:
-                print("\nReceived rate limit error, waiting for 60 seconds before retrying...")
-                utils.stop_print_period()
-                time.sleep(60)
-                retries += 1
-            except Exception as e:
-                print("\nQuitting due to unexpected error: {}".format(e))
-                utils.stop_print_period()
-                return None
-        if retries >= 5:
-            print("\nExceeded maximum number of retries. Giving up on current chunk.")
-    print(summary_list)
+        # Generic openai api function which accepts system message and user prompt
+        summary = openai.call_openai_api(system_message,prompt_message)
+        summary_list.append(summary)
     return "".join(summary_list)
 
 def save_summary_file(file_path,summary):
