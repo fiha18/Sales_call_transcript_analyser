@@ -37,7 +37,7 @@ def generate_transcript_summary(file_path,summary_format):
     summary_list = []
     total_chunks = len(chunks)
     for i,chunk in enumerate(chunks, start=1):
-        system_message = summarizer_prompt.get_summarizer_system_message(word_limit=1300)
+        system_message = summarizer_prompt.get_summarizer_system_message(word_limit=1500)
         prompt_message = summarizer_prompt.get_summarizer_user_prompt(chunk,summary_format,utils.get_major_context)
         retries = 0
         while retries < 5:

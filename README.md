@@ -108,7 +108,48 @@ CALL-TRANSCRIPT-ANALYSIS
         transcript_generator_prompt.py
 ```
 
-## Task 2: Call Summarization {WIP}
+## Task 2: Summarization of Sales Call Transcripts
+
+For Task 2, the objective is to create a script that generates a summary of a sales call transcript, either in paragraph form, bullet points, or a concise format, based on the user's preference. The resulting summary is saved into a `.txt` file for further analysis. 
+
+### Approach
+
+1. **Pre-processing the Transcript:**
+   - The transcript text file is cleaned and pre-processed to remove unnecessary elements that could interfere with summarization accuracy:
+     1. **Remove timestamps and participant names** from the transcript (e.g., `00:00:03 Sam(open.ai)`).
+     2. **Remove filler and stop words** such as "um," "so," "a," "an," "the," etc., from the text.
+     3. **Expand contractions** such as "won't" to "will not" for better clarity.
+
+2. **Splitting the Text into Chunks:**
+   - The cleaned text is split into smaller chunks, typically using a default word limit of **1500 words** per chunk to ensure the summarization process is manageable and fits within API token limits.
+
+3. **Summarizer System Message:**
+   - The system is set up using the `get_summarizer_system_message` function, with a word limit set to **default** to guide the OpenAI API in generating a precise summary.
+
+4. **Prompt for Summarization:**
+   - The user prompt is generated using the function `get_summarizer_user_prompt`, which takes the chunk of text and user-defined `summary_format` (paragraph, bullet points, or concise). It also uses a hardcoded list of key context points such as:
+     - **Product feature**
+     - **Product pricing**
+     - **Maintainability**
+     - **Scalability**
+     - **Security protocols**
+     - **Data security**
+     - **Support/maintenance costs**
+     - **Ease of integration**
+
+5. **Summarization Process with API Call and Error Handling:(To do - seperate open ai api logic as all 3 task are using it)** 
+   - The core of the summarization process is handled by making API requests to OpenAI’s GPT model.
+   
+   **Code Block Summary:**
+   - The code initiates a retry mechanism with a maximum of 5 attempts. It calls OpenAI's API for summarization, processes each chunk, and handles specific exceptions like `RateLimitError` by implementing a wait time before retrying. If other exceptions occur, the process will stop, and an error message will be displayed.
+
+6. **Saving the Summary:**
+   - The final step involves saving the generated summary to a `.txt` file using the `save_summary_file(file_path, summary)` function. This allows further analytics, such as querying the summary content for insights or answering user queries based on the call context.
+
+### Error Handling and Retry Logic:
+
+The script includes robust error handling to ensure smooth operation during the API call phase. If a rate limit error occurs, the script waits for 60 seconds before retrying. After five failed attempts, the script gives up on that particular chunk of text. Other unexpected errors are also caught, and the summarization process for that chunk is halted to avoid crashes.
+
 ### Future work 
   - Use of language detection to ensure the correct language model is applied for multilingual scenarios.
   - Tone Filtering: tone analysis as part of the processing, identify emotive language or sarcasm for better insight.
