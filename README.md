@@ -18,7 +18,24 @@ The project is divided into three main tasks:
 The goal of Task 1 is to develop a script that generates a realistic sales call transcript based on dynamic inputs and saves the generated transcript to a text file. This transcript mimics an actual sales call, detailing the interactions between a sales representative and a client.
 ### Assumption 
 1. **Call Duration**: Sales call are initial discussion between product owner and potential client , so in realistic enviornment the call duration is assumed to be 30 minutes. 
-2. **Product Details**: Product feature list are assumed to follow a format and have 10 features 
+2. **Product**: Rightnow 2 product are choosen namely juspay(payment solutions) and darwinbox(hr management tool), to add new product create a python file <product_name>_product indside product_details folder and follow below below format for each file.
+  ```python
+    {
+    product_company = "str type"
+    potential_customer = "str type"
+    sales_representative = f"str type"
+    client_representative = f"str type"
+    product_domain = "str type"
+    customer_domain = "str type"
+    major_issue = "str type"
+    product_details = [{{
+     "feature": "str type",
+     "description": "str type",
+     "pricing": "str type"
+      }}]
+    }
+  ```
+3. **Product Details**: Product feature list are assumed to follow a format and have 10 features 
  ```json
    {
      "feature": "HyperCheckout",
