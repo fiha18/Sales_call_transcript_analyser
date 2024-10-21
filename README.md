@@ -168,6 +168,15 @@ For Task 2, the objective is to create a script that generates a summary of a sa
 
 The script includes robust error handling to ensure smooth operation during the API call phase. If a rate limit error occurs, the script waits for 60 seconds before retrying. After five failed attempts, the script gives up on that particular chunk of text. Other unexpected errors are also caught, and the summarization process for that chunk is halted to avoid crashes.
 
+### Run the Summary Generator:
+
+```bash
+python3 summary.py <input_file_name> [summary_format] [word_limit]
+```
+  - <input_file_name>: Replace this with the actual name of the input file (located in the generated_transcripts folder).
+  - [summary_format]: (Optional) Specify the desired summary format: paragraph,bullet_points, or concise. If not provided, the paragraph format will be used.
+  - [word_limit]: (Optional) word limit for the summary.If not provided, 1000 word limit will be used for paragraph,bullet_points and 200 words for concise. ***word limit does not guarentee exact word count***
+
 ### Future work 
   - Use of language detection to ensure the correct language model is applied for multilingual scenarios.
   - Tone Filtering: tone analysis as part of the processing, identify emotive language or sarcasm for better insight.

@@ -10,21 +10,20 @@ import llm_strategy.openai as openai
 
 period_timer = None
 start_execution_time = time.time()
-# Initialize OpenAI API key
-# OPENAI_API_KEY = "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"
-# client = OpenAI(api_key=OPENAI_API_KEY)
-# model = "gpt-4o-mini"
-# temperature = 0.7
-# max_tokens = 8000   
 
-completion_usage = {}
-def generate_transcript_summary(file_path,summary_format="paragraph"):
+def merge_chunk_summaries(chunk_response_list,summary_format="paragraph",word_limit = 1000):
+    system_message = summarizer_prompt.get_merge_response_system_message(chunk_response_list,summary_format,word_limit)
+    prompt_message = "Generate a cohesive, well-structured summary of call transcript"
+    final_response = openai.call_openai_api(system_message,prompt_message)
+    return final_response
+
+def generate_transcript_summary_list(file_path,summary_format="paragraph"):
     """
     Creates a summary for a given file using the OpenAI GPT 4 API.
 
     Parameters:
     file_path (str): The path of the file.
-    prompt (list): The prompt to use for the OpenAI API.
+    summary_format (str) : summary format should be paragraph, bullet_point or concise.
 
     Returns:
     str: The summary.
@@ -37,22 +36,21 @@ def generate_transcript_summary(file_path,summary_format="paragraph"):
     transcript = summarizer_helper.preprocess_text(transcript)
     chunks = summarizer_helper.split_text(transcript)
     summary_list = []
-    total_chunks = len(chunks)
-    for i,chunk in enumerate(chunks, start=1):
-        system_message = summarizer_prompt.get_summarizer_system_message(word_limit=1500)
-        prompt_message = summarizer_prompt.get_summarizer_user_prompt(chunk,summary_format,utils.get_major_context)
+    for chunk in enumerate(chunks, start=1):
+        system_message = summarizer_prompt.get_summarizer_system_message()
+        prompt_message = summarizer_prompt.get_summarizer_user_prompt(chunk,utils.get_major_context)
         # Generic openai api function which accepts system message and user prompt
         summary = openai.call_openai_api(system_message,prompt_message)
         summary_list.append(summary)
-    return "".join(summary_list)
+    return summary_list
 
 def save_summary_file(file_path,summary):
     """
     This function saves a summary file to folder_path based on the provided final_response_content.
 
     Parameters:
-        summary : The text content to be written to the transcript file.
-        file_path (optional): The directory path where the transcript file will be saved.
+        summary (str) : The text content to be written to the transcript file.
+        file_path (str): The directory path where the transcript file will be saved.
     Returns:
         None
     """
@@ -69,26 +67,30 @@ def perform_call_transcript_summary_generation():
         print(f"Input file {input_file_name} does not exists, skipping.")
         return 
     # either paragraph , bullet_points, concise
-    summary_format = command_line_args[2] if len(command_line_args) > 2  else None 
+    summary_format = command_line_args[2] if len(command_line_args) > 2  else None
+    word_limit = command_line_args[3] if len(command_line_args) > 3 else None
     transcript_file_path = os.path.join(transcript_folder, input_file_name)
     if not os.path.exists(transcript_file_path):
         print(f"file {os.path.basename(transcript_file_path)} does not exists.")
         return 
     # summary_format paragraph format, bullet points, concise
-    summary = generate_transcript_summary(transcript_file_path,summary_format)
+    summary_list = generate_transcript_summary_list(transcript_file_path,summary_format)
     # folder path to save summary 
     folder_path="generated_summaries"
     # Create the folder if it doesn't exist
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
-    file_name = input_file_name.replace(".txt",f"_{summary_format}_summary.txt")
+    file_name = input_file_name.replace(".txt",f"_{summary_format}_summary_list.txt")
     file_path = os.path.join(folder_path, file_name)
     if os.path.exists(file_name):
         print(f"Output file {os.path.basename(file_path)} already exists, skipping.")
-        return 
-    if summary is not None:
+        return
+    # Creating final response 
+    summary = merge_chunk_summaries(summary_list,summary_format,word_limit)  
+    if summary_list is not None:
         try:
-            save_summary_file(file_path,summary)
+            # Saving only summary list as str , this can optimise query_handler
+            save_summary_file(file_path,"".join(summary_list))
             print(f"Summary generated successfully and saved to folder: {folder_path}\nFilename: {file_name}")
         except PermissionError:
             print(f"No permission to write file: {file_path}")
