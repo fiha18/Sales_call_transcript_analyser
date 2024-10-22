@@ -1,12 +1,13 @@
+from dotenv import load_dotenv,find_dotenv
 from openai import OpenAI
 from openai import RateLimitError
 import time
+import os 
 import utils
 
 period_timer = None
-OPENAI_API_KEY = "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"
-client = OpenAI(api_key=OPENAI_API_KEY)
-# Helper function to make OpenAI API calls
+_ = load_dotenv(find_dotenv())
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 def call_openai_api(system_message, prompt_message, model = "gpt-4o-mini", max_tokens = 8000, temperature = 0.7):
     """
     This function interacts with the OpenAI API to generate text based on user prompts and system information.

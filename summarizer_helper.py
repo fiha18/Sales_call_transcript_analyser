@@ -74,7 +74,6 @@ def preprocess_text_helper(text):
                 return line     
                     
         processed_lines = [spell_check_and_correct(replace_contractions(remove_fillers_and_stop_words(line))) for line in processed_lines]
-        print(processed_lines)
         end_execution_time_preprocessing = time.time()
         total_time = float(end_execution_time_preprocessing - start_execution_time_preprocessing)
         print(f"Total time taken for preprocessing: {total_time:.4f} seconds")
