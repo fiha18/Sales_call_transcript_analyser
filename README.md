@@ -171,11 +171,10 @@ The script includes robust error handling to ensure smooth operation during the 
 ### Run the Summary Generator:
 
 ```bash
-python3 summary.py <input_file_name> [summary_format] [word_limit]
+python3 summary.py <input_file_name> [summary_format]
 ```
   - <input_file_name>: Replace this with the actual name of the input file (located in the generated_transcripts folder).
   - [summary_format]: (Optional) Specify the desired summary format: paragraph,bullet_points, or concise. If not provided, the paragraph format will be used.
-  - [word_limit]: (Optional) word limit for the summary.If not provided, 1000 word limit will be used for paragraph,bullet_points and 200 words for concise. ***word limit does not guarentee exact word count***
 
 ### Future work 
   - Use of language detection to ensure the correct language model is applied for multilingual scenarios.

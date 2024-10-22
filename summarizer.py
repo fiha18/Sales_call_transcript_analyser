@@ -4,6 +4,7 @@ import os
 import sys
 import time
 import utils
+import threading
 import prompts.summarizer_prompt as summarizer_prompt
 import summarizer_helper
 import llm_strategy.openai as openai
@@ -11,9 +12,11 @@ import llm_strategy.openai as openai
 period_timer = None
 start_execution_time = time.time()
 
-def merge_chunk_summaries(chunk_response_list,summary_format="paragraph",word_limit = 1000):
-    system_message = summarizer_prompt.get_merge_response_system_message(chunk_response_list,summary_format,word_limit)
-    prompt_message = "Generate a cohesive, well-structured summary of call transcript"
+def merge_chunk_summaries(chunk_response_list,summary_format="paragraph"):
+    print(f"Chunk Response List Length : {len(chunk_response_list)}")
+    print(f"Chunk Response List : {chunk_response_list}")
+    system_message = summarizer_prompt.get_merge_response_system_message(chunk_response_list,summary_format)
+    prompt_message = "Generate a cohesive, well-structured summary of call transcript in at most 1000 words"
     final_response = openai.call_openai_api(system_message,prompt_message)
     return final_response
 
@@ -31,12 +34,12 @@ def generate_transcript_summary_list(file_path,summary_format="paragraph"):
     with open(file_path, "r") as f:
         print(f"Reading {os.path.basename(file_path)}")
         transcript = f.read()
-
     # Preprocess the transcript
-    transcript = summarizer_helper.preprocess_text(transcript)
-    chunks = summarizer_helper.split_text(transcript)
+    transcript_chunks = summarizer_helper.split_text(transcript)
+    chunks = summarizer_helper.preprocess_text(transcript_chunks)
     summary_list = []
     for chunk in enumerate(chunks, start=1):
+        print(f"Pre proccessed chuck for Open AI API :  {chunk}")
         system_message = summarizer_prompt.get_summarizer_system_message()
         prompt_message = summarizer_prompt.get_summarizer_user_prompt(chunk,utils.get_major_context)
         # Generic openai api function which accepts system message and user prompt
@@ -68,7 +71,7 @@ def perform_call_transcript_summary_generation():
         return 
     # either paragraph , bullet_points, concise
     summary_format = command_line_args[2] if len(command_line_args) > 2  else None
-    word_limit = command_line_args[3] if len(command_line_args) > 3 else None
+    #word_limit = command_line_args[3] if len(command_line_args) > 3 else None
     transcript_file_path = os.path.join(transcript_folder, input_file_name)
     if not os.path.exists(transcript_file_path):
         print(f"file {os.path.basename(transcript_file_path)} does not exists.")
@@ -86,7 +89,7 @@ def perform_call_transcript_summary_generation():
         print(f"Output file {os.path.basename(file_path)} already exists, skipping.")
         return
     # Creating final response 
-    summary = merge_chunk_summaries(summary_list,summary_format,word_limit)  
+    summary = merge_chunk_summaries(summary_list,summary_format)  
     if summary_list is not None:
         try:
             # Saving only summary list as str , this can optimise query_handler
