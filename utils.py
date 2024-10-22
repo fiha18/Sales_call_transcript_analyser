@@ -144,5 +144,5 @@ def get_major_context():
         return major_context
 
 def get_summary_related_words():
-        summary_related_words = [ "overview","abstract", "recap", "synopsis", "digest", "outline", "highlights", "key points", "summary statement", "brief", "condensed version", "summary report", "compendium", "review","conclusion"]
+        summary_related_words = [ "summary","overview","abstract", "recap", "synopsis", "digest", "outline", "highlights", "key points", "summary statement", "brief", "condensed version", "summary report", "compendium", "review","conclusion"]
         return summary_related_words

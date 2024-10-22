@@ -73,7 +73,7 @@ def perform_call_transcript_summary_generation():
     if not os.path.exists(transcript_file_path):
         print(f"file {os.path.basename(transcript_file_path)} does not exists.")
         return 
-    # summary_format paragraph format, bullet points, concise
+    # summary_format paragraph, bullet points, concise
     summary_list = generate_transcript_summary_list(transcript_file_path,summary_format)
     # folder path to save summary 
     folder_path="generated_summaries"

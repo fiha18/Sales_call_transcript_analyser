@@ -49,7 +49,7 @@ def perform_user_query_on_call_transcript_generation():
     # To do: add transcript_folder, input_file_name and summary_format from input or runtime parameter
     transcript_folder = "generated_transcripts"
     summary_folder = "generated_summaries"
-    summary_format = "paragraph"
+    summary_format = "bullet_points"
     command_line_args = sys.argv
     input_file_name = command_line_args[1]
     user_query = command_line_args[2]
@@ -57,7 +57,7 @@ def perform_user_query_on_call_transcript_generation():
     if any(keyword in query_helper.extract_keywords(user_query) for keyword in utils.get_summary_related_words()):
         # User query is related to summary, attempt to use the summary file
         print("Reading attempt to Summary file, as query is closly related to summary")
-        summary_file = input_file_name.replace(".txt", f"_{summary_format}_summary.txt")
+        summary_file = input_file_name.replace(".txt", f"_{summary_format}_summary_list.txt")
         summary_file_path = os.path.join(summary_folder, summary_file)       
         if os.path.exists(summary_file_path):
             # Summary file exists, use it for querying
