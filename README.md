@@ -93,8 +93,7 @@ source path/to/venv/bin/activate
 ```
 ### Install Dependencies
 ```bash
-pip install openai
-pip install textblob
+pip install -r requirements.txt
 ```
 
 ### Run the Transcript Generator:
