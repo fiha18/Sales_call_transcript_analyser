@@ -38,7 +38,7 @@ def generate_transcript_summary_list(file_path,summary_format="paragraph"):
     summary_list = []
     for chunk in enumerate(chunks, start=1):
         system_message = summarizer_prompt.get_summarizer_system_message()
-        prompt_message = summarizer_prompt.get_summarizer_user_prompt(chunk,utils.get_major_context)
+        prompt_message = summarizer_prompt.get_summarizer_user_prompt(chunk,utils.get_major_context,summary_list)
         # Generic openai api function which accepts system message and user prompt
         summary = openai.call_openai_api(system_message,prompt_message)
         summary_list.append(summary)

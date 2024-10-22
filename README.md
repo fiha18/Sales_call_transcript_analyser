@@ -111,7 +111,7 @@ For Task 2, the objective is to create a script that generates a summary of a sa
 ### Approach
 
 1. **Pre-processing the Transcript:**
-   - The transcript text file is cleaned and pre-processed to remove unnecessary elements that could interfere with summarization accuracy:
+   - The transcript text file is cleaned and pre-processed to remove unnecessary elements that could interfere with summarization accuracy (~ reduction in size of text from 32,000 to 20,000 length):q
      1. **Remove timestamps and participant names** from the transcript (e.g., `00:00:03 Sam(open.ai)`).
      2. **Remove filler and stop words** such as "um," "so," "a," "an," "the," etc., from the text.
      3. **Expand contractions** such as "won't" to "will not" for better clarity.

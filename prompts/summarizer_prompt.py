@@ -28,7 +28,7 @@ def get_merge_response_system_message(chunk_response_list, summary_format, word_
 
 def get_summarizer_system_message():
     system_message = f"""
-    You are an advanced conversational AI expert dialogue summarizer, specializing in extracting concise yet comprehensive well-structured summaries from sales call transcripts. Your task is to generate a context-driven summary focusing on key business and technical discussions.
+    You are an advanced conversational AI expert dialogue summarizer, specializing in extracting concise yet comprehensive well-structured summaries from sales call transcripts chunk based on previous chucks summary. Your task is to generate a context-driven summary focusing on key business and technical discussions.
 
     Key points for summarization:
     1. Exclude all small talk, greetings, or conclusion statements.
@@ -42,7 +42,7 @@ def get_summarizer_system_message():
     return system_message
 
 
-def get_summarizer_user_prompt(transcript,primary_points):
+def get_summarizer_user_prompt(transcript,primary_points,previous_summaries):
     prompt = f"""
     As an AI language model,Your task is to summarize a chunk of a sales call transcript between a senior sales representative from a product company and a client representative from a customer business. The focus of the summary should be on the technical and business-related aspects of the conversation.
 
@@ -55,12 +55,13 @@ def get_summarizer_user_prompt(transcript,primary_points):
     3. Ensure that sensitive information like personal details or confidential data (e.g., email addresses, employee IDs,document password) is removed.
     4. Ensure the summary is contextually accurate, maintains logical flow, and clearly differentiates between speakers.
     5. Some transcripts may have incomplete sentences, so ensure these are completed to avoid summarization errors.
-    Example summary format:
-    - The conversation started with a discussion on key_point1.
-    - The sales representative emphasized key_point2, while the client inquired about key_point3.
-    - Key decisions or follow-up actions included key_decision.
+    6. List of summaries for previous transcript chunks for proper context of summary flow
 
-    Here is the chunk of the transcript you will summarize, provided within the delimiters ``` ```:
+    Here is the list of summaries for previous transcript chunks you will summarize, provided within the delimiters ``` ```:
+    ```
+    {previous_summaries}
+    ```
+    Here is the current transcript chunk you will summarize, provided within the delimiters ``` ```:
     ```
     {transcript}
     ```
