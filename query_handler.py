@@ -116,10 +116,8 @@ def perform_user_query_on_call_transcript_generation():
         return
     if response is not None:
         try:
-            # Saving only summary list as str , this can optimise query_handler
-            
             save_chat_file(file_path,f"\n\n{user_query_time} User Query: {user_query}\n\n{chat_response_time} App Response: \n{response}")
-            print(f"Summary generated successfully and saved to folder: {folder_path}\nFilename: {file_name}")
+            print(f"Query Response generated successfully and saved to folder: {folder_path}\nFilename: {file_name}")
         except PermissionError:
             print(f"No permission to write file: {file_path}, moving forward.")
         except FileExistsError:
