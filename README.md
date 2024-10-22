@@ -205,7 +205,7 @@ Attaching Screenshots of querying to call transcript and summary for same query.
 - **Fallback Mechanism**: If the summary does not contain enough information to answer the user query, the system efficiently falls back on querying the transcript chunks.
 
 - **Merging Chunk Responses**: chat completion api response for each chunk are merged in a cohesive, well-structured response that directly addresses the user’s prompt.
-### Run the Summary Generator:
+### Run the Query Handler:
 
 ```bash
 python3 query_handler.py <input_file_name> <user_input_query>
