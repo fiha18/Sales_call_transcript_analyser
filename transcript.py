@@ -84,6 +84,12 @@ def save_transcript_file(file_path,final_response_content):
 
 
 def perform_call_transcript_generation():
+    """
+    The `perform_call_transcript_generation()` function generates a sales call transcript for a specified product. 
+    - It first checks if the product owner is in a predefined list. If not, it prompts the user to add product details in a specific format.
+    - The function dynamically imports the product details module, generates a fake transcript using `generate_fake_call_transcript()`, and saves it to the `generated_transcripts` folder with a timestamped filename.
+    - Error handling is implemented for file permissions, file existence, and general exceptions.
+    """
     predefined_product_list = ["juspay","darwinbox","shopify","sap-erp"]
     print(f"Enter the product owner in this list {predefined_product_list} else add product details in product_details folder following same format as others")
     product_owner = input("Enter product owner : ")

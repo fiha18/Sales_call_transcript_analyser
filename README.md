@@ -19,6 +19,7 @@ Inside working directory
 ### Set Up Virtual Environment
 
 ```bash
+pwd
 python3 -m venv $PATH/myenv/venv
 source myenv/venv/bin/activate
 ```
@@ -81,25 +82,22 @@ To create a realistic and accurate transcript, I leveraged OpenAI’s GPT models
     - sequential open ai completion api call based on **product detail list** elements
 
 ### Function: `generate_call_transcript_prompt`
-
-The function `generate_call_transcript_prompt` is at the core of this task. It generates a well-structured prompt to be sent to the GPT model, ensuring that the conversation is both realistic and informative.
-
-**Function Arguments:**
-
-1. **`sales_representative`**: Name of the sales representative (e.g., "Rahul Kothari").
-2. **`client_representative`**: Name of the client representative (e.g., "Kailash Nath").
-3. **`product_detail_list`**: A list of product details to be discussed in the call following product_detail format. 
-  
-4. **start_time**: The start time of the transcript, formatted as `HH:MM:SS` (e.g., "00:05:00").
-5. **call_duration**: The duration of the call in minutes (e.g., 5 minutes). If the `start_time` is "00:15:00" and the `call_duration` is 5, the transcript will cover the conversation until "00:20:00".
+  Function Logic:
+  ---------------
+  1. Calculates the `end_time` of the call segment by adding `call_duration` to `start_time`.
+  2. Compiles the product details from `product_detail_list` into a readable format for inclusion in the conversation.
+  3. Constructs a detailed prompt that provides the AI model with instructions on how
+  to simulate the conversation. This includes:
+      - Dialogue between the sales and client representatives
+      - Focus areas such as ease of integration, technical insights, and SLA discussion
+      - Format with timestamps and speaker names
+      - Continuation of the dialogue from the previous segment.
+      
 
 ### Additional Features
 - **Dynamic Timing**: The script calculates timestamps for each part of the transcript, ensuring that the call flows smoothly with realistic intervals between dialogue.
 - **Greeting and Conclusion**: A greeting is added at the start of the conversation, and a conclusion is appended based on the calculated time at the end of the call.
 
-### How to Run the Script
-
-Below are the steps to set up your environment and run the transcript generator script:
 
 ### Run the Transcript Generator:
 
@@ -193,10 +191,6 @@ Attaching Screenshots of querying to call transcript and summary for same query.
 
 2. **Fallback to Full Transcript Query(LLM Strategy = OpenAI)**:  
    If the summary is not present or query type is not closely related to summary, then the system falls back to the full transcript by searching through the chunks generated in Step 1.
-  - Querying without summary
-    ![Screenshot of querying without summary : Time 29 seconds ]( /screenshots/query_without_summary.png)
-  - Querying with summary
-    ![Screenshot of querying with summary : Time 9 seconds ]( /screenshots/query_with_summary.png)
     
 #### Optimizations
 - **Efficient Use of Token Limits**: Avoided exceeding token limits in the GPT models and ensure that responses are accurate without truncation.
@@ -253,42 +247,55 @@ python3 query_handler.py <input_file_name> <user_input_query>
 ## Project Structure
 ```
 CALL-TRANSCRIPT-ANALYSIS
-│   README.md
-│   query_handler.py
-│   query_helper.py
-│   summarizer_helper.py
-│   summarizer.py
-│   transcript.py
-│   transcript.py
-│   utils.py
-│
-├───myenv
-│   └───...
-├───llm_strategy
-│       openai.py
-├───generated_summaries
-│       darwinbox_srijan_sales_call_transcript_20241019_190826_bullet_points_summary_list.txt
-│       juspay_rohit_sales_call_transcript_20241019_191339_bullet_points_summary_list.txt
-├───generated_transcripts
-│       darwinbox_srijan_sales_call_transcript_20241019_190826.txt
-│       juspay_rohit_sales_call_transcript_20241019_191339.txt
-├───product_details
-│       juspay_product.py
-│       darwinbox_product.py
-├───product_details
-│       juspay_product.py
-│       darwinbox_product.py 
-├───prompts
-│       query_prompt.py
-│       summarizer_prompt.py
-│       transcript_generator_prompt.py     
-└───screen_shots
-       query_with_summary.png
-       query_without_summary.png
+├── README.md
+├── generated_summaries
+│   └── sap_mehdi_sales_call_transcript_20241022_211749_paragraph_summary_list.txt
+├── generated_transcripts
+│   └── sap_mehdi_sales_call_transcript_20241022_211749.txt
+├── llm_strategy
+│   └── openai.py
+├── product_details
+│   ├── darwinbox_product.py
+│   ├── juspay_product.py
+│   ├── sap-erp_product.py
+│   └── shopify_product.py
+├── prompts
+│   ├── query_prompt.py
+│   ├── summarizer_prompt.py
+│   └── transcript_generator_prompt.py
+├── query_handler.py
+├── query_helper.py
+├── query_responses
+│   └── sap_mehdi_sales_call_transcript_20241022_211749_query_responses.txt
+├── requirements.txt
+├── screenshots
+│   ├── query_example_1.png
+│   ├── query_response_with_summary.png
+│   ├── query_response_without_summary.png
+│   └── transcript_generation_and_summary.png
+├── summarizer.py
+├── summarizer_helper.py
+├── transcript.py
+└── utils.py
 ```
 
 ## FUTURE WORKS
-- **Classes for tasks** - Python is a OOP language , using classes to initiate object of each task,*assesment output is required in script only*.
+- **Classes for tasks** - Python is a OOP language , using classes to initiate object of each task, *assesment output is required in script only*.
 - **Environment Handling** - Handling multiple enviorment (development, uat, prod). If project is deployed Specifically path handling. 
 - **Use of open ai tiktoken tokeniser** : tiktoken is between 3-6x faster than a comparable open source tokeniser
 - **Logging and Monitoring** - Used to debug and track performance, saving transcript, summary and query_response in *JSON* format with performance metrics for further analytics.
+
+## Screenshots
+- **Transcript Creation and Summarizarion**
+    - Total time taken for transcript creation : 104.4765 seconds 
+    - Total time taken for summary creation : 23.1350 seconds 
+    ![Screenshot of transcript.py and summarizer.py]( /screenshots/transcript_generation_and_summary.png)
+- **Query Example**
+  - Total time taken: 6.8326 seconds
+  ![Screenshot of query_handler.py]( /screenshots/query_example_1.png)
+- **Query Without Summary**
+  - Total time taken: 13.8594 seconds
+  ![Screenshot of query_handler.py]( /screenshots/query_response_without_summary.png)
+- **Query With Summary**
+  - Total time taken: 5.9190 seconds
+  ![Screenshot of query_handler.py]( /screenshots/query_response_with_summary.png)

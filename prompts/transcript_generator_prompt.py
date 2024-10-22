@@ -1,5 +1,8 @@
 import utils as utils
 def generate_call_transcript_system_message(call_duration):
+    """
+    Generates a system role message for an AI language model to simulate a sales call transcript.
+    """
     system_message = f"""
     You are an expert dialogue and script generator.
     Your task is to create detailed, realistic, and technical sales call transcripts. The goal is to produce a natural and comprehensive conversation focused on the provided context, split into smaller chunks of {call_duration}-minute intervals to ensure accuracy and token efficiency.
@@ -16,6 +19,29 @@ def generate_call_transcript_system_message(call_duration):
 
 
 def generate_call_transcript_prompt(sales_representative, client_representative, product_domain, customer_domain, product_detail_list, start_time, call_duration,last_ending_line,fillers,contraction_words,major_context):
+    """
+    Generates a prompt for an AI language model to simulate a sales call transcript.
+
+    Parameters:
+    ----------
+    - sales_representative : str - Name of the sales rep.
+    - client_representative : str - Name of the client rep.
+    - product_domain : str - Sales rep’s industry domain.
+    - customer_domain : str - Client’s industry domain.
+    - product_detail_list : list of dicts - Product features, descriptions, and pricing.
+    - start_time : str - Start time of the transcript segment.
+    - call_duration : int - Duration of the call segment in minutes.
+    - last_ending_line : str - Last few lines from the previous chunk for continuity.
+    - fillers : str - Fillers (e.g., "um", "uh").
+    - contraction_words : str - Contraction words (e.g., "can't").
+    - major_context : str - Key discussion points (e.g., integration, technical concerns).
+
+    Returns:
+    -------
+    - prompt : str - A formatted prompt for the AI model to generate the transcript.
+    
+    The function compiles product details and creates a structured prompt with timestamps, dialogue formatting, and instructions to generate a natural, context-driven conversation.
+    """
     end_time = utils.add_time(start_time, call_duration)
     product_details = ""
     for product in product_detail_list:

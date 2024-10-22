@@ -150,7 +150,7 @@ def get_summary_related_words():
         """
         summary_related_words = [ "questions","briefly","name","context","summary","overview","abstract", "recap", "synopsis", "digest", "outline", "highlights", "key points", "summary statement", "brief", "condensed version", "summary report", "compendium", "review","conclusion"]
         summary_related_keywords_top_100 = [
-        "summary", "overview", "briefly", "context", "abstract", "recap", "synopsis", 
+        "summary", "brief","overview", "briefly", "context", "abstract","concise","recap", "synopsis", 
         "digest", "outline", "highlights", "key points", "essence", "gist", 
         "core points", "main ideas", "takeaways", "snapshot", "short version", 
         "quick review", "bullet points", "concise explanation", "primary details", 

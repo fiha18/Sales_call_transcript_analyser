@@ -38,9 +38,15 @@ def preprocess_text_helper(text):
     lines (str): proccessed lines .
     """
     start_execution_time_preprocessing = time.time()
-    print(f"Total number of words before preprocessing : {len(text)}")
     lines = text.lower().split('\n')
+    if (not lines[0].split(" ")[0] == "00:00:00"): # If text is summary just splitting based on new line
+        end_execution_time_preprocessing = time.time()
+        total_time = float(end_execution_time_preprocessing - start_execution_time_preprocessing)
+        print(f"Skipping deep preprocessing for summary...")
+        print(f"Total time taken for preprocessing: {total_time:.4f} seconds")
+        return lines
     # removing timestamp and participant name from lines
+    print(f"Total number of words before preprocessing : {len(text)}")
     processed_lines = [line.split("): ")[-1]for line in lines]
     try:
         # Load stop words, filler words, and contraction mappings from utility functions
