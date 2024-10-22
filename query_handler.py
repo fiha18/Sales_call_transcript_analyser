@@ -3,6 +3,7 @@ import sys
 import time
 import utils
 import query_helper
+from datetime import datetime
 import prompts.query_prompt as query_prompt
 import llm_strategy.openai as openai
 period_timer = None
@@ -44,12 +45,28 @@ def query_transcript(transcript, query):
     
     return response
 
+def save_chat_file(file_path,chat):
+    """
+    This function appends a chat to file_path based on the provided final_response_content.
+
+    Parameters:
+        chat (str) : The text content to be appended to the chat file.
+        file_path (str): The directory path where the transcript file will be saved.
+    Returns:
+        None
+    """
+    # Write the content to the transcript file
+    with open(file_path, 'a') as file:
+        file.write(chat)
+
 
 def perform_user_query_on_call_transcript_generation():
     # To do: add transcript_folder, input_file_name and summary_format from input or runtime parameter
     transcript_folder = "generated_transcripts"
     summary_folder = "generated_summaries"
     summary_format = "bullet_points"
+    # to be used in persisting chat
+    user_query_time = datetime.now().strftime("%Y:%m:%d-%H:%M:%S")
     command_line_args = sys.argv
     input_file_name = command_line_args[1]
     user_query = command_line_args[2]
@@ -84,8 +101,31 @@ def perform_user_query_on_call_transcript_generation():
             print(f"Transcript file {os.path.basename(transcript_file_path)} does not exist.")
             return None
     response = query_transcript(querying_file,user_query)
+    response = response.replace("**","")
+    # Response takes sometime
+    chat_response_time = datetime.now().strftime("%Y:%m:%d-%H:%M:%S")
     print(response)
-    #To Do : Persist Chat into file 
+    folder_path="query_responses"
+    # Create the folder if it doesn't exist
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+    file_name = input_file_name.replace(".txt",f"_query_responses.txt")
+    file_path = os.path.join(folder_path, file_name)
+    if os.path.exists(file_name):
+        print(f"Output file {os.path.basename(file_path)} already exists, skipping.")
+        return
+    if response is not None:
+        try:
+            # Saving only summary list as str , this can optimise query_handler
+            
+            save_chat_file(file_path,f"\n\n{user_query_time} User Query: {user_query}\n\n{chat_response_time} App Response: \n{response}")
+            print(f"Summary generated successfully and saved to folder: {folder_path}\nFilename: {file_name}")
+        except PermissionError:
+            print(f"No permission to write file: {file_path}, moving forward.")
+        except FileExistsError:
+            print(f"File already exists: {file_path}, moving forward.")
+        except Exception as e:
+            print(f"An error occurred while writing the file: {file_path}. Error: {e}, moving forward.")
         
 perform_user_query_on_call_transcript_generation() 
 end_execution_time = time.time()

@@ -1,0 +1,83 @@
+
+
+User Query: Identify using summary the following items for call transcript:
+    - Sentiment of customer {posetive or negative}
+    - Product Feature - product feature discussed
+Format of response is JSON object with Sentiment and Product
+
+App Response: 
+json
+{
+    "Sentiment": "positive",
+    "Product": {
+        "Features": [
+            "e-commerce solutions",
+            "drag-and-drop editor",
+            "mobile optimization",
+            "highly customizable themes",
+            "robust API support",
+            "PCI compliance",
+            "fraud analysis tools",
+            "24/7 customer support",
+            "loyalty programs",
+            "analytics tools",
+            "abandoned cart recovery tool",
+            "custom domain feature",
+            "multichannel selling",
+            "integration with existing inventory management systems",
+            "marketing automation tools"
+        ]
+    }
+}
+
+
+User Query: Identify in brief what product customer liked.Make sure your response as short as possible
+
+App Response: 
+The customer expressed interest in Shopify's loyalty programs and analytics tools.
+
+User Query: How are you ?
+
+App Response: 
+The transcript chunks do not provide any information regarding the personal feelings or well-being of the individuals involved in the conversation. Therefore, I cannot answer the question "How are you?" based on the provided information.
+
+User Query: How was our sales representative?
+
+App Response: 
+The sales representative, Sarthak, demonstrated a strong knowledge of Shopify's product offerings and effectively addressed the client's questions throughout the call. He showcased key features such as versatility, customization options, robust API support, security protocols, scalability, and customer support.
+
+Sarthak provided detailed explanations on various topics, including shipping features, pricing, app management, compliance, and security, ensuring the client felt reassured about the scalability of solutions available. He was responsive to concerns regarding data security and integration processes, offering examples of successful implementations.
+
+Additionally, Sarthak communicated effectively about analytics, custom domains, SEO preservation during domain transfer, and multichannel selling. He proactively suggested sending a comprehensive service level agreement (SLA) and scheduling a product demo for further exploration of features.
+
+Overall, Sarthak's knowledgeable, attentive, and helpful approach contributed to a positive sales experience for the client.
+
+2024:10:22-17:33:27 User Query: What was sales representative name?
+
+17:33:30 App Response: 
+The sales representative's name is Sarthak.
+
+2024:10:22-17:38:16 User Query: Did they have any future questions?
+
+2024:10:22-17:38:19 App Response: 
+Yes, during the conversation, the client indicated that they had future questions. They expressed interest in understanding how Shopify supports business growth and had inquiries about next steps. This led to an agreement to schedule a product demonstration, which would provide an opportunity to explore features in more detail and address any further questions they might have. Additionally, a follow-up meeting was organized to discuss specific requirements after the demonstration.
+
+2024:10:22-17:47:05 User Query: provide high-level summary?
+
+2024:10:22-17:47:12 App Response: 
+The sales call focused on enhancing e-commerce solutions using Shopify. Key highlights included:
+
+1. **Customization & Integration**: Shopify offers customizable themes and robust API support for integrating with existing systems.
+2. **Security**: The platform is PCI compliant and includes fraud analysis tools and encryption for data protection.
+3. **Scalability**: Shopify can handle increased traffic and sales volumes efficiently.
+4. **Customer Support**: 24/7 support, extensive documentation, and a service level agreement for response times were emphasized.
+5. **Pricing**: Basic plans start at $29/month, with transparency on costs.
+6. **Features**: The discussion covered loyalty programs, analytics tools, abandoned cart recovery, multichannel selling, and marketing automation.
+7. **Next Steps**: The client showed interest in further exploring Shopify, resulting in an agreement for a product demonstration and follow-up meeting.
+
+Overall, the call effectively addressed the client’s needs and reassured them of Shopify's capabilities for supporting business growth.
+
+2024:10:22-17:50:55 User Query: provide high-level summary?
+
+2024:10:22-17:51:00 App Response: 
+The sales call focused on enhancing e-commerce solutions using Shopify, highlighting its customizable themes, robust API support for legacy system integration, and strong security measures, including PCI compliance. Key features discussed included scalability for increased traffic, 24/7 customer support, and transparent pricing starting at $29/month. The onboarding process, marketing automation integration, and analytics tools for tracking customer behavior were also addressed. The client showed interest in loyalty programs and abandoned cart recovery features, with plans for a product demonstration to explore these functionalities further. Overall, the conversation indicated that Shopify is a promising fit for the client's business growth.

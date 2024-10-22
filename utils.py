@@ -144,5 +144,34 @@ def get_major_context():
         return major_context
 
 def get_summary_related_words():
-        summary_related_words = [ "summary","overview","abstract", "recap", "synopsis", "digest", "outline", "highlights", "key points", "summary statement", "brief", "condensed version", "summary report", "compendium", "review","conclusion"]
-        return summary_related_words
+        """
+        This function returns most commonly sumary related word to make query to summary file if exist.
+        More number of related keywords can be added for more precise result.
+        """
+        summary_related_words = [ "questions","briefly","name","context","summary","overview","abstract", "recap", "synopsis", "digest", "outline", "highlights", "key points", "summary statement", "brief", "condensed version", "summary report", "compendium", "review","conclusion"]
+        summary_related_keywords_top_100 = [
+        "summary", "overview", "briefly", "context", "abstract", "recap", "synopsis", 
+        "digest", "outline", "highlights", "key points", "essence", "gist", 
+        "core points", "main ideas", "takeaways", "snapshot", "short version", 
+        "quick review", "bullet points", "concise explanation", "primary details", 
+        "quick facts", "summary statement", "core message", "main points", "condensed version", 
+        "summary report", "compendium", "review", "conclusion", "essence", "critical points", 
+        "condensed", "essential points", "summation", "summarized", "core details", 
+        "key takeaways", "main highlights", "high-level summary", "summarized statement", 
+        "compact version", "concise account", "condensed outline", "important highlights", 
+        "summary essentials", "quick facts", "top points", "executive summary", 
+        "concise report", "brief summary", "summary memo", "key insights", "highlights report", 
+        "summary insight", "summary brief", "important points", "summary findings", 
+        "core summary", "brief overview", "summary key points", "final overview", 
+        "summary conclusions", "summary recap", "focused summary", "primary summary", 
+        "quick key points", "concise insights", "main conclusions", "highlighted points", 
+        "final summary", "important ideas", "core takeaways", "concise key points", 
+        "critical takeaways", "summary observations", "key facts", "relevant points", 
+        "quick highlights", "summary outline", "main ideas summary", "concise synopsis", 
+        "bullet summary", "brief analysis", "top-level summary", "summary checklist", 
+        "concise review", "quick overview", "summary directive", "brief facts", 
+        "main points summary", "final key points", "short recap", "key summary", 
+        "concise findings", "summary final points", "condensed version", "summary description", 
+        "main summary", "concise points"
+        ]
+        return summary_related_keywords_top_100

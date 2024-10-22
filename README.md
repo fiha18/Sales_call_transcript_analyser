@@ -205,6 +205,16 @@ Attaching Screenshots of querying to call transcript and summary for same query.
 - **Fallback Mechanism**: If the summary does not contain enough information to answer the user query, the system efficiently falls back on querying the transcript chunks.
 
 - **Merging Chunk Responses**: chat completion api response for each chunk are merged in a cohesive, well-structured response that directly addresses the user’s prompt.
+
+### Additional Feature
+- **Persist Chat**: The multiple responses for a single transacript are saved in same query response text file like
+```
+2024:10:22-17:38:16 User Query: Did they have any future questions?
+
+2024:10:22-17:38:19 App Response: 
+Yes, during the conversation, the client indicated that they had future questions. They expressed interest in understanding how Shopify supports business growth and had inquiries about next steps. This led to an agreement to schedule a product demonstration, which would provide an opportunity to explore features in more detail and address any further questions they might have. Additionally, a follow-up meeting was organized to discuss specific requirements after the demonstration.
+
+```
 ### Run the Query Handler:
 
 ```bash

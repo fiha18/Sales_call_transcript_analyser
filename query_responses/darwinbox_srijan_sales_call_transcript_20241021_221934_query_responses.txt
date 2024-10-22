@@ -1,0 +1,30 @@
+
+
+ User Query: Identify using summary the following items for call transcript:
+    - Sentiment of customer {posetive or negative}
+    - Product Feature - product feature discussed
+Format of response is JSON object with Sentiment and Product 
+
+ App Response: json
+{
+    "Sentiment": "positive",
+    "Product": {
+        "employee_onboarding_system": {
+            "features": [
+                "streamlines document management and background checks",
+                "advanced encryption protocols for data security",
+                "API-first architecture for integration with existing HR tools",
+                "highly customizable workflows, forms, and reporting",
+                "cloud-based infrastructure for scalability",
+                "24/7 assistance and dedicated account manager",
+                "integration of time attendance tracking",
+                "robust security protocols including AES-256 encryption and multi-factor authentication",
+                "non-intrusive integration process with dedicated support",
+                "service level agreement guaranteeing 99.9% uptime",
+                "automated data migration tools",
+                "training and ongoing support for client teams",
+                "availability of a trial period for assessment"
+            ]
+        }
+    }
+}

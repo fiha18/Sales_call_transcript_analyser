@@ -1,6 +1,5 @@
 import summarizer_helper 
 import re
-from collections import defaultdict
 
 # all synonym words into one words for optimised query keywords
 def get_synonyms_dict():

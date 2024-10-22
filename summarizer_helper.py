@@ -43,10 +43,6 @@ def preprocess_text_helper(text):
     # removing timestamp and participant name from lines
     processed_lines = [line.split("): ")[-1]for line in lines]
     try:
-        #list of common stop words
-        start_execution_time_preprocessing = time.time()
-        print(f"Total number of words before preprocessing : {len(text)}")
-
         # Load stop words, filler words, and contraction mappings from utility functions
         stop_words = set(utils.get_common_stop_words())
         filler_words = set(utils.get_common_fillers())
