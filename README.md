@@ -88,8 +88,8 @@ Below are the steps to set up your environment and run the transcript generator 
 ### Set Up Virtual Environment
 
 ```bash
-python3 -m venv path/to/venv
-source path/to/venv/bin/activate
+python3 -m venv $PATH/to/venv
+source $PATH/to/venv/bin/activate
 ```
 ### Install Dependencies
 ```bash
