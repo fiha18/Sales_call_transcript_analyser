@@ -38,6 +38,7 @@ def preprocess_text_helper(text):
     lines (str): proccessed lines .
     """
     start_execution_time_preprocessing = time.time()
+    print(f"Total number of words before preprocessing : {len(text)}")
     lines = text.lower().split('\n')
     # removing timestamp and participant name from lines
     processed_lines = [line.split("): ")[-1]for line in lines]
@@ -77,6 +78,7 @@ def preprocess_text_helper(text):
         end_execution_time_preprocessing = time.time()
         total_time = float(end_execution_time_preprocessing - start_execution_time_preprocessing)
         print(f"Total time taken for preprocessing: {total_time:.4f} seconds")
+        print(f"Total number of words after preprocessing : {len(processed_lines) * len(processed_lines[0])}")
         return processed_lines
     except Exception as e:
         # Catch all preprocessing-related errors and moving forward gracefully with just timestamp and removal participant name
