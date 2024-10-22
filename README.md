@@ -10,6 +10,22 @@ The project is divided into three main tasks:
 3. **Querying Transcripts**: Answering user queries based on the generated transcript content.
 
 ---
+## Project Setup 
+Inside working directory
+```bash
+ git clone https://github.com/fiha18/CALL-TRANSCRIPT-ANALYSIS.git
+ cd CALL-TRANSCRIPT-ANALYSIS
+```
+### Set Up Virtual Environment
+
+```bash
+python3 -m venv $PATH/myenv/venv
+source myenv/venv/bin/activate
+```
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
 ## Task 1: Generic Transcript Generator
 
@@ -85,17 +101,6 @@ The function `generate_call_transcript_prompt` is at the core of this task. It g
 
 Below are the steps to set up your environment and run the transcript generator script:
 
-### Set Up Virtual Environment
-
-```bash
-python3 -m venv $PATH/to/venv
-source $PATH/to/venv/bin/activate
-```
-### Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
 ### Run the Transcript Generator:
 
 - Right now sales_representative, client_representative,product_company,product_domain,  customer_domain,call_duration are hardcoded .
@@ -147,12 +152,6 @@ python3 summarizer.py <input_file_name> [summary_format] [word_limit]
   - <input_file_name>: Replace this with the actual name of the input file (located in the generated_transcripts folder).
   - [summary_format]: (Optional) Specify the desired summary format: paragraph,bullet_points, or concise. If not provided, the paragraph format will be used.
   - [word_limit]: (Optional) word limit for the summary.If not provided, 1000 word limit will be used for paragraph,bullet_points and 200 words for concise. ***word limit does not guarentee exact word count***
-
-### Future work 
-  - Use of language detection to ensure the correct language model is applied for multilingual scenarios.
-  - Tone Filtering: tone analysis as part of the processing, identify emotive language or sarcasm for better insight.
-  - Keyword Segmentation: From a list of important keywords that signify different sections of the conversation. When a keyword is detected, segment the transcript at that point.
-
 
 ## Task 3: Querying the Transcript Efficiently
 
@@ -286,5 +285,10 @@ CALL-TRANSCRIPT-ANALYSIS
 └───screen_shots
        query_with_summary.png
        query_without_summary.png
-
 ```
+
+## FUTURE WORKS
+- **Classes for tasks** - Python is a OOP language , using classes to initiate object of each task,*assesment output is required in script only*.
+- **Environment Handling** - Handling multiple enviorment (development, uat, prod). If project is deployed Specifically path handling. 
+- **Use of open ai tiktoken tokeniser** : tiktoken is between 3-6x faster than a comparable open source tokeniser
+- **Logging and Monitoring** - Used to debug and track performance, saving transcript, summary and query_response in *JSON* format with performance metrics for further analytics.
