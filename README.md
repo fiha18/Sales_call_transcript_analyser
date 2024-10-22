@@ -123,7 +123,7 @@ For Task 2, the objective is to create a script that generates a summary of a sa
 3. **Summarizer System Message:**
    - The system is set up using the `get_summarizer_system_message` function, with a word limit set to **default** to guide the OpenAI API in generating a precise summary.
 
-4. **Prompt for Summarization:**
+4. **Prompt for Summarization:(LLM Strategy = OpenAI)**
    - The user prompt is generated using the function `get_summarizer_user_prompt`, which takes the chunk of text and user-defined `summary_format` (paragraph, bullet points, or concise). It also uses a hardcoded list of key context points such as:
      - **Product feature**
      - **Product pricing**
@@ -133,8 +133,10 @@ For Task 2, the objective is to create a script that generates a summary of a sa
      - **Data security**
      - **Support/maintenance costs**
      - **Ease of integration**
-5. **Merging Chuck Summary System Message:**
-  - The system is set up using the `get_merge_response_system_message` function for chunk responses to be merged in a cohesive, well-structured final summary.
+
+
+5. **Merging Chuck Summary System Message(LLM Strategy = OpenAI):**
+  - The system is set up using the `get_merge_response_system_message` function for merging chunk responses in a cohesive, well-structured final summary.
 
 6. **Saving the Summary List:**
    - The final step involves saving the generated summary to a `.txt` file using the `save_summary_file(file_path, summary)` function. This allows further analytics, such as querying the summary content for insights or answering user queries based on the call context.
@@ -188,11 +190,11 @@ Due to token limitations in models like GPT-3.5 and GPT-4 (approximately 4,000 t
 For call of around 30 minutes the summary is smaller (~12,000 characters) and call transcript (~28,000 character), it is better suited for general queries that do not require deep contextual information. This saves processing time and fits within the token limit for querying.
 Attaching Screenshots of querying to call transcript and summary for same query. 
 **Steps:**
-1. **Direct Query on Summary**:  
+1. **Direct Query on Summary(LLM Strategy = OpenAI)**:  
    If the query appears general or focused on broad information, the summary file is used for querying directly, avoiding the need to process the full transcript.
 
-2. **Fallback to Full Transcript Query**:  
-   If the summary is not present for answering the query, the system falls back to the full transcript by searching through the chunks generated in Step 1.
+2. **Fallback to Full Transcript Query(LLM Strategy = OpenAI)**:  
+   If the summary is not present or query type is not closely related to summary, then the system falls back to the full transcript by searching through the chunks generated in Step 1.
   - Querying without summary
     ![Screenshot of querying without summary : Time 29 seconds ]( /screenshots/query_without_summary.png)
   - Querying with summary
