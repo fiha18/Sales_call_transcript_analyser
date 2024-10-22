@@ -18,7 +18,7 @@ The project is divided into three main tasks:
 The goal of Task 1 is to develop a script that generates a realistic sales call transcript based on dynamic inputs and saves the generated transcript to a text file. This transcript mimics an actual sales call, detailing the interactions between a sales representative and a client.
 ### Assumption 
 1. **Call Duration**: Sales call are initial discussion between product owner and potential client , so in realistic enviornment the call duration is assumed to be 30 minutes. 
-2. **Product**: Rightnow 2 product are choosen namely juspay(payment solutions) and darwinbox(hr management tool), to add new product create a python file <product_name>_product indside product_details folder and follow below below format for each file.
+2. **Product**: 4 products juspay(payment solutions), darwinbox(hr management tool), sap-erp(enterprise resource planning) and shopify(e-commerce), to add new product create a python file <product_name>_product indside product_details folder and follow below below format for each file.
   ```python
     {
     product_company = "str type"
@@ -50,10 +50,10 @@ To create a realistic and accurate transcript, I leveraged OpenAI’s GPT models
 
 1. **API Integration**: 
     - The OpenAI Completion API was used for generating the transcripts. 
-    - Model selection involved `gpt-3.5-turbo` and `gpt-4` to experiment with different combinations of settings such as temperature, max tokens, and messages.
+    - Using **call_openai_api** function with system_message and prompt_message at **llm_strategy/openai** folder.
 
 2. **Limitations**:
-    - I aimed to generate realistic transcripts by analyzing product documentation in PDF format and trying out various combinations of models, prompts, temperature settings, and `max_tokens`.
+    - I aimed to generate realistic transcripts by analyzing product_detail_list format and trying out various combinations of models, prompts, temperature settings, and `max_tokens`.
     - I faced token limitations that resulted in transcripts lacking essential product details.
     - Due to these token limitations, the transcripts were constrained to cover a duration of approximately 4–5 minutes.
 
@@ -78,7 +78,6 @@ The function `generate_call_transcript_prompt` is at the core of this task. It g
 5. **call_duration**: The duration of the call in minutes (e.g., 5 minutes). If the `start_time` is "00:15:00" and the `call_duration` is 5, the transcript will cover the conversation until "00:20:00".
 
 ### Additional Features
-
 - **Dynamic Timing**: The script calculates timestamps for each part of the transcript, ensuring that the call flows smoothly with realistic intervals between dialogue.
 - **Greeting and Conclusion**: A greeting is added at the start of the conversation, and a conclusion is appended based on the calculated time at the end of the call.
 
@@ -105,26 +104,6 @@ pip install textblob
 python3 transcript.py
 ```
 - The transcript will be saved to a .txt file inside transcipt folder for further analysis.
-
-### Inital Folder Structure
-```
-CALL-TRANSCRIPT-ANALYSIS
-│   README.md
-│   transcript.py
-│   utils.py
-│
-├───myenv
-│   └───...
-│   
-├───generated_transcripts
-│       darwinbox_srijan_sales_call_transcript_20241019_190826.txt
-│       juspay_rohit_sales_call_transcript_20241019_191339.txt
-├───product_details
-│       juspay_product.py
-│       darwinbox_product.py     
-└───prompts
-        transcript_generator_prompt.py
-```
 
 ## Task 2: Summarization of Sales Call Transcripts
 
@@ -154,24 +133,15 @@ For Task 2, the objective is to create a script that generates a summary of a sa
      - **Data security**
      - **Support/maintenance costs**
      - **Ease of integration**
+5. **Merging Chuck Summary System Message:**
+  - The system is set up using the `get_merge_response_system_message` function for chunk responses to be merged in a cohesive, well-structured final summary.
 
-5. **Summarization Process with API Call and Error Handling:(To do - seperate open ai api logic as all 3 task are using it)** 
-   - The core of the summarization process is handled by making API requests to OpenAI’s GPT model.
-   
-   **Code Block Summary:**
-   - The code initiates a retry mechanism with a maximum of 5 attempts. It calls OpenAI's API for summarization, processes each chunk, and handles specific exceptions like `RateLimitError` by implementing a wait time before retrying. If other exceptions occur, the process will stop, and an error message will be displayed.
-
-6. **Saving the Summary:**
+6. **Saving the Summary List:**
    - The final step involves saving the generated summary to a `.txt` file using the `save_summary_file(file_path, summary)` function. This allows further analytics, such as querying the summary content for insights or answering user queries based on the call context.
-
-### Error Handling and Retry Logic:
-
-The script includes robust error handling to ensure smooth operation during the API call phase. If a rate limit error occurs, the script waits for 60 seconds before retrying. After five failed attempts, the script gives up on that particular chunk of text. Other unexpected errors are also caught, and the summarization process for that chunk is halted to avoid crashes.
-
 ### Run the Summary Generator:
 
 ```bash
-python3 summary.py <input_file_name> [summary_format] [word_limit]
+python3 summarizer.py <input_file_name> [summary_format] [word_limit]
 ```
   - <input_file_name>: Replace this with the actual name of the input file (located in the generated_transcripts folder).
   - [summary_format]: (Optional) Specify the desired summary format: paragraph,bullet_points, or concise. If not provided, the paragraph format will be used.
@@ -222,7 +192,7 @@ Attaching Screenshots of querying to call transcript and summary for same query.
    If the query appears general or focused on broad information, the summary file is used for querying directly, avoiding the need to process the full transcript.
 
 2. **Fallback to Full Transcript Query**:  
-   If the summary is insufficient for answering the query, the system falls back to the full transcript by searching through the chunks generated in Step 1.
+   If the summary is not present for answering the query, the system falls back to the full transcript by searching through the chunks generated in Step 1.
   - Querying without summary
     ![Screenshot of querying without summary : Time 29 seconds ]( /screenshots/query_without_summary.png)
   - Querying with summary
@@ -234,4 +204,76 @@ Attaching Screenshots of querying to call transcript and summary for same query.
 - **Fallback Mechanism**: If the summary does not contain enough information to answer the user query, the system efficiently falls back on querying the transcript chunks.
 
 - **Merging Chunk Responses**: chat completion api response for each chunk are merged in a cohesive, well-structured response that directly addresses the user’s prompt.
+### Run the Summary Generator:
 
+```bash
+python3 query_handler.py <input_file_name> <user_input_query>
+```
+  - <input_file_name>: Replace this with the actual name of the input file (located in the generated_transcripts folder).
+  - <user_query> : Replace with user query
+
+
+## LLM Strategy(OpenAI) with API Interaction:
+   - The core of the open ai in llm_strategy folder is handled by making API requests to OpenAI’s GPT model.
+   - This strategy follows code reusability , extensibility and modular approach.
+   ### Generic call_open_api function ###
+   ```python
+   def call_openai_api(system_message, prompt_message, model = "gpt-4o-mini", max_tokens = 8000, temperature = 0.7):
+    """
+      This function interacts with the OpenAI API to generate text based on user prompts and system information.
+      
+      Parameters:
+      - system_message (str): The initial message or context provided by the system.
+      - prompt_message (str): The user's prompt or query that the AI will respond to.
+      - model (str, optional): The OpenAI model to use for generation. Defaults to "gpt-4o-mini".
+      - max_tokens (int, optional): The maximum number of tokens for the generated response. Defaults to 8000.
+      - temperature (float, optional): Controls the randomness of the generated text. Lower values are more deterministic, higher values are more creative. Defaults to 0.7.
+      
+      Returns:
+      - str: The generated response from the OpenAI model, or None if an error occurs.
+    """
+   ```
+  ### Error Handling
+  Error Handling
+  - Rate Limit Handling: If a rate limit is encountered, the function waits 60 seconds and retries the request.
+  - General Errors: For any unexpected error, the function gracefully exits and prints the error message.
+  - Retry Logic: The function retries up to 5 times in case of failure before giving up.
+
+
+## Project Structure
+```
+CALL-TRANSCRIPT-ANALYSIS
+│   README.md
+│   query_handler.py
+│   query_helper.py
+│   summarizer_helper.py
+│   summarizer.py
+│   transcript.py
+│   transcript.py
+│   utils.py
+│
+├───myenv
+│   └───...
+├───llm_strategy
+│       openai.py
+├───generated_summaries
+│       darwinbox_srijan_sales_call_transcript_20241019_190826_bullet_points_summary_list.txt
+│       juspay_rohit_sales_call_transcript_20241019_191339_bullet_points_summary_list.txt
+├───generated_transcripts
+│       darwinbox_srijan_sales_call_transcript_20241019_190826.txt
+│       juspay_rohit_sales_call_transcript_20241019_191339.txt
+├───product_details
+│       juspay_product.py
+│       darwinbox_product.py
+├───product_details
+│       juspay_product.py
+│       darwinbox_product.py 
+├───prompts
+│       query_prompt.py
+│       summarizer_prompt.py
+│       transcript_generator_prompt.py     
+└───screen_shots
+       query_with_summary.png
+       query_without_summary.png
+
+```
