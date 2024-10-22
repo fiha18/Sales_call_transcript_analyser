@@ -9,6 +9,14 @@ The project is divided into three main tasks:
 2. **Call Summarization**: Summarizing the call transcript with key points.
 3. **Querying Transcripts**: Answering user queries based on the generated transcript content.
 
+### Clean Code Principles
+
+- **Single Responsibility Principle**: Functions focus on a single task (e.g., transcript generation, summarization).
+- **Open/Closed Principle**: Functions and packages are extensible with clear separation of concerns.
+- **Modular Approach**: Each task (transcripts, queries, summaries) resides in its own module for easy maintenance.
+- **Generic LLM Strategy**: Utilized large language models for enhanced flexibility and reusability.
+- **Clean Code Guidelines**: Emphasized proper comments, readability, structured function descriptions, and adherence to the DRY principle for maintainability.
+
 ---
 ## Project Setup 
 Inside working directory
