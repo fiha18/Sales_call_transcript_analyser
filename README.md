@@ -144,6 +144,9 @@ For Task 2, the objective is to create a script that generates a summary of a sa
      - **Support/maintenance costs**
      - **Ease of integration**
 
+### Additional Features
+- **Multi language support**: User can provide languge choice for summary also with minimal code changes.
+
 
 5. **Merging Chuck Summary System Message(LLM Strategy = OpenAI):**
   - The system is set up using the `get_merge_response_system_message` function for merging chunk responses in a cohesive, well-structured final summary.
@@ -153,11 +156,12 @@ For Task 2, the objective is to create a script that generates a summary of a sa
 ### Run the Summary Generator:
 
 ```bash
-python3 summarizer.py <input_file_name> [summary_format] [word_limit]
+python3 summarizer.py <input_file_name> [summary_format][word_limit] [language]
 ```
   - <input_file_name>: Replace this with the actual name of the input file (located in the generated_transcripts folder).
   - [summary_format]: (Optional) Specify the desired summary format: paragraph,bullet_points, or concise. If not provided, the paragraph format will be used.
   - [word_limit]: (Optional) word limit for the summary.If not provided, 1000 word limit will be used for paragraph,bullet_points and 200 words for concise. ***word limit does not guarentee exact word count***
+  - [language]: (Optional) language for the summary. If not provided default will be english.
 
 ## Task 3: Querying the Transcript Efficiently
 
@@ -228,9 +232,10 @@ python3 query_handler.py <input_file_name> <user_input_query>
 ## LLM Strategy(OpenAI) with API Interaction:
    - The core of the open ai in llm_strategy folder is handled by making API requests to OpenAI’s GPT model.
    - This strategy follows code reusability , extensibility and modular approach.
+   - For better multi-language support , model has been updated to gpt-4o.
    ### Generic call_open_api function ###
    ```python
-   def call_openai_api(system_message, prompt_message, model = "gpt-4o-mini", max_tokens = 8000, temperature = 0.7):
+   def call_openai_api(system_message, prompt_message, model = "gpt-4o", max_tokens = 8000, temperature = 0.7):
     """
       This function interacts with the OpenAI API to generate text based on user prompts and system information.
       
@@ -307,3 +312,8 @@ CALL-TRANSCRIPT-ANALYSIS
 - **Query With Summary**
   - Total time taken: 5.9190 seconds
   ![Screenshot of query_handler.py]( /screenshots/query_response_with_summary.png)
+- **Multi language Summary**
+  - Total time taken: ~ 21 seconds
+   ![Screenshot of summarizer.py]( /screenshots/query_response_with_summary.png)
+    ![Screenshot of summarizer.py]( /screenshots/summary_in_french.png)
+    ![Screenshot of summarizer.py]( /screenshots/)

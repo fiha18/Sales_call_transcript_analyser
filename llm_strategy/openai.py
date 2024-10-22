@@ -8,7 +8,7 @@ import utils
 period_timer = None
 _ = load_dotenv(find_dotenv())
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-def call_openai_api(system_message, prompt_message, model = "gpt-4o-mini", max_tokens = 8000, temperature = 1):
+def call_openai_api(system_message, prompt_message, model = "gpt-4o", max_tokens = 8000, temperature = 1):
     """
     This function interacts with the OpenAI API to generate text based on user prompts and system information.
     
