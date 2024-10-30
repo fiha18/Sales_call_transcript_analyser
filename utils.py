@@ -146,3 +146,23 @@ def get_major_context():
 def get_summary_related_words():
         summary_related_words = [ "overview","abstract", "recap", "synopsis", "digest", "outline", "highlights", "key points", "summary statement", "brief", "condensed version", "summary report", "compendium", "review","conclusion"]
         return summary_related_words
+
+def merge_lists_into_no_of_api(input_lists, num_groups):
+    # Initialize empty lists to hold the merged result for each group
+    merged = [[] for _ in range(num_groups)]
+    
+    # Calculate the chunk size for each group
+    chunk_size = len(input_lists) // num_groups
+    remainder = len(input_lists) % num_groups  # Remainder to distribute extra lists
+    
+    # Start index for merging
+    start = 0
+    
+    for i in range(num_groups):
+        # Determine end index for the current chunk
+        end = start + chunk_size + (1 if i < remainder else 0)  # Distribute remainder if any
+        for lst in input_lists[start:end]:
+            merged[i].extend(lst)
+        start = end  # Move start to the end for the next chunk
+
+    return merged

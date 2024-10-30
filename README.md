@@ -181,6 +181,49 @@ python3 summary.py <input_file_name> [summary_format]
   - Tone Filtering: tone analysis as part of the processing, identify emotive language or sarcasm for better insight.
   - Keyword Segmentation: From a list of important keywords that signify different sections of the conversation. When a keyword is detected, segment the transcript at that point.
 
+### Multithreaded Transcript Processing with Queue-Based Solution
+
+#### Overview
+The `preprocess_text_multi_thread` function enhances the performance of transcript preprocessing by leveraging multi-threading. Designed to handle large volumes of text data efficiently, this implementation breaks down processing into smaller, concurrent tasks while ensuring thread-safe handling and fault tolerance.
+
+#### Multithreading with Threading Module
+- **Functionality**: The `preprocess_text_multi_thread` function applies multi-threading to preprocess chunks of text in parallel. By dividing the transcript into smaller chunks and processing each independently, the code achieves faster completion, especially on multi-core CPUs.
+- **Thread-Safe List Handling**: To maintain order, `result_list` is initialized with `None` values. Each thread updates its assigned index, preserving chunk order within the list.
+
+#### Key Features
+1. **Chunk Processing**: Each chunk is processed using `preprocess_text_helper` within its own thread, allowing independent processing across multiple threads.
+2. **Performance Gains**: Multi-threading significantly reduces latency for large datasets, taking advantage of parallel processing to enhance scalability and responsiveness.
+3. **Consistent Preprocessing Logic**: The core preprocessing operations—such as removing timestamps, filtering out filler and stop words, and handling contractions—remain consistent with single-threaded versions, ensuring predictable behavior.
+
+#### Exception Handling and Fault Tolerance
+- **Error Handling per Chunk**: Each thread includes try-except blocks to catch errors during chunk processing, preventing single-chunk errors from disrupting the entire function.
+- **Global Exception Handling**: If multi-threading encounters a critical failure (e.g., memory overflow, thread creation failure), it gracefully falls back to sequential processing, ensuring continuity.
+- **Sequential Fallback**: In case of multi-threading failure, the function defaults to sequential chunk processing, providing high availability albeit with higher latency.
+- **Detailed Logging**: Each thread logs its result, including error details if applicable, supporting detailed traceability and diagnostics.
+
+#### Addressing Race Conditions with Queue Implementation
+##### Problem Analysis
+In a concurrent environment, direct updates to `result_list` can lead to race conditions. These issues arise when:
+   - Threads complete at unpredictable times, causing out-of-order updates.
+   - Concurrent access to `result_list` leads to inconsistent data entries.
+
+##### Solution: Queue-Based Thread Management
+Using a `Queue` resolves race conditions by enabling thread-safe, orderly processing:
+- **Queue Setup**: A `Queue` named `processed_queue` stores processed chunks as `(index, processed_chunk)` tuples in FIFO order.
+- **Thread Execution and Safe Updates**: 
+  - Each thread processes a chunk and enqueues its result as `(index, processed_chunk)`.
+  - If an error occurs, the error message is enqueued to avoid data loss and facilitate error tracking.
+- **Result Collection**:
+  - Once all threads finish, the function retrieves items from `processed_queue` and inserts them into `result_list` at their original index.
+  
+##### Benefits of Queue-Based Approach
+1. **Thread-Safety**: The `Queue` handles concurrency, preventing race conditions and ensuring orderly data entry without direct access to `result_list`.
+2. **Consistent Ordering**: The final `result_list` maintains the original chunk order as each entry is inserted based on its index from the queue.
+3. **Error Resilience**: Processing errors in individual threads are captured and stored in the queue, preventing one failure from impacting the overall process.
+
+#### Summary
+This multithreaded solution, with robust exception handling and a queue-based approach, achieves scalable, low-latency transcript processing. It is designed to handle large datasets efficiently while ensuring reliability and data consistency through error resilience and order-preserving updates.
+
 
 ## Task 3: Querying the Transcript Efficiently
 

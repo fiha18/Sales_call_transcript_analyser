@@ -13,7 +13,6 @@ period_timer = None
 start_execution_time = time.time()
 
 def merge_chunk_summaries(chunk_response_list,summary_format="paragraph"):
-    print(f"Chunk Response List Length : {len(chunk_response_list)}")
     print(f"Chunk Response List : {chunk_response_list}")
     system_message = summarizer_prompt.get_merge_response_system_message(chunk_response_list,summary_format)
     prompt_message = "Generate a cohesive, well-structured summary of call transcript in at most 1000 words"
@@ -37,6 +36,7 @@ def generate_transcript_summary_list(file_path,summary_format="paragraph"):
     # Preprocess the transcript
     transcript_chunks = summarizer_helper.split_text(transcript)
     chunks = summarizer_helper.preprocess_text(transcript_chunks)
+    chunks = utils.merge_lists_into_no_of_api(chunks,5)
     summary_list = []
     for chunk in enumerate(chunks, start=1):
         print(f"Pre proccessed chuck for Open AI API :  {chunk}")
