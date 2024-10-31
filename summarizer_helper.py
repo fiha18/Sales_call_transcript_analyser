@@ -4,7 +4,7 @@ import re
 import utils
 
 # Initialize the spell checker once
-def split_text(text, word_limit=1500):
+def split_text(text, word_limit=2000):
     """
     Splits a given text into chunks of a specific size.
 
